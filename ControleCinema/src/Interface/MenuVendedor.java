@@ -5,6 +5,6 @@ import Class.Vendas;
 
 public class MenuVendedor extends Vendas {
 
-	private Usuario usuario;
+    private Usuario usuario;
 
 }

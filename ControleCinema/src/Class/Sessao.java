@@ -2,6 +2,6 @@ package Class;
 
 public class Sessao {
 
-	private Ingresso[] ingressos;
+    private Ingresso[] ingressos;
 
 }

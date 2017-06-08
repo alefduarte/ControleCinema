@@ -2,8 +2,8 @@ package Class;
 
 public class Sala {
 
-	private int codSala;
+    private int codSala;
 
-	private int capacidade;
+    private int capacidade;
 
 }

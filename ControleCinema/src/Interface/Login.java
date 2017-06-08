@@ -2,12 +2,12 @@ package Interface;
 
 public class Login {
 
-	public void vendedor() {
+    public void vendedor() {
 
-	}
+    }
 
-	public void gerente() {
+    public void gerente() {
 
-	}
+    }
 
 }

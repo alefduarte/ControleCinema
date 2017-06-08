@@ -1,4 +1,3 @@
-
 package controlecinema;
 
 /* Written by alefduarte */

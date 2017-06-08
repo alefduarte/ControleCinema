@@ -2,10 +2,10 @@ package Class;
 
 public class Usuario {
 
-	private String nome;
+    private String nome;
 
-	private int id;
+    private int id;
 
-	private String senha;
+    private String senha;
 
 }

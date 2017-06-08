@@ -2,8 +2,8 @@ package Class;
 
 public class Filme {
 
-	private String nome;
+    private String nome;
 
-	private Tempo duracao;
+    private Tempo duracao;
 
 }
