@@ -2,8 +2,13 @@ package Class;
 
 public class Filme {
 
-    private String nome;
+    private final String nome;
 
-    private Tempo duracao;
+    private final Tempo duracao;
+
+    public Filme(String nome, Tempo duracao) {
+        this.nome = nome;
+        this.duracao = duracao;
+    }
 
 }
