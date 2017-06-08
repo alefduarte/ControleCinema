@@ -11,4 +11,12 @@ public class Filme {
         this.duracao = duracao;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public Tempo getDuracao() {
+        return duracao;
+    }
+
 }
