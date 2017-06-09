@@ -3,27 +3,17 @@ package Class;
 public class DadosSessao {
 
     private Filme filme;
-
     private double preco;
-
     private Sala sala;
-
-    /**
-     * 2D ou 3D
-     */
-    private int tipo;
-
+    private int tipo; // 3D ou 2D
     private Tempo horarioInicio;
 
-    private Tempo horarioFim;
-
-    public DadosSessao(Filme filme, double preco, Sala sala, int tipo, Tempo horarioInicio, Tempo horarioFim) {
+    public DadosSessao(Filme filme, double preco, Sala sala, int tipo, Tempo horarioInicio) {
         this.filme = filme;
         this.preco = preco;
         this.sala = sala;
         this.tipo = tipo;
         this.horarioInicio = horarioInicio;
-        this.horarioFim = horarioFim;
     }
 
     public Filme getFilme() {
@@ -65,13 +55,4 @@ public class DadosSessao {
     public void setHorarioInicio(Tempo horarioInicio) {
         this.horarioInicio = horarioInicio;
     }
-
-    public Tempo getHorarioFim() {
-        return horarioFim;
-    }
-
-    public void setHorarioFim(Tempo horarioFim) {
-        this.horarioFim = horarioFim;
-    }
-
 }
