@@ -10,11 +10,11 @@ public class Ingresso {
      * Meia ou Inteira
      *
      */
-    private char tipo;
+    private int tipo;
 
     private DadosSessao dados;
 
-    public Ingresso(int codigo, int assento, char tipo, DadosSessao dados) {
+    public Ingresso(int codigo, int assento, int tipo, DadosSessao dados) {
         this.codigo = codigo;
         this.assento = assento;
         this.tipo = tipo;
@@ -29,11 +29,11 @@ public class Ingresso {
         this.assento = assento;
     }
 
-    public char getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
-    public void setTipo(char tipo) {
+    public void setTipo(int tipo) {
         this.tipo = tipo;
     }
 
