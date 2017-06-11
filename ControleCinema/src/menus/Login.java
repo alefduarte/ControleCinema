@@ -5,30 +5,17 @@
  */
 package menus;
 
-import BancoDeDados.DBConnection;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import javax.swing.JOptionPane;
-
 /**
  *
- * @author alefduarte
+ * @author gabriel
  */
-public class Login extends javax.swing.JDialog {
-
-    Connection con = new DBConnection().connect();
+public class Login extends javax.swing.JFrame {
 
     /**
-     * Creates new form Login
-     *
-     * @param parent
-     * @param modal
+     * Creates new form Login_2
      */
-    public Login(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public Login() {
         initComponents();
-        setLocationRelativeTo(this);
     }
 
     /**
@@ -40,77 +27,62 @@ public class Login extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jtxUsuario = new javax.swing.JTextField();
-        jSeparator2 = new javax.swing.JSeparator();
-        jLabel6 = new javax.swing.JLabel();
-        jtxSenha = new javax.swing.JPasswordField();
-        jSeparator1 = new javax.swing.JSeparator();
+        jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jtxSenha = new javax.swing.JPasswordField();
+        jLabel2 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        jPanel2.setBackground(new java.awt.Color(97, 212, 195));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setBackground(new java.awt.Color(97, 212, 195));
-        jLabel1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ElementosGraficos/cinema.png"))); // NOI18N
-        jLabel1.setToolTipText("");
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel1.setName(""); // NOI18N
-        jLabel1.setOpaque(true);
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 410, 390));
-
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Alice", 1, 60)); // NOI18N
-        jLabel5.setText("MovieLand");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.setBackground(new java.awt.Color(97, 212, 195));
+        jPanel3.setToolTipText("");
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Alice", 1, 48)); // NOI18N
-        jLabel2.setText("LOGIN");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, -1));
-
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jLabel4.setText("Usuário");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, -1));
-
-        jtxUsuario.setBackground(new java.awt.Color(0, 204, 204));
-        jtxUsuario.setFont(new java.awt.Font("Alice", 0, 12)); // NOI18N
-        jtxUsuario.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jtxUsuario.setText("Nome de usuário");
-        jtxUsuario.setToolTipText("");
-        jtxUsuario.setBorder(null);
-        jtxUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton1.setBackground(new java.awt.Color(229, 91, 0));
+        jButton1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Entrar");
+        jButton1.setBorder(null);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jtxUsuarioMouseClicked(evt);
+                jButton1MouseClicked(evt);
             }
         });
-        jPanel1.add(jtxUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 340, 20));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 40));
 
-        jSeparator2.setBackground(new java.awt.Color(0, 204, 204));
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        jSeparator2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, 340, 10));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, 180, 40));
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jLabel6.setText("Senha");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Usuário");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, -1, -1));
 
-        jtxSenha.setBackground(new java.awt.Color(0, 204, 204));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, 340, 20));
+
+        jtxSenha.setBackground(new java.awt.Color(36, 47, 65));
         jtxSenha.setFont(new java.awt.Font("Alice", 0, 12)); // NOI18N
+        jtxSenha.setForeground(new java.awt.Color(255, 255, 255));
         jtxSenha.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jtxSenha.setText("exemplo de senha");
         jtxSenha.setToolTipText("Digite a senha");
@@ -127,72 +99,89 @@ public class Login extends javax.swing.JDialog {
                 jtxSenhaMouseClicked(evt);
             }
         });
-        jPanel1.add(jtxSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 254, 340, 20));
-
-        jSeparator1.setBackground(new java.awt.Color(0, 204, 204));
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        jSeparator1.setToolTipText("");
-        jSeparator1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 340, 20));
-
-        jButton1.setBackground(new java.awt.Color(255, 0, 51));
-        jButton1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jButton1.setText("Entrar");
-        jButton1.setBorder(null);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jtxSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jtxSenhaActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 180, 40));
+        getContentPane().add(jtxSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 314, 340, 20));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 520));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Senha");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, -1, -1));
+
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 340, 10));
+
+        jPanel4.setBackground(new java.awt.Color(36, 47, 65));
+        jPanel4.setForeground(new java.awt.Color(36, 47, 65));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Alice", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Login");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 460, 600));
+
+        jPanel6.setBackground(new java.awt.Color(36, 47, 65));
+
+        jLabel6.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setText("www.devcodes.com.br");
+        jPanel6.add(jLabel6);
+
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 410, 30));
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel5.setBackground(new java.awt.Color(36, 47, 65));
+
+        jLabel5.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setText("DevCodes");
+        jPanel5.add(jLabel5);
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 30));
+
+        jLabel1.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon("/home/gabriel/cinema2.png")); // NOI18N
+        jLabel1.setToolTipText("");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel1.setName(""); // NOI18N
+        jLabel1.setOpaque(true);
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 560));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtxUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxUsuarioMouseClicked
-        jtxUsuario.setText("");
-    }//GEN-LAST:event_jtxUsuarioMouseClicked
-
-    private void jtxSenhaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtxSenhaFocusGained
-
-    }//GEN-LAST:event_jtxSenhaFocusGained
+    private void jtxSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxSenhaActionPerformed
 
     private void jtxSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxSenhaMouseClicked
         jtxSenha.setText("");
     }//GEN-LAST:event_jtxSenhaMouseClicked
+
+    private void jtxSenhaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtxSenhaFocusGained
+
+    }//GEN-LAST:event_jtxSenhaFocusGained
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String usuario = jtxUsuario.getText();
-        String senha = jtxSenha.getText();
 
-        String sql = "Select * from usuarios where username=? and password=?";
-        try {
-            PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1, usuario);
-            ps.setString(2, senha);
-            ResultSet rs = ps.executeQuery();
-            
-            if (rs.next()){
-                this.dispose();
-                MainMenu mm = new MainMenu();
-                mm.show();
-            } else{
-                JOptionPane.showMessageDialog(null, "Usuario e senha inválidos");
-            }
-        } catch(Exception e)  {
-            
-        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -222,19 +211,12 @@ public class Login extends javax.swing.JDialog {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            Login dialog = new Login(new javax.swing.JFrame(), true);
-            dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                @Override
-                public void windowClosing(java.awt.event.WindowEvent e) {
-                    System.exit(0);
-                }
-            });
-            dialog.setVisible(true);
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Login().setVisible(true);
+            }
         });
     }
 
@@ -242,14 +224,17 @@ public class Login extends javax.swing.JDialog {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPasswordField jtxSenha;
-    private javax.swing.JTextField jtxUsuario;
     // End of variables declaration//GEN-END:variables
 }
