@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package menus;
-
+import de.javasoft.plaf.synthetica.SyntheticaBlackEyeLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel;
+import javax.swing.UIManager;
 /**
  *
  * @author gabriel
@@ -47,12 +49,31 @@ public class MenuUsuario extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jLabel2 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jpMostrador1 = new javax.swing.JPanel();
+
+        try
+        {
+            UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         jScrollBar1 = new javax.swing.JScrollBar();
-        jPanel7 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jpMostrador2 = new javax.swing.JPanel();
+
+        try
+        {
+            UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         jScrollBar2 = new javax.swing.JScrollBar();
         jpPedido = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jpCancelamento = new javax.swing.JPanel();
         jpFechamento = new javax.swing.JPanel();
         jpSuperUser = new javax.swing.JPanel();
@@ -101,7 +122,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbSairActionPerformed(evt);
             }
         });
-        jPanel4.add(jbSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 80, 20));
+        jPanel4.add(jbSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 80, 30));
 
         jlNomeUsuario.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jlNomeUsuario.setForeground(new java.awt.Color(255, 255, 255));
@@ -229,35 +250,39 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel2.setText("filmes em cartaz");
         jLayeredPane1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 550, 70));
 
-        jPanel3.setBackground(new java.awt.Color(36, 47, 65));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jScrollBar1.setBackground(new java.awt.Color(36, 47, 65));
-        jScrollBar1.setFont(new java.awt.Font("Bebas", 0, 12)); // NOI18N
-        jScrollBar1.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
-        jPanel3.add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 490, 20));
-
-        jLayeredPane1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 490, 190));
-
-        jPanel7.setBackground(new java.awt.Color(36, 47, 65));
-        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jScrollBar2.setBackground(new java.awt.Color(36, 47, 65));
-        jScrollBar2.setFont(new java.awt.Font("Bebas", 0, 12)); // NOI18N
-        jScrollBar2.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
-        jPanel7.add(jScrollBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 490, 20));
-
-        jLayeredPane1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
-
-        jpPedido.setBackground(new java.awt.Color(204, 204, 204));
-        jpPedido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jLabel3.setFont(new java.awt.Font("Bebas", 1, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(36, 47, 65));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("filmes rodando");
-        jpPedido.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 550, -1));
+        jLayeredPane1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 550, -1));
 
+        jpMostrador1.setBackground(new java.awt.Color(36, 47, 65));
+        jpMostrador1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollBar1.setBackground(new java.awt.Color(36, 47, 65));
+        jScrollBar1.setFont(new java.awt.Font("Bebas", 0, 12)); // NOI18N
+        jScrollBar1.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
+        jpMostrador1.add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 490, 20));
+
+        jLabel1.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("nome filme");
+        jpMostrador1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
+
+        jLayeredPane1.add(jpMostrador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 490, 190));
+
+        jpMostrador2.setBackground(new java.awt.Color(36, 47, 65));
+        jpMostrador2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollBar2.setBackground(new java.awt.Color(36, 47, 65));
+        jScrollBar2.setFont(new java.awt.Font("Bebas", 0, 12)); // NOI18N
+        jScrollBar2.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
+        jpMostrador2.add(jScrollBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 490, 20));
+
+        jLayeredPane1.add(jpMostrador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
+
+        jpPedido.setBackground(new java.awt.Color(204, 204, 204));
+        jpPedido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jLayeredPane1.add(jpPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
 
         jpCancelamento.setBackground(new java.awt.Color(204, 0, 0));
@@ -285,6 +310,22 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSairMouseClicked
 
     private void jbSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSairActionPerformed
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
         Login log = new Login();
         log.setVisible(true);
         dispose();
@@ -301,6 +342,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
         jLabel3.setVisible(false);
+        jpMostrador1.setVisible(false);
+        jpMostrador2.setVisible(false);
     }//GEN-LAST:event_jbCancelamentoActionPerformed
 
     private void jbFechamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbFechamentoMouseClicked
@@ -314,6 +357,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
         jLabel3.setVisible(false);
+        jpMostrador1.setVisible(false);
+        jpMostrador2.setVisible(false);
     }//GEN-LAST:event_jbFechamentoActionPerformed
 
     private void jbSuperUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSuperUserMouseClicked
@@ -327,6 +372,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpSuperUser.setVisible(true);
         jLabel2.setVisible(false);
         jLabel3.setVisible(false);
+        jpMostrador1.setVisible(false);
+        jpMostrador2.setVisible(false);
     }//GEN-LAST:event_jbSuperUserActionPerformed
 
     private void jbHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbHomeMouseClicked
@@ -340,6 +387,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(true);
         jLabel3.setVisible(true);
+        jpMostrador1.setVisible(true);
+        jpMostrador2.setVisible(true);
     }//GEN-LAST:event_jbHomeActionPerformed
 
     private void jbPedidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPedidoMouseClicked
@@ -353,6 +402,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
         jLabel3.setVisible(false);
+        jpMostrador1.setVisible(false);
+        jpMostrador2.setVisible(false);
     }//GEN-LAST:event_jbPedidoActionPerformed
 
     public void alterarNomeUsuario(String nome){
@@ -375,13 +426,13 @@ public class MenuUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -397,6 +448,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
@@ -404,11 +456,9 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollBar jScrollBar2;
     private javax.swing.JSeparator jSeparator1;
@@ -424,6 +474,8 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jlNomeUsuario;
     private javax.swing.JPanel jpCancelamento;
     private javax.swing.JPanel jpFechamento;
+    private javax.swing.JPanel jpMostrador1;
+    private javax.swing.JPanel jpMostrador2;
     private javax.swing.JPanel jpPedido;
     private javax.swing.JPanel jpSuperUser;
     // End of variables declaration//GEN-END:variables

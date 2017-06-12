@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package menus;
+import de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel;
 
 /**
  *
