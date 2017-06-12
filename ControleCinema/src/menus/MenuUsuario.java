@@ -47,10 +47,12 @@ public class MenuUsuario extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollBar1 = new javax.swing.JScrollBar();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollBar2 = new javax.swing.JScrollBar();
         jpPedido = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jpCancelamento = new javax.swing.JPanel();
         jpFechamento = new javax.swing.JPanel();
         jpSuperUser = new javax.swing.JPanel();
@@ -227,12 +229,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel2.setText("filmes em cartaz");
         jLayeredPane1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 550, 70));
 
-        jLabel3.setFont(new java.awt.Font("Bebas", 1, 48)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(36, 47, 65));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("filmes rodando");
-        jLayeredPane1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 550, 90));
-
         jPanel3.setBackground(new java.awt.Color(36, 47, 65));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -243,8 +239,25 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jLayeredPane1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 490, 190));
 
+        jPanel7.setBackground(new java.awt.Color(36, 47, 65));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollBar2.setBackground(new java.awt.Color(36, 47, 65));
+        jScrollBar2.setFont(new java.awt.Font("Bebas", 0, 12)); // NOI18N
+        jScrollBar2.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
+        jPanel7.add(jScrollBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 490, 20));
+
+        jLayeredPane1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
+
         jpPedido.setBackground(new java.awt.Color(204, 204, 204));
         jpPedido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Bebas", 1, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(36, 47, 65));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("filmes rodando");
+        jpPedido.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 550, -1));
+
         jLayeredPane1.add(jpPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
 
         jpCancelamento.setBackground(new java.awt.Color(204, 0, 0));
@@ -395,7 +408,9 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollBar jScrollBar1;
+    private javax.swing.JScrollBar jScrollBar2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
