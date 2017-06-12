@@ -34,16 +34,22 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jbSair = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jlNomeUsuario = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jbCancelamento = new javax.swing.JButton();
         jbFechamento = new javax.swing.JButton();
         jbSuperUser = new javax.swing.JButton();
         jbHome = new javax.swing.JButton();
         jbPedido = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollBar1 = new javax.swing.JScrollBar();
         jpPedido = new javax.swing.JPanel();
         jpCancelamento = new javax.swing.JPanel();
         jpFechamento = new javax.swing.JPanel();
@@ -95,11 +101,11 @@ public class MenuUsuario extends javax.swing.JFrame {
         });
         jPanel4.add(jbSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 80, 20));
 
-        jLabel1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon("/home/gabriel/user-icon.png")); // NOI18N
-        jLabel1.setText("    Usuario");
-        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 160, 70));
+        jlNomeUsuario.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jlNomeUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jlNomeUsuario.setIcon(new javax.swing.ImageIcon("/home/gabriel/user-icon.png")); // NOI18N
+        jlNomeUsuario.setText("    Usuario");
+        jPanel4.add(jlNomeUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 160, 70));
 
         jPanel2.setBackground(new java.awt.Color(229, 91, 0));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -112,7 +118,9 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbCancelamento.setForeground(new java.awt.Color(255, 255, 255));
         jbCancelamento.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/cancel.png")); // NOI18N
         jbCancelamento.setText("Cancelamento");
-        jbCancelamento.setBorder(null);
+        jbCancelamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbCancelamento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jbCancelamento.setIconTextGap(30);
         jbCancelamento.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jbCancelamentoMouseClicked(evt);
@@ -123,14 +131,16 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbCancelamentoActionPerformed(evt);
             }
         });
-        jPanel4.add(jbCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 160, 40));
+        jPanel4.add(jbCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 230, 40));
 
         jbFechamento.setBackground(new java.awt.Color(229, 91, 0));
         jbFechamento.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbFechamento.setForeground(new java.awt.Color(255, 255, 255));
         jbFechamento.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/dollar-symbol.png")); // NOI18N
         jbFechamento.setText("Fechamento de Caixa");
-        jbFechamento.setBorder(null);
+        jbFechamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbFechamento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jbFechamento.setIconTextGap(7);
         jbFechamento.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jbFechamentoMouseClicked(evt);
@@ -141,14 +151,16 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbFechamentoActionPerformed(evt);
             }
         });
-        jPanel4.add(jbFechamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 160, 40));
+        jPanel4.add(jbFechamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 230, 40));
 
         jbSuperUser.setBackground(new java.awt.Color(229, 91, 0));
         jbSuperUser.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbSuperUser.setForeground(new java.awt.Color(255, 255, 255));
         jbSuperUser.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/file.png")); // NOI18N
         jbSuperUser.setText("Super User");
-        jbSuperUser.setBorder(null);
+        jbSuperUser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbSuperUser.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jbSuperUser.setIconTextGap(45);
         jbSuperUser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jbSuperUserMouseClicked(evt);
@@ -159,14 +171,16 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbSuperUserActionPerformed(evt);
             }
         });
-        jPanel4.add(jbSuperUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 160, 40));
+        jPanel4.add(jbSuperUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 230, 40));
 
         jbHome.setBackground(new java.awt.Color(229, 91, 0));
         jbHome.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbHome.setForeground(new java.awt.Color(255, 255, 255));
         jbHome.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/house (1).png")); // NOI18N
         jbHome.setText("Home");
-        jbHome.setBorder(null);
+        jbHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbHome.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jbHome.setIconTextGap(70);
         jbHome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jbHomeMouseClicked(evt);
@@ -177,14 +191,16 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbHomeActionPerformed(evt);
             }
         });
-        jPanel4.add(jbHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 160, 40));
+        jPanel4.add(jbHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 230, 40));
 
         jbPedido.setBackground(new java.awt.Color(229, 91, 0));
         jbPedido.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbPedido.setForeground(new java.awt.Color(255, 255, 255));
         jbPedido.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/checked.png")); // NOI18N
         jbPedido.setText("Pedido");
-        jbPedido.setBorder(null);
+        jbPedido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbPedido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jbPedido.setIconTextGap(65);
         jbPedido.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jbPedidoMouseClicked(evt);
@@ -195,39 +211,53 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbPedidoActionPerformed(evt);
             }
         });
-        jPanel4.add(jbPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 160, 40));
+        jPanel4.add(jbPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 230, 40));
+        jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 230, -1));
+        jPanel4.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 230, -1));
+        jPanel4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 230, -1));
+        jPanel4.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 230, -1));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 600));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 600));
+
+        jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Bebas", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(36, 47, 65));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("BEM vINDO !!");
-        jLayeredPane1.add(jLabel2);
-        jLabel2.setBounds(0, 150, 550, 110);
+        jLabel2.setText("filmes em cartaz");
+        jLayeredPane1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 550, 70));
 
         jLabel3.setFont(new java.awt.Font("Bebas", 1, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(36, 47, 65));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("USuario");
-        jLayeredPane1.add(jLabel3);
-        jLabel3.setBounds(0, 240, 550, 90);
+        jLabel3.setText("filmes rodando");
+        jLayeredPane1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 550, 90));
+
+        jPanel3.setBackground(new java.awt.Color(36, 47, 65));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollBar1.setBackground(new java.awt.Color(36, 47, 65));
+        jScrollBar1.setFont(new java.awt.Font("Bebas", 0, 12)); // NOI18N
+        jScrollBar1.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
+        jPanel3.add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 490, 20));
+
+        jLayeredPane1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 490, 190));
 
         jpPedido.setBackground(new java.awt.Color(204, 204, 204));
-        jLayeredPane1.add(jpPedido);
-        jpPedido.setBounds(0, 0, 550, 540);
+        jpPedido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLayeredPane1.add(jpPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
 
-        jpCancelamento.setBackground(new java.awt.Color(204, 204, 204));
-        jLayeredPane1.add(jpCancelamento);
-        jpCancelamento.setBounds(0, 0, 550, 540);
+        jpCancelamento.setBackground(new java.awt.Color(204, 0, 0));
+        jpCancelamento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLayeredPane1.add(jpCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
 
-        jpFechamento.setBackground(new java.awt.Color(204, 204, 204));
-        jLayeredPane1.add(jpFechamento);
-        jpFechamento.setBounds(0, 0, 550, 540);
+        jpFechamento.setBackground(new java.awt.Color(0, 153, 153));
+        jpFechamento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLayeredPane1.add(jpFechamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
 
-        jpSuperUser.setBackground(new java.awt.Color(204, 204, 204));
-        jLayeredPane1.add(jpSuperUser);
-        jpSuperUser.setBounds(0, 0, 550, 540);
+        jpSuperUser.setBackground(new java.awt.Color(255, 255, 0));
+        jpSuperUser.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLayeredPane1.add(jpSuperUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
 
         jPanel1.add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 560, 540));
 
@@ -312,6 +342,9 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel3.setVisible(false);
     }//GEN-LAST:event_jbPedidoActionPerformed
 
+    public void alterarNomeUsuario(String nome){
+        jlNomeUsuario.setText(nome);
+    }
     /**
      * @param args the command line arguments
      */
@@ -351,7 +384,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
@@ -359,15 +391,22 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollBar jScrollBar1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JButton jbCancelamento;
     private javax.swing.JButton jbFechamento;
     private javax.swing.JButton jbHome;
     private javax.swing.JButton jbPedido;
     private javax.swing.JButton jbSair;
     private javax.swing.JButton jbSuperUser;
+    private javax.swing.JLabel jlNomeUsuario;
     private javax.swing.JPanel jpCancelamento;
     private javax.swing.JPanel jpFechamento;
     private javax.swing.JPanel jpPedido;

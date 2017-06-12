@@ -36,6 +36,8 @@ public class Login extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jtxUser = new javax.swing.JTextField();
+        jlAviso = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -128,6 +130,17 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setText("Login");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
 
+        jtxUser.setBackground(new java.awt.Color(36, 47, 65));
+        jtxUser.setFont(new java.awt.Font("Alice", 0, 12)); // NOI18N
+        jtxUser.setForeground(new java.awt.Color(255, 255, 255));
+        jtxUser.setBorder(null);
+        jPanel4.add(jtxUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 244, 340, 20));
+
+        jlAviso.setFont(new java.awt.Font("Alice", 1, 14)); // NOI18N
+        jlAviso.setForeground(new java.awt.Color(255, 0, 0));
+        jlAviso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel4.add(jlAviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 340, 40));
+
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 460, 600));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
@@ -184,7 +197,20 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+       if(jtxUser.getText().equals("admin")){
+           if(jtxSenha.getText().equals("admin")){
+               String userName ="Admin";
+               MenuUsuario log = new MenuUsuario();
+               log.setVisible(true);
+               log.alterarNomeUsuario("     " +userName);
+           }
+           else{
+               jlAviso.setText("Senha do Usuario Incorreta!");
+           }
+       }
+       else{
+           jlAviso.setText("Usuario Inexistente!");
+       }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -238,6 +264,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel jlAviso;
     private javax.swing.JPasswordField jtxSenha;
+    private javax.swing.JTextField jtxUser;
     // End of variables declaration//GEN-END:variables
 }
