@@ -312,9 +312,6 @@
               <Font name="Alice" size="18" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="/home/gabriel/cinema2.png"/>
-            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
