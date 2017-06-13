@@ -60,7 +60,7 @@ public class Login extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Entrar");
-        jButton1.setBorder(null);
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -204,6 +204,7 @@ public class Login extends javax.swing.JFrame {
                MenuUsuario log = new MenuUsuario();
                log.setVisible(true);
                log.alterarNomeUsuario("     " +userName);
+               dispose();
            }
            else{
                jlAviso.setText("Senha do Usuario Incorreta!");

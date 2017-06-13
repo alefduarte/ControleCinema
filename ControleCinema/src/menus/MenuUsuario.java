@@ -20,6 +20,21 @@ public class MenuUsuario extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void recebePoltrona(String pol){
+        jLabel21.setText("Poltrona "+pol);
+    }
+    
+    public void voltarPedido(){
+        jpPedido.setVisible(true);
+        jpCancelamento.setVisible(false);
+        jpFechamento.setVisible(false);
+        jpSuperUser.setVisible(false);
+        jLabel2.setVisible(false);
+        jLabel3.setVisible(false);
+        jpMostrador1.setVisible(false);
+        jpMostrador2.setVisible(false);
+        jpPoltrona.setVisible(false);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,12 +44,12 @@ public class MenuUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel6 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        jpDevCodesSite = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jpDevCodes = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        jpSeletorOpc = new javax.swing.JPanel();
         jbSair = new javax.swing.JButton();
         jlNomeUsuario = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -51,67 +66,119 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jpMostrador1 = new javax.swing.JPanel();
-
-        try
-        {
-            UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
         jScrollBar1 = new javax.swing.JScrollBar();
         jLabel1 = new javax.swing.JLabel();
         jpMostrador2 = new javax.swing.JPanel();
-
-        try
-        {
-            UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
         jScrollBar2 = new javax.swing.JScrollBar();
-        jpPedido = new javax.swing.JPanel();
         jpCancelamento = new javax.swing.JPanel();
         jpFechamento = new javax.swing.JPanel();
+        jpPedido = new javax.swing.JPanel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jSeparator15 = new javax.swing.JSeparator();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jbPoltrona = new javax.swing.JButton();
+        jbCompra = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
         jpSuperUser = new javax.swing.JPanel();
+        jpPoltrona = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jlLinha5 = new javax.swing.JLabel();
+        jlLinha1 = new javax.swing.JLabel();
+        jlLinha2 = new javax.swing.JLabel();
+        jlLinha3 = new javax.swing.JLabel();
+        jlLinha4 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        jButton25 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jButton28 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        jButton30 = new javax.swing.JButton();
+        jButton31 = new javax.swing.JButton();
+        jButton32 = new javax.swing.JButton();
+        jButton33 = new javax.swing.JButton();
+        jButton34 = new javax.swing.JButton();
+        jButton35 = new javax.swing.JButton();
+        jButton36 = new javax.swing.JButton();
+        jButton37 = new javax.swing.JButton();
+        jButton38 = new javax.swing.JButton();
+        jButton39 = new javax.swing.JButton();
+        jButton40 = new javax.swing.JButton();
+        jButton41 = new javax.swing.JButton();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
+        jSeparator8 = new javax.swing.JSeparator();
+        jSeparator9 = new javax.swing.JSeparator();
+        jSeparator10 = new javax.swing.JSeparator();
+        jSeparator11 = new javax.swing.JSeparator();
+        jSeparator12 = new javax.swing.JSeparator();
+        jSeparator13 = new javax.swing.JSeparator();
+        jSeparator14 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel6.setBackground(new java.awt.Color(36, 47, 65));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jpDevCodesSite.setBackground(new java.awt.Color(36, 47, 65));
 
         jLabel6.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
         jLabel6.setText("www.devcodes.com.br");
-        jPanel6.add(jLabel6);
+        jpDevCodesSite.add(jLabel6);
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 560, 30));
+        jPanel1.add(jpDevCodesSite, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 560, 30));
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel5.setBackground(new java.awt.Color(36, 47, 65));
+        jpDevCodes.setBackground(new java.awt.Color(36, 47, 65));
 
         jLabel5.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 204, 204));
         jLabel5.setText("DevCodes");
-        jPanel5.add(jLabel5);
+        jpDevCodes.add(jLabel5);
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 560, 30));
+        jPanel1.add(jpDevCodes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 560, 30));
 
-        jPanel4.setBackground(new java.awt.Color(36, 47, 65));
-        jPanel4.setForeground(new java.awt.Color(36, 47, 65));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jpSeletorOpc.setBackground(new java.awt.Color(36, 47, 65));
+        jpSeletorOpc.setForeground(new java.awt.Color(36, 47, 65));
+        jpSeletorOpc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jbSair.setBackground(new java.awt.Color(229, 91, 0));
         jbSair.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbSair.setForeground(new java.awt.Color(255, 255, 255));
         jbSair.setText("Sair");
-        jbSair.setBorder(null);
+        jbSair.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbSair.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jbSairMouseClicked(evt);
@@ -122,26 +189,26 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbSairActionPerformed(evt);
             }
         });
-        jPanel4.add(jbSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 80, 30));
+        jpSeletorOpc.add(jbSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 80, 20));
 
         jlNomeUsuario.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jlNomeUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jlNomeUsuario.setIcon(new javax.swing.ImageIcon("/home/gabriel/user-icon.png")); // NOI18N
         jlNomeUsuario.setText("    Usuario");
-        jPanel4.add(jlNomeUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 160, 70));
+        jpSeletorOpc.add(jlNomeUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 160, 70));
 
         jPanel2.setBackground(new java.awt.Color(229, 91, 0));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
         jPanel2.setForeground(new java.awt.Color(238, 238, 238));
         jPanel2.setToolTipText("");
-        jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 30, 70, 70));
+        jpSeletorOpc.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 30, 70, 70));
 
         jbCancelamento.setBackground(new java.awt.Color(229, 91, 0));
         jbCancelamento.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbCancelamento.setForeground(new java.awt.Color(255, 255, 255));
         jbCancelamento.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/cancel.png")); // NOI18N
         jbCancelamento.setText("Cancelamento");
-        jbCancelamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbCancelamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbCancelamento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jbCancelamento.setIconTextGap(30);
         jbCancelamento.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -154,14 +221,14 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbCancelamentoActionPerformed(evt);
             }
         });
-        jPanel4.add(jbCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 230, 40));
+        jpSeletorOpc.add(jbCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 230, 40));
 
         jbFechamento.setBackground(new java.awt.Color(229, 91, 0));
         jbFechamento.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbFechamento.setForeground(new java.awt.Color(255, 255, 255));
         jbFechamento.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/dollar-symbol.png")); // NOI18N
         jbFechamento.setText("Fechamento de Caixa");
-        jbFechamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbFechamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbFechamento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jbFechamento.setIconTextGap(7);
         jbFechamento.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -174,14 +241,14 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbFechamentoActionPerformed(evt);
             }
         });
-        jPanel4.add(jbFechamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 230, 40));
+        jpSeletorOpc.add(jbFechamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 230, 40));
 
         jbSuperUser.setBackground(new java.awt.Color(229, 91, 0));
         jbSuperUser.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbSuperUser.setForeground(new java.awt.Color(255, 255, 255));
         jbSuperUser.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/file.png")); // NOI18N
         jbSuperUser.setText("Super User");
-        jbSuperUser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbSuperUser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbSuperUser.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jbSuperUser.setIconTextGap(45);
         jbSuperUser.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -194,14 +261,14 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbSuperUserActionPerformed(evt);
             }
         });
-        jPanel4.add(jbSuperUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 230, 40));
+        jpSeletorOpc.add(jbSuperUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 230, 40));
 
         jbHome.setBackground(new java.awt.Color(229, 91, 0));
         jbHome.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbHome.setForeground(new java.awt.Color(255, 255, 255));
         jbHome.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/house (1).png")); // NOI18N
         jbHome.setText("Home");
-        jbHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbHome.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jbHome.setIconTextGap(70);
         jbHome.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -214,14 +281,14 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbHomeActionPerformed(evt);
             }
         });
-        jPanel4.add(jbHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 230, 40));
+        jpSeletorOpc.add(jbHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 230, 40));
 
         jbPedido.setBackground(new java.awt.Color(229, 91, 0));
         jbPedido.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbPedido.setForeground(new java.awt.Color(255, 255, 255));
         jbPedido.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/checked.png")); // NOI18N
         jbPedido.setText("Pedido");
-        jbPedido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(229, 91, 0), 4));
+        jbPedido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbPedido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jbPedido.setIconTextGap(65);
         jbPedido.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -234,14 +301,23 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbPedidoActionPerformed(evt);
             }
         });
-        jPanel4.add(jbPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 230, 40));
-        jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 230, -1));
-        jPanel4.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 230, -1));
-        jPanel4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 230, -1));
-        jPanel4.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 230, -1));
+        jpSeletorOpc.add(jbPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 230, 40));
+        jpSeletorOpc.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 230, -1));
+        jpSeletorOpc.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 230, -1));
+        jpSeletorOpc.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 230, -1));
+        jpSeletorOpc.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 230, -1));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 600));
+        jPanel1.add(jpSeletorOpc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 600));
 
+        jpPedido.setVisible(false);
+        jpCancelamento.setVisible(false);
+        jpFechamento.setVisible(false);
+        jpSuperUser.setVisible(false);
+        jLabel2.setVisible(true);
+        jLabel3.setVisible(true);
+        jpMostrador1.setVisible(true);
+        jpMostrador2.setVisible(true);
+        jpPoltrona.setVisible(false);
         jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Bebas", 1, 48)); // NOI18N
@@ -281,21 +357,535 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jLayeredPane1.add(jpMostrador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
 
-        jpPedido.setBackground(new java.awt.Color(204, 204, 204));
-        jpPedido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jLayeredPane1.add(jpPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
-
         jpCancelamento.setBackground(new java.awt.Color(204, 0, 0));
         jpCancelamento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jLayeredPane1.add(jpCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
+        jLayeredPane1.add(jpCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 560, 540));
 
         jpFechamento.setBackground(new java.awt.Color(0, 153, 153));
         jpFechamento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jLayeredPane1.add(jpFechamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
+        jLayeredPane1.add(jpFechamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 550, 540));
+
+        jpPedido.setBackground(new java.awt.Color(204, 204, 204));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Filme");
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+
+        jLabel14.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Sala");
+
+        jLabel15.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("Capacidade :");
+
+        jSeparator15.setForeground(new java.awt.Color(36, 47, 65));
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+
+        jLabel16.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Horario");
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+
+        jLabel17.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Tipo de Ingresso");
+
+        jLabel18.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel18.setText("Preço do Ingresso");
+
+        jLabel19.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Posição Poltrona");
+
+        jbPoltrona.setBackground(new java.awt.Color(229, 91, 0));
+        jbPoltrona.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbPoltrona.setForeground(new java.awt.Color(255, 255, 255));
+        jbPoltrona.setText("Poltrona");
+        jbPoltrona.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbPoltrona.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbPoltronaMouseClicked(evt);
+            }
+        });
+        jbPoltrona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbPoltronaActionPerformed(evt);
+            }
+        });
+
+        jbCompra.setBackground(new java.awt.Color(229, 91, 0));
+        jbCompra.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbCompra.setForeground(new java.awt.Color(255, 255, 255));
+        jbCompra.setText("Confirmar Compra/Imprimir Ingresso");
+        jbCompra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbCompra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbCompraMouseClicked(evt);
+            }
+        });
+        jbCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCompraActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("R$ 00.00");
+        jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+
+        jLabel21.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("Poltrona ???");
+        jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+
+        jLabel22.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("000");
+        jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+
+        javax.swing.GroupLayout jpPedidoLayout = new javax.swing.GroupLayout(jpPedido);
+        jpPedido.setLayout(jpPedidoLayout);
+        jpPedidoLayout.setHorizontalGroup(
+            jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator15)
+            .addGroup(jpPedidoLayout.createSequentialGroup()
+                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpPedidoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel19)
+                            .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpPedidoLayout.createSequentialGroup()
+                                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jbPoltrona, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jpPedidoLayout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpPedidoLayout.createSequentialGroup()
+                                .addComponent(jLabel18)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jbCompra, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addGap(29, 29, 29))
+        );
+        jpPedidoLayout.setVerticalGroup(
+            jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpPedidoLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1))
+                .addGap(18, 18, 18)
+                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addGap(18, 18, 18)
+                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel22))
+                .addGap(18, 18, 18)
+                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addGap(18, 18, 18)
+                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17))
+                .addGap(18, 18, 18)
+                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19)
+                    .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jbPoltrona)
+                        .addComponent(jLabel21)))
+                .addGap(58, 58, 58)
+                .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel20))
+                .addGap(29, 29, 29)
+                .addComponent(jbCompra)
+                .addGap(28, 28, 28))
+        );
+
+        jLayeredPane1.add(jpPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 540, 540));
 
         jpSuperUser.setBackground(new java.awt.Color(255, 255, 0));
         jpSuperUser.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jLayeredPane1.add(jpSuperUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
+        jLayeredPane1.add(jpSuperUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 550, 540));
+
+        jpPoltrona.setBackground(new java.awt.Color(204, 204, 204));
+        jpPoltrona.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(204, 204, 204), null, null));
+        jpPoltrona.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Alice", 1, 24)); // NOI18N
+        jLabel4.setText("   A         B         C         D         E         F         G");
+        jpPoltrona.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 480, 30));
+
+        jlLinha5.setFont(new java.awt.Font("Alice", 1, 24)); // NOI18N
+        jlLinha5.setText("5");
+        jpPoltrona.add(jlLinha5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, -1));
+
+        jlLinha1.setFont(new java.awt.Font("Alice", 1, 24)); // NOI18N
+        jlLinha1.setText("1");
+        jpPoltrona.add(jlLinha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+
+        jlLinha2.setFont(new java.awt.Font("Alice", 1, 24)); // NOI18N
+        jlLinha2.setText("2");
+        jpPoltrona.add(jlLinha2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+
+        jlLinha3.setFont(new java.awt.Font("Alice", 1, 24)); // NOI18N
+        jlLinha3.setText("3");
+        jpPoltrona.add(jlLinha3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        jlLinha4.setFont(new java.awt.Font("Alice", 1, 24)); // NOI18N
+        jlLinha4.setText("4");
+        jpPoltrona.add(jlLinha4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Alice", 1, 36)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Poltronas Sala");
+        jpPoltrona.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 540, 70));
+
+        jButton2.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton2.setToolTipText("");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 60, -1));
+
+        jButton3.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 60, -1));
+
+        jButton4.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 60, -1));
+
+        jButton5.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 60, -1));
+
+        jButton6.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 60, -1));
+
+        jButton7.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 60, -1));
+
+        jButton8.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 60, -1));
+
+        jButton14.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 60, -1));
+
+        jButton15.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 60, -1));
+
+        jButton16.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 60, -1));
+
+        jButton17.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 60, -1));
+
+        jButton18.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 60, -1));
+
+        jButton19.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 60, -1));
+
+        jButton20.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 60, -1));
+
+        jButton21.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 60, -1));
+
+        jButton22.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 60, -1));
+
+        jButton23.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 60, -1));
+
+        jButton24.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 60, -1));
+
+        jButton25.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 60, -1));
+
+        jButton26.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 60, -1));
+
+        jButton27.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 60, -1));
+
+        jButton28.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton28ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 60, -1));
+
+        jButton29.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 60, -1));
+
+        jButton30.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 60, -1));
+
+        jButton31.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 60, -1));
+
+        jButton32.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 60, -1));
+
+        jButton33.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 60, -1));
+
+        jButton34.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 60, -1));
+
+        jButton35.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton35ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 60, -1));
+
+        jButton36.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 60, -1));
+
+        jButton37.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton37ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 60, -1));
+
+        jButton38.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 60, -1));
+
+        jButton39.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton39ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 60, -1));
+
+        jButton40.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 60, -1));
+
+        jButton41.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/poltrona2.png")); // NOI18N
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton41ActionPerformed(evt);
+            }
+        });
+        jpPoltrona.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 60, -1));
+        jpPoltrona.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 512, 10));
+        jpPoltrona.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 512, -1));
+        jpPoltrona.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 510, 10));
+        jpPoltrona.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 510, -1));
+
+        jSeparator9.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jpPoltrona.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, 10, 430));
+
+        jSeparator10.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jpPoltrona.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 10, 430));
+
+        jSeparator11.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jpPoltrona.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 10, 430));
+
+        jSeparator12.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jpPoltrona.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 10, 430));
+
+        jSeparator13.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jpPoltrona.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 10, 430));
+
+        jSeparator14.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jpPoltrona.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 10, 430));
+
+        jLayeredPane1.add(jpPoltrona, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 550, 540));
 
         jPanel1.add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 560, 540));
 
@@ -344,6 +934,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel3.setVisible(false);
         jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
+        jpPoltrona.setVisible(false);
     }//GEN-LAST:event_jbCancelamentoActionPerformed
 
     private void jbFechamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbFechamentoMouseClicked
@@ -359,6 +950,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel3.setVisible(false);
         jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
+        jpPoltrona.setVisible(false);
     }//GEN-LAST:event_jbFechamentoActionPerformed
 
     private void jbSuperUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSuperUserMouseClicked
@@ -374,6 +966,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel3.setVisible(false);
         jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
+        jpPoltrona.setVisible(false);
     }//GEN-LAST:event_jbSuperUserActionPerformed
 
     private void jbHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbHomeMouseClicked
@@ -389,6 +982,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel3.setVisible(true);
         jpMostrador1.setVisible(true);
         jpMostrador2.setVisible(true);
+        jpPoltrona.setVisible(false);
     }//GEN-LAST:event_jbHomeActionPerformed
 
     private void jbPedidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPedidoMouseClicked
@@ -404,7 +998,211 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel3.setVisible(false);
         jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
+        jpPoltrona.setVisible(false);
     }//GEN-LAST:event_jbPedidoActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jbPoltronaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPoltronaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbPoltronaMouseClicked
+
+    private void jbPoltronaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPoltronaActionPerformed
+        jpPedido.setVisible(false);
+        jpCancelamento.setVisible(false);
+        jpFechamento.setVisible(false);
+        jpSuperUser.setVisible(false);
+        jLabel2.setVisible(false);
+        jLabel3.setVisible(false);
+        jpMostrador1.setVisible(false);
+        jpMostrador2.setVisible(false);
+        jpPoltrona.setVisible(true);
+    }//GEN-LAST:event_jbPoltronaActionPerformed
+
+    private void jbCompraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCompraMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbCompraMouseClicked
+
+    private void jbCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCompraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbCompraActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        recebePoltrona("A1");
+        voltarPedido();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        recebePoltrona("B1");
+        voltarPedido();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        recebePoltrona("A2");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        recebePoltrona("A3");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        recebePoltrona("A4");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        recebePoltrona("A5");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        recebePoltrona("B2");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        recebePoltrona("B3");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        recebePoltrona("B4");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        recebePoltrona("B5");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        recebePoltrona("C1");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        recebePoltrona("C2");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        recebePoltrona("C3");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        recebePoltrona("C4");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        recebePoltrona("C5");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        recebePoltrona("D1");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        recebePoltrona("D2");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton26ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        recebePoltrona("D3");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        recebePoltrona("D4");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        recebePoltrona("D5");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        recebePoltrona("E1");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        recebePoltrona("E2");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton30ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        recebePoltrona("E3");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton31ActionPerformed
+
+    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+        recebePoltrona("E4");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton32ActionPerformed
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+        recebePoltrona("E5");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton33ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        recebePoltrona("F1");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        recebePoltrona("F2");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton34ActionPerformed
+
+    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
+        recebePoltrona("F3");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton35ActionPerformed
+
+    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+        recebePoltrona("F4");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton36ActionPerformed
+
+    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+        recebePoltrona("F5");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton37ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        recebePoltrona("G1");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+        recebePoltrona("G2");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton38ActionPerformed
+
+    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
+        recebePoltrona("G3");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton39ActionPerformed
+
+    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+        recebePoltrona("G4");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton40ActionPerformed
+
+    private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
+        recebePoltrona("G5");
+        voltarPedido();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton41ActionPerformed
 
     public void alterarNomeUsuario(String nome){
         jlNomeUsuario.setText(nome);
@@ -448,35 +1246,105 @@ public class MenuUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
+    private javax.swing.JButton jButton32;
+    private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
+    private javax.swing.JButton jButton35;
+    private javax.swing.JButton jButton36;
+    private javax.swing.JButton jButton37;
+    private javax.swing.JButton jButton38;
+    private javax.swing.JButton jButton39;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton40;
+    private javax.swing.JButton jButton41;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollBar jScrollBar2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator14;
+    private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JButton jbCancelamento;
+    private javax.swing.JButton jbCompra;
     private javax.swing.JButton jbFechamento;
     private javax.swing.JButton jbHome;
     private javax.swing.JButton jbPedido;
+    private javax.swing.JButton jbPoltrona;
     private javax.swing.JButton jbSair;
     private javax.swing.JButton jbSuperUser;
+    private javax.swing.JLabel jlLinha1;
+    private javax.swing.JLabel jlLinha2;
+    private javax.swing.JLabel jlLinha3;
+    private javax.swing.JLabel jlLinha4;
+    private javax.swing.JLabel jlLinha5;
     private javax.swing.JLabel jlNomeUsuario;
     private javax.swing.JPanel jpCancelamento;
+    private javax.swing.JPanel jpDevCodes;
+    private javax.swing.JPanel jpDevCodesSite;
     private javax.swing.JPanel jpFechamento;
     private javax.swing.JPanel jpMostrador1;
     private javax.swing.JPanel jpMostrador2;
     private javax.swing.JPanel jpPedido;
+    private javax.swing.JPanel jpPoltrona;
+    private javax.swing.JPanel jpSeletorOpc;
     private javax.swing.JPanel jpSuperUser;
     // End of variables declaration//GEN-END:variables
 }
