@@ -77,11 +77,13 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jpMostrador1 = new javax.swing.JPanel();
-        jScrollBar1 = new javax.swing.JScrollBar();
+        jpMostrador1 = new javax.swing.JScrollPane();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jpMostrador2 = new javax.swing.JPanel();
-        jScrollBar2 = new javax.swing.JScrollBar();
+        jpMostrador2 = new javax.swing.JScrollPane();
+        jPanel3 = new javax.swing.JPanel();
         jpCancelamento = new javax.swing.JPanel();
         jpFechamento = new javax.swing.JPanel();
         jpPedido = new javax.swing.JPanel();
@@ -156,6 +158,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jSeparator12 = new javax.swing.JSeparator();
         jSeparator13 = new javax.swing.JSeparator();
         jSeparator14 = new javax.swing.JSeparator();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -345,29 +348,37 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLayeredPane1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 550, -1));
 
         jpMostrador1.setBackground(new java.awt.Color(36, 47, 65));
-        jpMostrador1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jpMostrador1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 
-        jScrollBar1.setBackground(new java.awt.Color(36, 47, 65));
-        jScrollBar1.setFont(new java.awt.Font("Bebas", 0, 12)); // NOI18N
-        jScrollBar1.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
-        jpMostrador1.add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 490, 20));
+        jPanel4.setBackground(new java.awt.Color(36, 47, 65));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/Cartazes Filme/Icones fIlmes/068236.jpg")); // NOI18N
+        jLabel8.setText("O Ciúme");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -5, -1, 180));
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/Cartazes Filme/Icones fIlmes/007a73605e87f97898cb9b15af6db6e5.jpg")); // NOI18N
+        jLabel9.setText("Gladiador");
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, -1, -1));
+
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("nome filme");
-        jpMostrador1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon("/home/gabriel/Imagens/Cartazes Filme/Icones fIlmes/025084.jpg")); // NOI18N
+        jLabel1.setText("Invocação do mal 2");
+        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, -1, -1));
 
-        jLayeredPane1.add(jpMostrador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 490, 190));
+        jpMostrador1.setViewportView(jPanel4);
+
+        jLayeredPane1.add(jpMostrador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 490, 190));
 
         jpMostrador2.setBackground(new java.awt.Color(36, 47, 65));
-        jpMostrador2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jpMostrador2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 
-        jScrollBar2.setBackground(new java.awt.Color(36, 47, 65));
-        jScrollBar2.setFont(new java.awt.Font("Bebas", 0, 12)); // NOI18N
-        jScrollBar2.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
-        jpMostrador2.add(jScrollBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 490, 20));
+        jPanel3.setBackground(new java.awt.Color(36, 47, 65));
+        jpMostrador2.setViewportView(jPanel3);
 
-        jLayeredPane1.add(jpMostrador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
+        jLayeredPane1.add(jpMostrador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 490, 190));
 
         jpCancelamento.setBackground(new java.awt.Color(204, 0, 0));
         jpCancelamento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -899,6 +910,9 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jLayeredPane1.add(jpPoltrona, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 550, 540));
 
+        jLabel7.setText("jLabel7");
+        jLayeredPane1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
+
         jPanel1.add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 560, 540));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -1314,11 +1328,14 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollBar jScrollBar1;
-    private javax.swing.JScrollBar jScrollBar2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -1352,8 +1369,8 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JPanel jpDevCodes;
     private javax.swing.JPanel jpDevCodesSite;
     private javax.swing.JPanel jpFechamento;
-    private javax.swing.JPanel jpMostrador1;
-    private javax.swing.JPanel jpMostrador2;
+    private javax.swing.JScrollPane jpMostrador1;
+    private javax.swing.JScrollPane jpMostrador2;
     private javax.swing.JPanel jpPedido;
     private javax.swing.JPanel jpPoltrona;
     private javax.swing.JPanel jpSeletorOpc;
