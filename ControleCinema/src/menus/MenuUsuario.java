@@ -4,8 +4,11 @@
  * and open the template in the editor.
  */
 package menus;
+import Class.Ingresso;
 import de.javasoft.plaf.synthetica.SyntheticaBlackEyeLookAndFeel;
 import de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel;
+import java.util.ArrayList;
+import javax.swing.JButton;
 import javax.swing.UIManager;
 /**
  *
@@ -34,6 +37,15 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
         jpPoltrona.setVisible(false);
+    }
+    public void verificaPoltrona(String pol, JButton bot){
+        ArrayList<Ingresso> in = new ArrayList<Ingresso>();
+        for(int i=0; 1<in.size(); i++){
+            if(in.get(i).equals(pol)){
+                bot.setVisible(false);
+            }
+            else{bot.setVisible(true);}
+            }
     }
     /**
      * This method is called from within the constructor to initialize the form.

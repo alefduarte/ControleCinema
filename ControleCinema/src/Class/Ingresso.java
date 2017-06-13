@@ -21,6 +21,10 @@ public class Ingresso {
         this.dados = dados;
     }
 
+    public Ingresso() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getAssento() {
         return assento;
     }
