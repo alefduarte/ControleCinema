@@ -88,10 +88,10 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jbSair1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jbCancelarIngresso = new javax.swing.JButton();
         jpPedido = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
@@ -419,22 +419,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Horario de Inicio");
 
-        jbSair1.setBackground(new java.awt.Color(229, 91, 0));
-        jbSair1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jbSair1.setForeground(new java.awt.Color(255, 255, 255));
-        jbSair1.setText("Cancelar Ingresso");
-        jbSair1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
-        jbSair1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jbSair1MouseClicked(evt);
-            }
-        });
-        jbSair1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSair1ActionPerformed(evt);
-            }
-        });
-
         jLabel1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Meia/Inteira");
@@ -450,14 +434,33 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel24.setText("00:00");
         jLabel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
 
+        jbCancelarIngresso.setBackground(new java.awt.Color(229, 91, 0));
+        jbCancelarIngresso.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbCancelarIngresso.setForeground(new java.awt.Color(255, 255, 255));
+        jbCancelarIngresso.setText("Cancelar Ingresso");
+        jbCancelarIngresso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbCancelarIngresso.setMaximumSize(new java.awt.Dimension(238, 38));
+        jbCancelarIngresso.setMinimumSize(new java.awt.Dimension(238, 38));
+        jbCancelarIngresso.setPreferredSize(new java.awt.Dimension(238, 38));
+        jbCancelarIngresso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbCancelarIngressoMouseClicked(evt);
+            }
+        });
+        jbCancelarIngresso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCancelarIngressoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpCancelamentoLayout = new javax.swing.GroupLayout(jpCancelamento);
         jpCancelamento.setLayout(jpCancelamentoLayout);
         jpCancelamentoLayout.setHorizontalGroup(
             jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpCancelamentoLayout.createSequentialGroup()
+            .addGroup(jpCancelamentoLayout.createSequentialGroup()
                 .addContainerGap(51, Short.MAX_VALUE)
-                .addGroup(jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jpCancelamentoLayout.createSequentialGroup()
+                .addGroup(jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpCancelamentoLayout.createSequentialGroup()
                         .addGroup(jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -468,11 +471,11 @@ public class MenuUsuario extends javax.swing.JFrame {
                             .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jpCancelamentoLayout.createSequentialGroup()
-                        .addComponent(jbSair1)
-                        .addGap(100, 100, 100)))
-                .addGap(91, 91, 91))
+                            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(91, 91, 91))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpCancelamentoLayout.createSequentialGroup()
+                        .addComponent(jbCancelarIngresso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(149, 149, 149))))
         );
         jpCancelamentoLayout.setVerticalGroup(
             jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -493,9 +496,9 @@ public class MenuUsuario extends javax.swing.JFrame {
                 .addGroup(jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel24))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
-                .addComponent(jbSair1)
-                .addGap(53, 53, 53))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addComponent(jbCancelarIngresso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
         );
 
         jLayeredPane1.add(jpCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
@@ -1085,7 +1088,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator16)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
-                .addContainerGap(127, Short.MAX_VALUE)
+                .addContainerGap(117, Short.MAX_VALUE)
                 .addGroup(jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
                         .addGroup(jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1099,11 +1102,11 @@ public class MenuUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(113, 113, 113))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(140, 140, 140))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
                         .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(100, 100, 100))))
+                        .addGap(100, 100, 100))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(139, 139, 139))))
         );
         jpFechamentoLayout.setVerticalGroup(
             jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1350,10 +1353,10 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jbSair1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jbCancelarIngresso = new javax.swing.JButton();
         jpPedido = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
@@ -1680,22 +1683,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Horario de Inicio");
 
-        jbSair1.setBackground(new java.awt.Color(229, 91, 0));
-        jbSair1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jbSair1.setForeground(new java.awt.Color(255, 255, 255));
-        jbSair1.setText("Cancelar Ingresso");
-        jbSair1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
-        jbSair1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jbSair1MouseClicked(evt);
-            }
-        });
-        jbSair1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSair1ActionPerformed(evt);
-            }
-        });
-
         jLabel1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Meia/Inteira");
@@ -1710,6 +1697,25 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("00:00");
         jLabel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+
+        jbCancelarIngresso.setBackground(new java.awt.Color(229, 91, 0));
+        jbCancelarIngresso.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbCancelarIngresso.setForeground(new java.awt.Color(255, 255, 255));
+        jbCancelarIngresso.setText("Cancelar Ingresso");
+        jbCancelarIngresso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbCancelarIngresso.setMaximumSize(new java.awt.Dimension(238, 38));
+        jbCancelarIngresso.setMinimumSize(new java.awt.Dimension(238, 38));
+        jbCancelarIngresso.setPreferredSize(new java.awt.Dimension(238, 38));
+        jbCancelarIngresso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbCancelarIngressoMouseClicked(evt);
+            }
+        });
+        jbCancelarIngresso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCancelarIngressoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpCancelamentoLayout = new javax.swing.GroupLayout(jpCancelamento);
         jpCancelamento.setLayout(jpCancelamentoLayout);
@@ -1732,8 +1738,8 @@ public class MenuUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(91, 91, 91))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpCancelamentoLayout.createSequentialGroup()
-                        .addComponent(jbSair1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(155, 155, 155))))
+                        .addComponent(jbCancelarIngresso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(149, 149, 149))))
         );
         jpCancelamentoLayout.setVerticalGroup(
             jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1754,9 +1760,9 @@ public class MenuUsuario extends javax.swing.JFrame {
                 .addGroup(jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel24))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addComponent(jbSair1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addComponent(jbCancelarIngresso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
         );
 
         jLayeredPane1.add(jpCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
@@ -2346,7 +2352,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator16)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
-                .addContainerGap(127, Short.MAX_VALUE)
+                .addContainerGap(117, Short.MAX_VALUE)
                 .addGroup(jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
                         .addGroup(jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2360,11 +2366,11 @@ public class MenuUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(113, 113, 113))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(146, 146, 146))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
                         .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(112, 112, 112))))
+                        .addGap(100, 100, 100))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(139, 139, 139))))
         );
         jpFechamentoLayout.setVerticalGroup(
             jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2885,14 +2891,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         voltarPedido();// TODO add your handling code here:
     }//GEN-LAST:event_jButton41ActionPerformed
 
-    private void jbSair1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbSair1MouseClicked
-
-    private void jbSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbSair1ActionPerformed
-
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
@@ -2948,6 +2946,14 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jbSair7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbSair7ActionPerformed
+
+    private void jbCancelarIngressoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCancelarIngressoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbCancelarIngressoMouseClicked
+
+    private void jbCancelarIngressoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarIngressoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbCancelarIngressoActionPerformed
 
     public void alterarNomeUsuario(String nome){
         jlNomeUsuario.setText(nome);
@@ -3089,13 +3095,13 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JButton jbCancelamento;
+    private javax.swing.JButton jbCancelarIngresso;
     private javax.swing.JButton jbCompra;
     private javax.swing.JButton jbFechamento;
     private javax.swing.JButton jbHome;
     private javax.swing.JButton jbPedido;
     private javax.swing.JButton jbPoltrona;
     private javax.swing.JButton jbSair;
-    private javax.swing.JButton jbSair1;
     private javax.swing.JButton jbSair2;
     private javax.swing.JButton jbSair3;
     private javax.swing.JButton jbSair4;
