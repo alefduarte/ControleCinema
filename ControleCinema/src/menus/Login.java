@@ -42,14 +42,18 @@ public class Login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
+        setSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(97, 212, 195));
@@ -123,6 +127,9 @@ public class Login extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(36, 47, 65));
         jPanel4.setForeground(new java.awt.Color(36, 47, 65));
+        jPanel4.setMaximumSize(new java.awt.Dimension(460, 600));
+        jPanel4.setMinimumSize(new java.awt.Dimension(460, 600));
+        jPanel4.setPreferredSize(new java.awt.Dimension(460, 600));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -145,6 +152,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 460, 600));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setMaximumSize(new java.awt.Dimension(410, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setBackground(new java.awt.Color(36, 47, 65));
@@ -156,6 +164,15 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 30));
 
+        jPanel6.setBackground(new java.awt.Color(36, 47, 65));
+
+        jLabel6.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setText("www.devcodes.com.br");
+        jPanel6.add(jLabel6);
+
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 410, 60));
+
         jLabel1.setBackground(new java.awt.Color(204, 204, 204));
         jLabel1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -166,14 +183,14 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setOpaque(true);
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 560));
 
-        jPanel6.setBackground(new java.awt.Color(36, 47, 65));
+        jPanel7.setBackground(new java.awt.Color(36, 47, 65));
 
-        jLabel6.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel6.setText("www.devcodes.com.br");
-        jPanel6.add(jLabel6);
+        jLabel7.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setText("www.devcodes.com.br");
+        jPanel7.add(jLabel7);
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 410, 30));
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 410, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 600));
 
@@ -198,21 +215,33 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       if(jtxUser.getText().equals("admin")){
-           if(jtxSenha.getText().equals("admin")){
-               String userName ="Admin";
-               MenuUsuario log = new MenuUsuario();
-               log.setVisible(true);
-               log.alterarNomeUsuario("     " +userName);
-               dispose();
-           }
-           else{
-               jlAviso.setText("Senha do Usuario Incorreta!");
-           }
-       }
-       else{
-           jlAviso.setText("Usuario Inexistente!");
-       }
+
+            if(jtxUser.getText().equals("admin")){
+                    if(jtxSenha.getText().equals("admin") ){
+                    String userName ="Admin";
+                    MenuUsuario log = new MenuUsuario(true);
+                    log.setVisible(true);
+                    log.alterarNomeUsuario("     " +userName);
+                    dispose();
+                }
+                else{
+                        jlAviso.setText("Senha Incorreta!");
+                }
+            }
+
+            else if(jtxUser.getText().equals("user")){
+                    if(jtxSenha.getText().equals("user") ){
+                    String userName ="User";
+                    MenuUsuario log = new MenuUsuario(false);
+                    log.setVisible(true);
+                    log.alterarNomeUsuario("     " +userName);
+                    dispose();
+                }
+                else{
+                        jlAviso.setText("Senha Incorreta!");
+                }
+            }
+            else{jlAviso.setText("Usuario Inexistente!");}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -259,11 +288,13 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel jlAviso;
