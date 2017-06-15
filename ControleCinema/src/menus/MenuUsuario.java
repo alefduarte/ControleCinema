@@ -17,6 +17,7 @@ import java.nio.file.Path;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -1494,6 +1495,11 @@ public class MenuUsuario extends javax.swing.JFrame {
         jTextField4.setEditable(false);
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
         jpCadastrarSessao.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 150, 30));
 
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2109,15 +2115,17 @@ public class MenuUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbSair1MouseClicked
 
+    String nome ="";
+    String caminho = "";
     private void jbSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair1ActionPerformed
         String NomeImagem = "";
-        String CaminhoPacote = "";
+        String CaminhoPacote = caminho;
         
         BufferedReader img = pegarImagemPacote(NomeImagem,CaminhoPacote);
         
-        JLabel filme = null;
+        JLabel filme = new JLabel();
         filme.setText(jtxNomeFilme.getText() +"\nHorario de Inicio: " +jtxHoraInicio +":"+jtxMinutosInicio);
-        filme.setIcon((Icon) img);
+        Icon icon = new ImageIcon(CaminhoPacote);
         jPanel3.add(filme);
         jPanel3.setVisible(true);
         
@@ -2128,7 +2136,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSair8MouseClicked
 
     private void jbSair8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair8ActionPerformed
-        String caminho = "";
         File source;
         File dest= null;
         int retorno = 0;
@@ -2147,9 +2154,9 @@ public class MenuUsuario extends javax.swing.JFrame {
             jTextField4.setText(caminho);
             
             JOptionPane.showMessageDialog(null, poster.getSelectedFile().getName());
-            
+            nome=poster.getSelectedFile().getName();
             dest = new File("src" + File.separator + "Imagens" + File.separator + poster.getSelectedFile().getName());
-            
+            caminho= dest.getAbsolutePath();
             try {
                 Copiar2(source, dest);
             } catch (InterruptedException ex) {
@@ -2179,6 +2186,10 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jbSair9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbSair9ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
     public void alterarNomeUsuario(String nome){
         jlNomeUsuario.setText(nome);
