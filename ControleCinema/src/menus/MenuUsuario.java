@@ -2117,17 +2117,19 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     String nome ="";
     String caminho = "";
+    int i=0;
     private void jbSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair1ActionPerformed
+        i++;
         String NomeImagem = "";
         String CaminhoPacote = caminho;
         
-        BufferedReader img = pegarImagemPacote(NomeImagem,CaminhoPacote);
+        //BufferedReader img = pegarImagemPacote(NomeImagem,CaminhoPacote);
         
-        JLabel filme = new JLabel();
-        filme.setText(jtxNomeFilme.getText() +"\nHorario de Inicio: " +jtxHoraInicio +":"+jtxMinutosInicio);
+        JLabel filme = new JLabel("Label n" + i);
+        filme.setText(jtxNomeFilme.getText() +"\nHorario de Inicio: " +jtxHoraInicio.getText() +":"+jtxMinutosInicio.getText());
         Icon icon = new ImageIcon(CaminhoPacote);
+        filme.setIcon(icon);
         jPanel3.add(filme);
-        jPanel3.setVisible(true);
         
     }//GEN-LAST:event_jbSair1ActionPerformed
 
