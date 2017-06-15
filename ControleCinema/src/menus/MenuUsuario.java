@@ -1499,7 +1499,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jlNomeUsuario.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jlNomeUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        jlNomeUsuario.setIcon(new javax.swing.ImageIcon("/home/gabriel/user-icon.png")); // NOI18N
+        jlNomeUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/user-icon.png"))); // NOI18N
         jlNomeUsuario.setText("    Usuario");
         jpSeletorOpc.add(jlNomeUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 160, 70));
 
@@ -1512,7 +1512,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbCancelamento.setBackground(new java.awt.Color(229, 91, 0));
         jbCancelamento.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbCancelamento.setForeground(new java.awt.Color(255, 255, 255));
-        jbCancelamento.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/cancel.png")); // NOI18N
+        jbCancelamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/cancel.png"))); // NOI18N
         jbCancelamento.setText("Cancelamento");
         jbCancelamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbCancelamento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1532,7 +1532,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbFechamento.setBackground(new java.awt.Color(229, 91, 0));
         jbFechamento.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbFechamento.setForeground(new java.awt.Color(255, 255, 255));
-        jbFechamento.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/dollar-symbol.png")); // NOI18N
+        jbFechamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/dollar-symbol.png"))); // NOI18N
         jbFechamento.setText("Fechamento de Caixa");
         jbFechamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbFechamento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1552,7 +1552,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbSuperUser.setBackground(new java.awt.Color(229, 91, 0));
         jbSuperUser.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbSuperUser.setForeground(new java.awt.Color(255, 255, 255));
-        jbSuperUser.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/file.png")); // NOI18N
+        jbSuperUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/file.png"))); // NOI18N
         jbSuperUser.setText("Super User");
         jbSuperUser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbSuperUser.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1572,7 +1572,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbHome.setBackground(new java.awt.Color(229, 91, 0));
         jbHome.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbHome.setForeground(new java.awt.Color(255, 255, 255));
-        jbHome.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/house (1).png")); // NOI18N
+        jbHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/house.png"))); // NOI18N
         jbHome.setText("Home");
         jbHome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbHome.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1592,7 +1592,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbPedido.setBackground(new java.awt.Color(229, 91, 0));
         jbPedido.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbPedido.setForeground(new java.awt.Color(255, 255, 255));
-        jbPedido.setIcon(new javax.swing.ImageIcon("/home/gabriel/Downloads/checked.png")); // NOI18N
+        jbPedido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/checked.png"))); // NOI18N
         jbPedido.setText("Pedido");
         jbPedido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbPedido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -2352,7 +2352,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator16)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
-                .addContainerGap(117, Short.MAX_VALUE)
+                .addContainerGap(127, Short.MAX_VALUE)
                 .addGroup(jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFechamentoLayout.createSequentialGroup()
                         .addGroup(jpFechamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)

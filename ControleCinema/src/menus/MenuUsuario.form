@@ -157,7 +157,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/home/gabriel/user-icon.png"/>
+                  <Image iconType="3" name="/Imagens/user-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="    Usuario"/>
               </Properties>
@@ -204,7 +204,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/home/gabriel/Downloads/cancel.png"/>
+                  <Image iconType="3" name="/Imagens/cancel.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cancelamento"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -239,7 +239,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/home/gabriel/Downloads/dollar-symbol.png"/>
+                  <Image iconType="3" name="/Imagens/dollar-symbol.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Fechamento de Caixa"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -274,7 +274,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/home/gabriel/Downloads/file.png"/>
+                  <Image iconType="3" name="/Imagens/file.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Super User"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -309,7 +309,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/home/gabriel/Downloads/house (1).png"/>
+                  <Image iconType="3" name="/Imagens/house.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Home"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -344,7 +344,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/home/gabriel/Downloads/checked.png"/>
+                  <Image iconType="3" name="/Imagens/checked.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pedido"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
