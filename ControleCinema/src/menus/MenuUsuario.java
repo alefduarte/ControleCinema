@@ -7,12 +7,37 @@ package menus;
 import Class.Ingresso;
 import java.util.ArrayList;
 import javax.swing.JButton;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author gabriel
  */
 public class MenuUsuario extends javax.swing.JFrame {
+    
+    
+    public static void Copiar2(File source, File dest) throws InterruptedException, IOException {
+        //copy file conventional way using Stream
+        long start = System.nanoTime();
+        Copiar(source, dest);
+        System.out.println("Time taken by Stream Copy = "+(System.nanoTime()-start));       
+    }
+    
+    
+    private static void Copiar(File source, File dest) throws IOException {
+        Path copy = Files.copy(source.toPath(), dest.toPath());
+        /*Writer output = null;
+        output = new BufferedWriter(new FileWriter(dest));
+        return (BufferedWriter) output;*/
+    }
 
     /**
      * Creates new form Login_2
@@ -1895,8 +1920,40 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSair8MouseClicked
 
     private void jbSair8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair8ActionPerformed
-        BuscarImagem poster =new BuscarImagem();
-        poster.setVisible(true);
+        String caminho = "";
+        File source;
+        File dest= null;
+        int retorno = 0;
+        
+        JFileChooser poster =new JFileChooser();
+        poster.setDialogTitle("Buscador de Imagem");
+        poster.setFileFilter(new FileNameExtensionFilter("Image files", "bmp", "png", "jpg"));
+        poster.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        poster.showOpenDialog(this);
+        
+        if (retorno==JFileChooser.APPROVE_OPTION){
+            
+            caminho = poster.getSelectedFile().getAbsolutePath();
+            source = poster.getSelectedFile();
+            
+            jTextField4.setText(source.getName());
+            
+            JOptionPane.showMessageDialog(null, source.toPath());
+            
+            dest = new File("src" + File.separator + "Imagens" + File.separator + poster.getName());
+            
+            try {
+                Copiar2(source, dest);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(MenuUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MenuUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+               
+        }
+        else{
+            //dispose();
+        }
     }//GEN-LAST:event_jbSair8ActionPerformed
 
     private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
