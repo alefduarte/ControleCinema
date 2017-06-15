@@ -1895,7 +1895,8 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSair8MouseClicked
 
     private void jbSair8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair8ActionPerformed
-        // TODO add your handling code here:
+        BuscarImagem poster =new BuscarImagem();
+        poster.setVisible(true);
     }//GEN-LAST:event_jbSair8ActionPerformed
 
     private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed

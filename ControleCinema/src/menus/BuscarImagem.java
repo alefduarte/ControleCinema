@@ -5,9 +5,16 @@
  */
 package menus;
 
+import de.javasoft.io.FileUtils;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import static jdk.nashorn.internal.objects.NativeRegExp.source;
+
 
 /**
  *
@@ -15,11 +22,16 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class BuscarImagem extends javax.swing.JFrame {
 
+    private static void Copiar(File source, File dest) throws IOException {
+    Files.copy(source.toPath(), dest.toPath());
+}
+
     /**
      * Creates new form BuscarImagem
      */
     public BuscarImagem() {
         initComponents();
+        jFileChooser1.setFileFilter(new FileNameExtensionFilter("Image files", "bmp", "png", "jpg"));
     }
 
     /**
@@ -61,19 +73,25 @@ public class BuscarImagem extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jFileChooser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFileChooser1ActionPerformed
-        JFileChooser chooser = new JFileChooser();
-        chooser.setFileFilter(new FileNameExtensionFilter("Image files", "bmp", "png", "jpg"));
-        chooser.setAcceptAllFileFilterUsed(false);
         String caminho = "";
-        File file = null;
-        int retorno = chooser.showSaveDialog(null); // showSaveDialog retorna um inteiro , e ele ira determinar que o chooser será para salvar.
-        if (retorno==JFileChooser.APPROVE_OPTION){
-        caminho = chooser.getSelectedFile().getAbsolutePath();
-        if(!caminho.equals("")){
-            
+        File poster = null;
+        File dest = new File("/home/gabriel/NetBeansProjects/ControleCinema/ControleCinema/src/Imagens");
+        int retorno = 0;
+        
+        if (evt.equals(JFileChooser.APPROVE_OPTION)){
+            caminho = jFileChooser1.getSelectedFile().getAbsolutePath();
+            poster = jFileChooser1.getSelectedFile();
+            if(!caminho.equals("")){
+                try {
+                    Copiar(poster, dest);
+                } catch (IOException ex) {
+                    Logger.getLogger(BuscarImagem.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                dispose();
+            }
         }
-        }else{
-            System.out.println("eee");
+        else{
+            dispose();
         }
     }//GEN-LAST:event_jFileChooser1ActionPerformed
 
