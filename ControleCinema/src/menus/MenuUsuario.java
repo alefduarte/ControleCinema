@@ -1936,11 +1936,11 @@ public class MenuUsuario extends javax.swing.JFrame {
             caminho = poster.getSelectedFile().getAbsolutePath();
             source = poster.getSelectedFile();
             
-            jTextField4.setText(source.getName());
+            jTextField4.setText(caminho);
             
-            JOptionPane.showMessageDialog(null, source.toPath());
+            JOptionPane.showMessageDialog(null, poster.getSelectedFile().getName());
             
-            dest = new File("src" + File.separator + "Imagens" + File.separator + poster.getName());
+            dest = new File("src" + File.separator + "Imagens" + File.separator + poster.getSelectedFile().getName());
             
             try {
                 Copiar2(source, dest);
