@@ -1,0 +1,5 @@
+admin|admin|1
+alef|alef|2
+marina|marina|2
+gabriel|gabriel|2
+mario|mario|2

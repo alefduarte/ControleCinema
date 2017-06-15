@@ -1,0 +1,4 @@
+aladdin|125|Fantasia/Romance|14.0|12345|20|1|14:40
+xuxa|100|Infantil|28.0|12345|20|2|19:30
+A Mumia|90|terror|18.0|54321|15|2|20:40
+xuxa|100|Infantil|28.0|12345|20|2|16:20
