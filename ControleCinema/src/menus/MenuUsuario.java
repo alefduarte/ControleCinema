@@ -61,6 +61,33 @@ public class MenuUsuario extends javax.swing.JFrame {
         return (BufferedWriter) output;*/
     }
 
+    public static File resize(File source) throws IOException {
+        String inputImagePath = source.getAbsolutePath();
+        String outputImagePath = source.getAbsolutePath() + "novo.jpg";
+        int scaledWidth = 170;
+        int scaledHeight = 300;
+        // reads input image
+        File inputFile = new File(inputImagePath);
+        BufferedImage inputImage = ImageIO.read(inputFile);
+
+        // creates output image
+        BufferedImage outputImage = new BufferedImage(scaledWidth,
+                scaledHeight, inputImage.getType());
+
+        // scales the input image to the output image
+        Graphics2D g2d = outputImage.createGraphics();
+        g2d.drawImage(inputImage, 0, 0, scaledWidth, scaledHeight, null);
+        g2d.dispose();
+
+        // extracts extension of output file
+        String formatName = outputImagePath.substring(outputImagePath
+                .lastIndexOf(".") + 1);
+
+        // writes to output file
+        ImageIO.write(outputImage, formatName, new File(outputImagePath));
+        File temp = new File(outputImagePath);
+        return temp;
+    }
 
     /**
      * Creates new form Login_2
@@ -2168,7 +2195,12 @@ public class MenuUsuario extends javax.swing.JFrame {
             caminho = dest.getAbsolutePath();
 
             /////// 
-
+            try {
+                ///////
+                source = resize(source);
+            } catch (IOException ex) {
+                Logger.getLogger(MenuUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
             ////
             try {
                 Copiar2(source, dest);
