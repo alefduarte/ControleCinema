@@ -7,16 +7,12 @@ package menus;
 
 import Class.Ingresso;
 import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
@@ -49,9 +45,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     public static void Copiar2(File source, File dest) throws InterruptedException, IOException {
         //copy file conventional way using Stream
-        long start = System.nanoTime();
         Copiar(source, dest);
-        System.out.println("Time taken by Stream Copy = " + (System.nanoTime() - start));
     }
 
     private static void Copiar(File source, File dest) throws IOException {
@@ -63,7 +57,9 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     public static File resize(File source) throws IOException {
         String inputImagePath = source.getAbsolutePath();
-        String outputImagePath = source.getAbsolutePath() + "novo.jpg";
+        String outputImagePath = source.getAbsolutePath();
+        outputImagePath += "novo." + outputImagePath.substring(outputImagePath
+                .lastIndexOf(".") + 1); //pega o tipo da imagem
         int scaledWidth = 170;
         int scaledHeight = 300;
         // reads input image
@@ -91,6 +87,8 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form Login_2
+     *
+     * @param ver
      */
     public MenuUsuario(boolean ver) {
         initComponentsAlterado(ver);
@@ -2204,9 +2202,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             ////
             try {
                 Copiar2(source, dest);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(MenuUsuario.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+            } catch (InterruptedException | IOException ex) {
                 Logger.getLogger(MenuUsuario.class.getName()).log(Level.SEVERE, null, ex);
             }
 
@@ -2270,10 +2266,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MenuUsuario(false).setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new MenuUsuario(false).setVisible(true);
         });
     }
 
