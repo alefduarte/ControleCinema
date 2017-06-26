@@ -5,6 +5,7 @@
  */
 package menus;
 
+import BancoDeDados.Conexao;
 import Class.Ingresso;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -17,9 +18,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -31,6 +35,10 @@ import javax.swing.JOptionPane;
  * @author gabriel
  */
 public class MenuUsuario extends javax.swing.JFrame {
+
+    // variaveis globais, para nao ser preciso declarar toda ver que usá-la
+    public static String sql = null;
+    public static Conexao con = new Conexao();
 
     public BufferedReader pegarImagemPacote(String fileNameWithExtension, String sourcePackage) {
         try {
@@ -1853,6 +1861,22 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
+
+        //<editor-fold defaultstate="collapsed" desc=" Código para alternar os valores dentro do jComboBox da tela de pedidos, pode ser apagado/editado ">
+        ArrayList<String> filmes = new ArrayList<>();
+        sql = "SELECT  * FROM filme";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                filmes.add(retorno.getString("nome"));
+            }
+            jComboBox1.setModel(new DefaultComboBoxModel(filmes.toArray()));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+            jComboBox1.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
+        }
+        //</editor-fold>
+
     }//GEN-LAST:event_jbPedidoActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
