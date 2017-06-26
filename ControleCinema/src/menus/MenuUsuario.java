@@ -839,7 +839,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLayeredPane1.add(jpPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 540, 540));
 
         jpPoltrona.setBackground(new java.awt.Color(204, 204, 204));
-        jpPoltrona.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(204, 204, 204), null, null));
         jpPoltrona.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Alice", 1, 24)); // NOI18N
@@ -886,7 +885,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 55, -1));
+        jpPoltrona.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 55, 60));
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -894,7 +893,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 55, -1));
+        jpPoltrona.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 55, 60));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -902,7 +901,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 55, -1));
+        jpPoltrona.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 55, 60));
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -910,7 +909,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 55, -1));
+        jpPoltrona.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 55, 60));
 
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -918,7 +917,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 55, -1));
+        jpPoltrona.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 55, 60));
 
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -926,7 +925,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 55, -1));
+        jpPoltrona.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 55, 60));
 
         jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -934,7 +933,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 55, -1));
+        jpPoltrona.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 55, 60));
 
         jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -942,7 +941,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton15ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 55, -1));
+        jpPoltrona.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 55, 60));
 
         jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -950,7 +949,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton16ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 55, -1));
+        jpPoltrona.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 55, 60));
 
         jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -958,7 +957,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton17ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 55, -1));
+        jpPoltrona.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 55, 60));
 
         jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton18.addActionListener(new java.awt.event.ActionListener() {
@@ -966,7 +965,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton18ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 55, -1));
+        jpPoltrona.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 55, 60));
 
         jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton19.addActionListener(new java.awt.event.ActionListener() {
@@ -974,7 +973,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton19ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 55, -1));
+        jpPoltrona.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 55, 60));
 
         jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -982,7 +981,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton20ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 55, -1));
+        jpPoltrona.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 55, 60));
 
         jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton21.addActionListener(new java.awt.event.ActionListener() {
@@ -990,7 +989,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton21ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 55, -1));
+        jpPoltrona.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 55, 60));
 
         jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton22.addActionListener(new java.awt.event.ActionListener() {
@@ -998,7 +997,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton22ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 55, -1));
+        jpPoltrona.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 55, 60));
 
         jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton23.addActionListener(new java.awt.event.ActionListener() {
@@ -1006,7 +1005,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton23ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 55, -1));
+        jpPoltrona.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 55, 60));
 
         jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton24.addActionListener(new java.awt.event.ActionListener() {
@@ -1014,7 +1013,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton24ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 55, -1));
+        jpPoltrona.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 55, 60));
 
         jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton25.addActionListener(new java.awt.event.ActionListener() {
@@ -1022,7 +1021,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton25ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 55, -1));
+        jpPoltrona.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 55, 60));
 
         jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton26.addActionListener(new java.awt.event.ActionListener() {
@@ -1030,7 +1029,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton26ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 55, -1));
+        jpPoltrona.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 55, 60));
 
         jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton27.addActionListener(new java.awt.event.ActionListener() {
@@ -1038,7 +1037,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton27ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 55, -1));
+        jpPoltrona.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 55, 60));
 
         jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton28.addActionListener(new java.awt.event.ActionListener() {
@@ -1046,7 +1045,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton28ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 55, -1));
+        jpPoltrona.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 55, 60));
 
         jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton29.addActionListener(new java.awt.event.ActionListener() {
@@ -1054,7 +1053,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton29ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 55, -1));
+        jpPoltrona.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 55, 60));
 
         jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton30.addActionListener(new java.awt.event.ActionListener() {
@@ -1062,7 +1061,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton30ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 55, -1));
+        jpPoltrona.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 55, 60));
 
         jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton31.addActionListener(new java.awt.event.ActionListener() {
@@ -1070,7 +1069,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton31ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 55, -1));
+        jpPoltrona.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 55, 60));
 
         jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton32.addActionListener(new java.awt.event.ActionListener() {
@@ -1078,7 +1077,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton32ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 55, -1));
+        jpPoltrona.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 55, 60));
 
         jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton33.addActionListener(new java.awt.event.ActionListener() {
@@ -1086,7 +1085,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton33ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 55, -1));
+        jpPoltrona.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 55, 60));
 
         jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton34.addActionListener(new java.awt.event.ActionListener() {
@@ -1094,7 +1093,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton34ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 55, -1));
+        jpPoltrona.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 55, 60));
 
         jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton35.addActionListener(new java.awt.event.ActionListener() {
@@ -1102,7 +1101,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton35ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 55, -1));
+        jpPoltrona.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 55, 60));
 
         jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton36.addActionListener(new java.awt.event.ActionListener() {
@@ -1110,7 +1109,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton36ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 55, -1));
+        jpPoltrona.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 55, 60));
 
         jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton37.addActionListener(new java.awt.event.ActionListener() {
@@ -1118,7 +1117,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton37ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 55, -1));
+        jpPoltrona.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 55, 60));
 
         jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton38.addActionListener(new java.awt.event.ActionListener() {
@@ -1126,7 +1125,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton38ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 55, -1));
+        jpPoltrona.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 55, 60));
 
         jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton39.addActionListener(new java.awt.event.ActionListener() {
@@ -1134,7 +1133,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton39ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 55, -1));
+        jpPoltrona.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 55, 60));
 
         jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton40.addActionListener(new java.awt.event.ActionListener() {
@@ -1142,7 +1141,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton40ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 55, -1));
+        jpPoltrona.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 55, 60));
 
         jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
         jButton41.addActionListener(new java.awt.event.ActionListener() {
@@ -1150,7 +1149,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jButton41ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 55, -1));
+        jpPoltrona.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 55, 60));
         jpPoltrona.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 512, 10));
         jpPoltrona.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 512, -1));
         jpPoltrona.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 510, 10));

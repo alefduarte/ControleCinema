@@ -6,6 +6,7 @@
 package menus;
 
 import BancoDeDados.Conexao;
+import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -82,6 +83,11 @@ public class Login extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton1KeyPressed(evt);
+            }
+        });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 40));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, 180, 40));
@@ -120,6 +126,11 @@ public class Login extends javax.swing.JFrame {
                 jtxSenhaActionPerformed(evt);
             }
         });
+        jtxSenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtxSenhaKeyPressed(evt);
+            }
+        });
         getContentPane().add(jtxSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 314, 340, 20));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -149,6 +160,11 @@ public class Login extends javax.swing.JFrame {
         jtxUser.setFont(new java.awt.Font("Alice", 0, 12)); // NOI18N
         jtxUser.setForeground(new java.awt.Color(255, 255, 255));
         jtxUser.setBorder(null);
+        jtxUser.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtxUserKeyPressed(evt);
+            }
+        });
         jPanel4.add(jtxUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 244, 340, 20));
 
         jlAviso.setFont(new java.awt.Font("Alice", 0, 10)); // NOI18N
@@ -226,7 +242,7 @@ public class Login extends javax.swing.JFrame {
         String user = jtxUser.getText();
         String senha = jtxSenha.getText();
 
-        String sql = "SELECT  * FROM usuarios";
+        String sql = "SELECT * FROM usuarios";
 
         if (jtxUser.getText().equals("administrador")) {
             if (jtxSenha.getText().equals("280677")) {
@@ -281,6 +297,21 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
+    }//GEN-LAST:event_jButton1KeyPressed
+
+    private void jtxSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxSenhaKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            login();
+        }
+    }//GEN-LAST:event_jtxSenhaKeyPressed
+
+    private void jtxUserKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxUserKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            login();
+        }
+    }//GEN-LAST:event_jtxUserKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -315,6 +346,66 @@ public class Login extends javax.swing.JFrame {
                 new Login().setVisible(true);
             }
         });
+    }
+
+    public void login() {
+        jlAviso.setText(con.error);
+        String user = jtxUser.getText();
+        String senha = jtxSenha.getText();
+
+        String sql = "SELECT  * FROM usuarios";
+
+        if (jtxUser.getText().equals("administrador")) {
+            if (jtxSenha.getText().equals("280677")) {
+                String urlNovo = JOptionPane.showInputDialog(null, "Link atual: "
+                        + con.getUrl() + "\nInforme o link do banco de dados\nDeixe em branco para padrão");
+                if (urlNovo.equals("")) {
+                    urlNovo = con.getUrl();
+                }
+                String userNovo = JOptionPane.showInputDialog(null, "Usuário atual: " + con.getUser()
+                        + "\nInforme o usuário do banco de dados\nDeixe em branco para padrão");
+                if (userNovo.equals("")) {
+                    userNovo = con.getUser();
+                }
+                String senhaNova = JOptionPane.showInputDialog(null, "Senha atual: " + con.getSenha()
+                        + "\nInforme a senha para o banco de dados\nDeixe em branco para padrão");
+                if (senhaNova.equals("")) {
+                    senhaNova = con.getSenha();
+                }
+                con = new Conexao(urlNovo, userNovo, senhaNova);
+                jlAviso.setText(con.error);
+            } else {
+                jlAviso.setText("Senha Incorreta!");
+            }
+        } else {
+            try {
+                ResultSet retorno = con.sentenca.executeQuery(sql);
+                while (retorno.next()) {
+                    if (user.equals(retorno.getString("usuario"))) {
+                        if (senha.equals(retorno.getString("senha"))) {
+                            if (retorno.getInt("super") == 1) {
+                                String userName = "Admin";
+                                MenuUsuario log = new MenuUsuario(true);
+                                log.setVisible(true);
+                                log.alterarNomeUsuario("     " + userName);
+                                dispose();
+                            } else {
+                                MenuUsuario log = new MenuUsuario(false);
+                                log.setVisible(true);
+                                log.alterarNomeUsuario("     " + user);
+                                dispose();
+                            }
+                        } else {
+                            jlAviso.setText("Senha Incorreta!");
+                        }
+                    } else {
+                        jlAviso.setText("Usuario Inexistente!");
+                    }
+                }
+            } catch (SQLException ex) {
+                jlAviso.setText("Erro de conexão, contate seu administrador! \n" + ex.getMessage());
+            }
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
