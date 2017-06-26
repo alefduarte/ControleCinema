@@ -4,11 +4,20 @@
  * and open the template in the editor.
  */
 package menus;
+
+import BancoDeDados.Conexao;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gabriel
  */
 public class Login extends javax.swing.JFrame {
+
+    //Variáveis Globais
+    Conexao con = new Conexao();
 
     /**
      * Creates new form Login_2
@@ -142,10 +151,10 @@ public class Login extends javax.swing.JFrame {
         jtxUser.setBorder(null);
         jPanel4.add(jtxUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 244, 340, 20));
 
-        jlAviso.setFont(new java.awt.Font("Alice", 1, 14)); // NOI18N
+        jlAviso.setFont(new java.awt.Font("Alice", 0, 10)); // NOI18N
         jlAviso.setForeground(new java.awt.Color(255, 0, 0));
         jlAviso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jPanel4.add(jlAviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 340, 40));
+        jPanel4.add(jlAviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 370, 40));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 460, 600));
 
@@ -213,33 +222,63 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jlAviso.setText(con.error);
+        String user = jtxUser.getText();
+        String senha = jtxSenha.getText();
 
-            if(jtxUser.getText().equals("admin")){
-                    if(jtxSenha.getText().equals("admin") ){
-                    String userName ="Admin";
-                    MenuUsuario log = new MenuUsuario(true);
-                    log.setVisible(true);
-                    log.alterarNomeUsuario("     " +userName);
-                    dispose();
-                }
-                else{
-                        jlAviso.setText("Senha Incorreta!");
-                }
-            }
+        String sql = "SELECT  * FROM usuarios";
 
-            else if(jtxUser.getText().equals("user")){
-                    if(jtxSenha.getText().equals("user") ){
-                    String userName ="User";
-                    MenuUsuario log = new MenuUsuario(false);
-                    log.setVisible(true);
-                    log.alterarNomeUsuario("     " +userName);
-                    dispose();
+        if (jtxUser.getText().equals("administrador")) {
+            if (jtxSenha.getText().equals("280677")) {
+                String urlNovo = JOptionPane.showInputDialog(null, "Link atual: "
+                        + con.getUrl() + "\nInforme o link do banco de dados\nDeixe em branco para padrão");
+                if (urlNovo.equals("")) {
+                    urlNovo = con.getUrl();
                 }
-                else{
-                        jlAviso.setText("Senha Incorreta!");
+                String userNovo = JOptionPane.showInputDialog(null, "Usuário atual: " + con.getUser()
+                        + "\nInforme o usuário do banco de dados\nDeixe em branco para padrão");
+                if (userNovo.equals("")) {
+                    userNovo = con.getUser();
                 }
+                String senhaNova = JOptionPane.showInputDialog(null, "Senha atual: " + con.getSenha()
+                        + "\nInforme a senha para o banco de dados\nDeixe em branco para padrão");
+                if (senhaNova.equals("")) {
+                    senhaNova = con.getSenha();
+                }
+                con = new Conexao(urlNovo, userNovo, senhaNova);
+                jlAviso.setText(con.error);
+            } else {
+                jlAviso.setText("Senha Incorreta!");
             }
-            else{jlAviso.setText("Usuario Inexistente!");}
+        } else {
+            try {
+                ResultSet retorno = con.sentenca.executeQuery(sql);
+                while (retorno.next()) {
+                    if (user.equals(retorno.getString("usuario"))) {
+                        if (senha.equals(retorno.getString("senha"))) {
+                            if (retorno.getInt("super") == 1) {
+                                String userName = "Admin";
+                                MenuUsuario log = new MenuUsuario(true);
+                                log.setVisible(true);
+                                log.alterarNomeUsuario("     " + userName);
+                                dispose();
+                            } else {
+                                MenuUsuario log = new MenuUsuario(false);
+                                log.setVisible(true);
+                                log.alterarNomeUsuario("     " + user);
+                                dispose();
+                            }
+                        } else {
+                            jlAviso.setText("Senha Incorreta!");
+                        }
+                    } else {
+                        jlAviso.setText("Usuario Inexistente!");
+                    }
+                }
+            } catch (SQLException ex) {
+                jlAviso.setText("Erro de conexão, contate seu administrador! \n" + ex.getMessage());
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
