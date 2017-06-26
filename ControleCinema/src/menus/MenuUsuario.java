@@ -140,6 +140,18 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void initComponentsAlterado(boolean superdefinidor) {
         initComponents();
         jbSuperUser.setVisible(superdefinidor);
+        
+        jpPedido.setVisible(false);
+        jpCancelamento.setVisible(false);
+        jpFechamento.setVisible(false);
+        jpSuperUser.setVisible(false);
+        jLabel2.setVisible(true);
+        jLabel3.setVisible(true);
+        jpMostrador1.setVisible(true);
+        jpMostrador2.setVisible(true);
+        jpPoltrona.setVisible(false);
+        jpCadastrarSessao.setVisible(false);
+        jpRemoverSessao.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -1864,7 +1876,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         //<editor-fold defaultstate="collapsed" desc=" Código para alternar os valores dentro do jComboBox da tela de pedidos, pode ser apagado/editado ">
         ArrayList<String> filmes = new ArrayList<>();
-        sql = "SELECT  * FROM filme";
+        sql = "SELECT  * FROM filmes";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
