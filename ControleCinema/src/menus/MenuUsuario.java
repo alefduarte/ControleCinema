@@ -687,6 +687,11 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
 
         jLabel16.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -694,6 +699,11 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Inteira", "Meia" }));
         jComboBox4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1859,7 +1869,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jbPedidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPedidoMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jbPedidoMouseClicked
-
+    public static String filme = null;
     private void jbPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPedidoActionPerformed
         jpPedido.setVisible(true);
         jpCancelamento.setVisible(false);
@@ -1888,7 +1898,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         }
 
         //codigo do filme
-        String filme = null;
+        filme = null;
         sql = "SELECT * FROM filmes";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
@@ -1949,11 +1959,110 @@ public class MenuUsuario extends javax.swing.JFrame {
             jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
 
+        // pegar preço
+        float preco = 0;
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codFilme").equals(filme)
+                        && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())
+                        && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
+                    preco = retorno.getFloat("preco");
+                }
+            }
+            if (jComboBox4.getSelectedItem().toString().equals("Meia")) {
+                preco /= 2;
+            }
+            jLabel20.setText("R$ " + String.valueOf(preco));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
+        }
     }//GEN-LAST:event_jbPedidoActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        String nomeFilme = jComboBox1.getSelectedItem().toString();
+        //codigo do filme
+        filme = null;
+        sql = "SELECT * FROM filmes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("nome").equals(jComboBox1.getSelectedItem().toString())) {
+                    filme = retorno.getString("codigo");
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Não há sessões com o filme selecionado \n" + ex.getMessage());
+        }
 
+        //lista sessoes
+        ArrayList<String> salas = new ArrayList<>();
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codFilme").equals(filme)) {
+                    salas.add(retorno.getString("codSala"));
+                }
+            }
+            jComboBox2.setModel(new DefaultComboBoxModel(salas.toArray()));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+            jComboBox2.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
+        }
+        // pega capacidade
+
+        String capacidade = null;
+        sql = "SELECT * FROM salas";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())) {
+                    capacidade = retorno.getString("capacidade");
+                }
+            }
+            jLabel22.setText(capacidade);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+            jComboBox2.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
+        }
+
+        //pegar horarios
+        ArrayList<String> horario = new ArrayList<>();
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codFilme").equals(filme) && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())) {
+                    horario.add(retorno.getTime("horario").toString());
+                }
+            }
+            jComboBox3.setModel(new DefaultComboBoxModel(horario.toArray()));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
+        }
+        // pegar preço
+        float preco = 0;
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codFilme").equals(filme)
+                        && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())
+                        && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
+                    preco = retorno.getFloat("preco");
+                }
+            }
+            if (jComboBox4.getSelectedItem().toString().equals("Meia")) {
+                preco /= 2;
+            }
+            jLabel20.setText("R$ " + String.valueOf(preco));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jbPoltronaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPoltronaMouseClicked
@@ -2334,6 +2443,54 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // pegar preço
+        float preco = 0;
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codFilme").equals(filme)
+                        && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())
+                        && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
+                    preco = retorno.getFloat("preco");
+                }
+            }
+
+            if (jComboBox4.getSelectedItem().toString().equals("Meia")) {
+                preco /= 2;
+            }
+            jLabel20.setText("R$ " + String.valueOf(preco));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
+        }
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+       // pegar preço
+        float preco = 0;
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codFilme").equals(filme)
+                        && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())
+                        && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
+                    preco = retorno.getFloat("preco");
+                }
+            }
+
+            if (jComboBox4.getSelectedItem().toString().equals("Meia")) {
+                preco /= 2;
+            }
+            jLabel20.setText("R$ " + String.valueOf(preco));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
+        }
+    }//GEN-LAST:event_jComboBox4ActionPerformed
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
