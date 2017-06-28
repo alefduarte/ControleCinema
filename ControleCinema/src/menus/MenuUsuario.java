@@ -2698,7 +2698,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
             JOptionPane.showMessageDialog(null, poster.getSelectedFile().getName());
             nome = poster.getSelectedFile().getName();
-            dest = new File("src" + File.separator + "Imagens" + File.separator + poster.getSelectedFile().getName());
+            dest = new File("src" + File.separator + "Filmes" + File.separator + poster.getSelectedFile().getName());
             caminho = dest.getAbsolutePath();
 
             /////// 
