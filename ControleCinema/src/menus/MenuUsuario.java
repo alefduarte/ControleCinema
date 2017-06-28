@@ -6,6 +6,7 @@
 package menus;
 
 import BancoDeDados.Conexao;
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
@@ -27,6 +28,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
 
 /**
  *
@@ -102,17 +106,21 @@ public class MenuUsuario extends javax.swing.JFrame {
     public static File resize(File source) throws IOException {
         String inputImagePath = source.getAbsolutePath();
         String outputImagePath = source.getAbsolutePath();
-        outputImagePath += "novo." + outputImagePath.substring(outputImagePath
-                .lastIndexOf(".") + 1); //pega o tipo da imagem
-        int scaledWidth = 170;
+        outputImagePath += "novo." + outputImagePath.substring(outputImagePath.lastIndexOf(".") + 1); //pega o tipo da imagem
+        int scaledWidth;
         int scaledHeight = 300;
         // reads input image
         File inputFile = new File(inputImagePath);
         BufferedImage inputImage = ImageIO.read(inputFile);
 
+        //Define tamanho de largura 
+        int o = inputImage.getHeight();
+        int u = inputImage.getWidth();
+        int porc=o/u;
+        scaledWidth = scaledHeight*porc;
+        
         // creates output image
-        BufferedImage outputImage = new BufferedImage(scaledWidth,
-                scaledHeight, inputImage.getType());
+        BufferedImage outputImage = new BufferedImage(scaledWidth, scaledHeight, inputImage.getType());
 
         // scales the input image to the output image
         Graphics2D g2d = outputImage.createGraphics();
@@ -149,8 +157,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
-        jLabel3.setVisible(false);
-        jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
@@ -171,8 +177,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(true);
-        jLabel3.setVisible(true);
-        jpMostrador1.setVisible(true);
         jpMostrador2.setVisible(true);
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
@@ -312,6 +316,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbSair6 = new javax.swing.JButton();
         jbSair7 = new javax.swing.JButton();
         jSeparator19 = new javax.swing.JSeparator();
+        jbSair10 = new javax.swing.JButton();
+        jbSair5 = new javax.swing.JButton();
         jpCadastrarSessao = new javax.swing.JPanel();
         jbSair1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -545,14 +551,13 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Bebas", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(36, 47, 65));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("filmes em cartaz");
-        jLayeredPane1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 60));
+        jLabel2.setText("Filmes em Cartaz");
+        jLayeredPane1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 120));
 
         jLabel3.setFont(new java.awt.Font("Bebas", 1, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(36, 47, 65));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("filmes rodando");
-        jLayeredPane1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 550, 60));
+        jLayeredPane1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 536, 550, 0));
 
         jpMostrador1.setBackground(new java.awt.Color(36, 47, 65));
         jpMostrador1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
@@ -561,7 +566,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jpMostrador1.setViewportView(jPanel4);
 
-        jLayeredPane1.add(jpMostrador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 490, 200));
+        jLayeredPane1.add(jpMostrador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 492, 490, 0));
 
         jpMostrador2.setBackground(new java.awt.Color(36, 47, 65));
         jpMostrador2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
@@ -569,7 +574,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(36, 47, 65));
         jpMostrador2.setViewportView(jPanel3);
 
-        jLayeredPane1.add(jpMostrador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 490, 190));
+        jLayeredPane1.add(jpMostrador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 490, 370));
 
         jpCancelamento.setBackground(new java.awt.Color(204, 204, 204));
         jpCancelamento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1480,52 +1485,92 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jSeparator19.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+        jbSair10.setBackground(new java.awt.Color(229, 91, 0));
+        jbSair10.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbSair10.setForeground(new java.awt.Color(255, 255, 255));
+        jbSair10.setText("Remover Filme");
+        jbSair10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbSair10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbSair10MouseClicked(evt);
+            }
+        });
+        jbSair10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSair10ActionPerformed(evt);
+            }
+        });
+
+        jbSair5.setBackground(new java.awt.Color(229, 91, 0));
+        jbSair5.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbSair5.setForeground(new java.awt.Color(255, 255, 255));
+        jbSair5.setText("Cadastrar Filme");
+        jbSair5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbSair5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbSair5MouseClicked(evt);
+            }
+        });
+        jbSair5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSair5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpSuperUserLayout = new javax.swing.GroupLayout(jpSuperUser);
         jpSuperUser.setLayout(jpSuperUserLayout);
         jpSuperUserLayout.setHorizontalGroup(
             jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpSuperUserLayout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
-                .addGroup(jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jbSair2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbSair3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbSair4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addContainerGap(69, Short.MAX_VALUE)
                 .addGroup(jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jbSair7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbRemoverSessao, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jbSair6, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jbSair2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbSair3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbSair4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbSair5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jbSair10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbSair7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbRemoverSessao, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                    .addComponent(jbSair6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE))
                 .addGap(59, 59, 59))
         );
         jpSuperUserLayout.setVerticalGroup(
             jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpSuperUserLayout.createSequentialGroup()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
                 .addGroup(jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpSuperUserLayout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(jbSair2)
-                        .addGap(40, 40, 40)
-                        .addComponent(jbSair3)
-                        .addGap(44, 44, 44)
-                        .addComponent(jbSair4)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpSuperUserLayout.createSequentialGroup()
+                                .addGap(110, 110, 110)
+                                .addComponent(jbSair2)
+                                .addGap(40, 40, 40)
+                                .addComponent(jbSair3)
+                                .addGap(44, 44, 44)
+                                .addComponent(jbSair4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jpSuperUserLayout.createSequentialGroup()
+                                .addGap(109, 109, 109)
+                                .addComponent(jbRemoverSessao)
+                                .addGap(41, 41, 41)
+                                .addComponent(jbSair6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                                .addComponent(jbSair7)
+                                .addGap(46, 46, 46)))
+                        .addGroup(jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbSair10)
+                            .addComponent(jbSair5))
+                        .addGap(84, 84, 84))
                     .addGroup(jpSuperUserLayout.createSequentialGroup()
-                        .addComponent(jSeparator19)
-                        .addGap(120, 120, 120))
-                    .addGroup(jpSuperUserLayout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(jbRemoverSessao)
-                        .addGap(41, 41, 41)
-                        .addComponent(jbSair6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                        .addComponent(jbSair7)
-                        .addGap(160, 160, 160))))
+                        .addGap(24, 24, 24)
+                        .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         jLayeredPane1.add(jpSuperUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
@@ -1855,8 +1900,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
-        jLabel3.setVisible(false);
-        jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
@@ -1873,8 +1916,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(true);
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
-        jLabel3.setVisible(false);
-        jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
@@ -1892,8 +1933,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(true);
         jLabel2.setVisible(false);
-        jLabel3.setVisible(false);
-        jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
@@ -1910,8 +1949,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(true);
-        jLabel3.setVisible(true);
-        jpMostrador1.setVisible(true);
         jpMostrador2.setVisible(true);
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
@@ -1929,8 +1966,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
-        jLabel3.setVisible(false);
-        jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
@@ -2130,8 +2165,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
-        jLabel3.setVisible(false);
-        jpMostrador1.setVisible(false);
         jpMostrador2.setVisible(false);
         jpPoltrona.setVisible(true);
         jpCadastrarSessao.setVisible(false);
@@ -2535,9 +2568,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
-        jLabel3.setVisible(false);
-        jpMostrador1.setVisible(false);
-        jpMostrador2.setVisible(false);
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(true);
         jpRemoverSessao.setVisible(false);
@@ -2573,9 +2603,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
         jLabel2.setVisible(false);
-        jLabel3.setVisible(false);
-        jpMostrador1.setVisible(false);
-        jpMostrador2.setVisible(false);
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(true);
@@ -2652,10 +2679,16 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         //BufferedReader img = pegarImagemPacote(NomeImagem,CaminhoPacote);
         JLabel filme = new JLabel("Label n" + i);
-        filme.setText(jtxNomeFilme.getText() + "\nHorario de Inicio: " + jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText());
+        filme.setBackground(jbSair1.getBackground());
+        filme.setOpaque(true);
+        String text = jtxNomeFilme.getText() + "\nHorario de Inicio: " + jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText();
+        Border bord = new TitledBorder(jbSair1.getBorder(), text, 0 , ICONIFIED, jbSair1.getFont(), Color.WHITE);
+        filme.setBorder(bord);
+        filme.setText("");
         Icon icon = new ImageIcon(CaminhoPacote);
         filme.setIcon(icon);
         jPanel3.add(filme);
+        jPanel3.setName(sql);
 
         String nome = jtxNomeFilme.getText();
         int random = (int) (Math.random() * 9999 + 1111);
@@ -2808,6 +2841,22 @@ public class MenuUsuario extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jbCancelarIngresso1ActionPerformed
+
+    private void jbSair10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbSair10MouseClicked
+
+    private void jbSair10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbSair10ActionPerformed
+
+    private void jbSair5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbSair5MouseClicked
+
+    private void jbSair5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbSair5ActionPerformed
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
@@ -2989,9 +3038,11 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JButton jbRemoverSessao;
     private javax.swing.JButton jbSair;
     private javax.swing.JButton jbSair1;
+    private javax.swing.JButton jbSair10;
     private javax.swing.JButton jbSair2;
     private javax.swing.JButton jbSair3;
     private javax.swing.JButton jbSair4;
+    private javax.swing.JButton jbSair5;
     private javax.swing.JButton jbSair6;
     private javax.swing.JButton jbSair7;
     private javax.swing.JButton jbSair8;
