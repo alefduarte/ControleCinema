@@ -38,7 +38,7 @@ public class Conexao {
             } catch (SQLException ez) {
                 try {
                 Class.forName("com.mysql.jdbc.Driver");
-                conexao = DriverManager.getConnection(url, "marina", senha);
+                conexao = DriverManager.getConnection(url, "marina", "unknown");
                 sentenca = conexao.createStatement();
             } catch (ClassNotFoundException ea) {
                 System.out.println("Driver não encontrado! " + ea.getMessage());
