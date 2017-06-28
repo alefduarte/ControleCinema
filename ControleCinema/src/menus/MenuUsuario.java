@@ -10,7 +10,6 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.util.ArrayList;
-import javax.swing.JButton;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
 import java.io.IOException;
@@ -60,6 +59,44 @@ public class MenuUsuario extends javax.swing.JFrame {
         /*Writer output = null;
         output = new BufferedWriter(new FileWriter(dest));
         return (BufferedWriter) output;*/
+    }
+
+    public void resetaPoltrona() {
+        jButtonA1.setEnabled(true);
+        jButtonB1.setEnabled(true);
+        jButtonC1.setEnabled(true);
+        jButtonD1.setEnabled(true);
+        jButtonE1.setEnabled(true);
+        jButtonF1.setEnabled(true);
+        jButtonG1.setEnabled(true);
+        jButtonA2.setEnabled(true);
+        jButtonB2.setEnabled(true);
+        jButtonC2.setEnabled(true);
+        jButtonD2.setEnabled(true);
+        jButtonE2.setEnabled(true);
+        jButtonF2.setEnabled(true);
+        jButtonG2.setEnabled(true);
+        jButtonA3.setEnabled(true);
+        jButtonB3.setEnabled(true);
+        jButtonC3.setEnabled(true);
+        jButtonD3.setEnabled(true);
+        jButtonE3.setEnabled(true);
+        jButtonF3.setEnabled(true);
+        jButtonG3.setEnabled(true);
+        jButtonA4.setEnabled(true);
+        jButtonB4.setEnabled(true);
+        jButtonC4.setEnabled(true);
+        jButtonD4.setEnabled(true);
+        jButtonE4.setEnabled(true);
+        jButtonF4.setEnabled(true);
+        jButtonG4.setEnabled(true);
+        jButtonA5.setEnabled(true);
+        jButtonB5.setEnabled(true);
+        jButtonC5.setEnabled(true);
+        jButtonD5.setEnabled(true);
+        jButtonE5.setEnabled(true);
+        jButtonF5.setEnabled(true);
+        jButtonG5.setEnabled(true);
     }
 
     public static File resize(File source) throws IOException {
@@ -208,41 +245,41 @@ public class MenuUsuario extends javax.swing.JFrame {
         jlLinha3 = new javax.swing.JLabel();
         jlLinha4 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
-        jButton37 = new javax.swing.JButton();
-        jButton38 = new javax.swing.JButton();
-        jButton39 = new javax.swing.JButton();
-        jButton40 = new javax.swing.JButton();
-        jButton41 = new javax.swing.JButton();
+        jButtonA1 = new javax.swing.JButton();
+        jButtonB1 = new javax.swing.JButton();
+        jButtonC1 = new javax.swing.JButton();
+        jButtonD1 = new javax.swing.JButton();
+        jButtonE1 = new javax.swing.JButton();
+        jButtonF1 = new javax.swing.JButton();
+        jButtonG1 = new javax.swing.JButton();
+        jButtonA2 = new javax.swing.JButton();
+        jButtonA3 = new javax.swing.JButton();
+        jButtonA4 = new javax.swing.JButton();
+        jButtonA5 = new javax.swing.JButton();
+        jButtonB2 = new javax.swing.JButton();
+        jButtonB3 = new javax.swing.JButton();
+        jButtonB4 = new javax.swing.JButton();
+        jButtonB5 = new javax.swing.JButton();
+        jButtonC2 = new javax.swing.JButton();
+        jButtonC3 = new javax.swing.JButton();
+        jButtonC4 = new javax.swing.JButton();
+        jButtonC5 = new javax.swing.JButton();
+        jButtonD2 = new javax.swing.JButton();
+        jButtonD3 = new javax.swing.JButton();
+        jButtonD4 = new javax.swing.JButton();
+        jButtonD5 = new javax.swing.JButton();
+        jButtonE2 = new javax.swing.JButton();
+        jButtonE3 = new javax.swing.JButton();
+        jButtonE4 = new javax.swing.JButton();
+        jButtonE5 = new javax.swing.JButton();
+        jButtonF2 = new javax.swing.JButton();
+        jButtonF3 = new javax.swing.JButton();
+        jButtonF4 = new javax.swing.JButton();
+        jButtonF5 = new javax.swing.JButton();
+        jButtonG2 = new javax.swing.JButton();
+        jButtonG3 = new javax.swing.JButton();
+        jButtonG4 = new javax.swing.JButton();
+        jButtonG5 = new javax.swing.JButton();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
@@ -625,7 +662,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCancelamentoLayout.setHorizontalGroup(
             jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpCancelamentoLayout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(51, Short.MAX_VALUE)
                 .addGroup(jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -644,7 +681,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 .addGap(91, 91, 91))
             .addGroup(jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpCancelamentoLayout.createSequentialGroup()
-                    .addContainerGap(163, Short.MAX_VALUE)
+                    .addContainerGap(173, Short.MAX_VALUE)
                     .addComponent(jbCancelarIngresso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(139, 139, 139)))
         );
@@ -900,286 +937,286 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel12.setText("Poltronas Sala");
         jpPoltrona.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 540, 70));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton2.setToolTipText("");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonA1.setToolTipText("");
+        jButtonA1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonA1ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 55, 60));
+        jpPoltrona.add(jButtonA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 55, 60));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonB1ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 55, 60));
+        jpPoltrona.add(jButtonB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 55, 60));
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButtonC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonC1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButtonC1ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 55, 60));
+        jpPoltrona.add(jButtonC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 55, 60));
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButtonD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonD1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButtonD1ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 55, 60));
+        jpPoltrona.add(jButtonD1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 55, 60));
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jButtonE1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonE1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jButtonE1ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 55, 60));
+        jpPoltrona.add(jButtonE1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 55, 60));
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jButtonF1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonF1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                jButtonF1ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 55, 60));
+        jpPoltrona.add(jButtonF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 55, 60));
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        jButtonG1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonG1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                jButtonG1ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 55, 60));
+        jpPoltrona.add(jButtonG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 55, 60));
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        jButtonA2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonA2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                jButtonA2ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 55, 60));
+        jpPoltrona.add(jButtonA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 55, 60));
 
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        jButtonA3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonA3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                jButtonA3ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 55, 60));
+        jpPoltrona.add(jButtonA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 55, 60));
 
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        jButtonA4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonA4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                jButtonA4ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 55, 60));
+        jpPoltrona.add(jButtonA4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 55, 60));
 
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        jButtonA5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonA5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                jButtonA5ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 55, 60));
+        jpPoltrona.add(jButtonA5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 55, 60));
 
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        jButtonB2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonB2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                jButtonB2ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 55, 60));
+        jpPoltrona.add(jButtonB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 55, 60));
 
-        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
+        jButtonB3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonB3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
+                jButtonB3ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 55, 60));
+        jpPoltrona.add(jButtonB3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 55, 60));
 
-        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        jButtonB4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonB4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                jButtonB4ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 55, 60));
+        jpPoltrona.add(jButtonB4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 55, 60));
 
-        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
+        jButtonB5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonB5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
+                jButtonB5ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 55, 60));
+        jpPoltrona.add(jButtonB5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 55, 60));
 
-        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
+        jButtonC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonC2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
+                jButtonC2ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 55, 60));
+        jpPoltrona.add(jButtonC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 55, 60));
 
-        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton23.addActionListener(new java.awt.event.ActionListener() {
+        jButtonC3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonC3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton23ActionPerformed(evt);
+                jButtonC3ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 55, 60));
+        jpPoltrona.add(jButtonC3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 55, 60));
 
-        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton24.addActionListener(new java.awt.event.ActionListener() {
+        jButtonC4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonC4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton24ActionPerformed(evt);
+                jButtonC4ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 55, 60));
+        jpPoltrona.add(jButtonC4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 55, 60));
 
-        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton25.addActionListener(new java.awt.event.ActionListener() {
+        jButtonC5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonC5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25ActionPerformed(evt);
+                jButtonC5ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 55, 60));
+        jpPoltrona.add(jButtonC5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 55, 60));
 
-        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton26.addActionListener(new java.awt.event.ActionListener() {
+        jButtonD2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton26ActionPerformed(evt);
+                jButtonD2ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 55, 60));
+        jpPoltrona.add(jButtonD2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 55, 60));
 
-        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton27.addActionListener(new java.awt.event.ActionListener() {
+        jButtonD3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonD3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton27ActionPerformed(evt);
+                jButtonD3ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 55, 60));
+        jpPoltrona.add(jButtonD3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 55, 60));
 
-        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton28.addActionListener(new java.awt.event.ActionListener() {
+        jButtonD4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonD4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton28ActionPerformed(evt);
+                jButtonD4ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 55, 60));
+        jpPoltrona.add(jButtonD4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 55, 60));
 
-        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton29.addActionListener(new java.awt.event.ActionListener() {
+        jButtonD5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonD5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton29ActionPerformed(evt);
+                jButtonD5ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 55, 60));
+        jpPoltrona.add(jButtonD5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 55, 60));
 
-        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton30.addActionListener(new java.awt.event.ActionListener() {
+        jButtonE2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonE2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton30ActionPerformed(evt);
+                jButtonE2ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 55, 60));
+        jpPoltrona.add(jButtonE2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 55, 60));
 
-        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton31.addActionListener(new java.awt.event.ActionListener() {
+        jButtonE3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonE3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton31ActionPerformed(evt);
+                jButtonE3ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 55, 60));
+        jpPoltrona.add(jButtonE3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 55, 60));
 
-        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton32.addActionListener(new java.awt.event.ActionListener() {
+        jButtonE4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonE4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton32ActionPerformed(evt);
+                jButtonE4ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 55, 60));
+        jpPoltrona.add(jButtonE4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 55, 60));
 
-        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton33.addActionListener(new java.awt.event.ActionListener() {
+        jButtonE5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonE5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton33ActionPerformed(evt);
+                jButtonE5ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 55, 60));
+        jpPoltrona.add(jButtonE5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 55, 60));
 
-        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton34.addActionListener(new java.awt.event.ActionListener() {
+        jButtonF2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonF2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton34ActionPerformed(evt);
+                jButtonF2ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 55, 60));
+        jpPoltrona.add(jButtonF2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 55, 60));
 
-        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton35.addActionListener(new java.awt.event.ActionListener() {
+        jButtonF3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonF3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton35ActionPerformed(evt);
+                jButtonF3ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 55, 60));
+        jpPoltrona.add(jButtonF3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 55, 60));
 
-        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton36.addActionListener(new java.awt.event.ActionListener() {
+        jButtonF4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonF4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton36ActionPerformed(evt);
+                jButtonF4ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 55, 60));
+        jpPoltrona.add(jButtonF4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 55, 60));
 
-        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton37.addActionListener(new java.awt.event.ActionListener() {
+        jButtonF5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonF5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton37ActionPerformed(evt);
+                jButtonF5ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 55, 60));
+        jpPoltrona.add(jButtonF5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 55, 60));
 
-        jButton38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton38.addActionListener(new java.awt.event.ActionListener() {
+        jButtonG2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonG2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton38ActionPerformed(evt);
+                jButtonG2ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 55, 60));
+        jpPoltrona.add(jButtonG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 55, 60));
 
-        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton39.addActionListener(new java.awt.event.ActionListener() {
+        jButtonG3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonG3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton39ActionPerformed(evt);
+                jButtonG3ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 55, 60));
+        jpPoltrona.add(jButtonG3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 55, 60));
 
-        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton40.addActionListener(new java.awt.event.ActionListener() {
+        jButtonG4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonG4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton40ActionPerformed(evt);
+                jButtonG4ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 55, 60));
+        jpPoltrona.add(jButtonG4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 55, 60));
 
-        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
-        jButton41.addActionListener(new java.awt.event.ActionListener() {
+        jButtonG5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/poltrona.png"))); // NOI18N
+        jButtonG5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton41ActionPerformed(evt);
+                jButtonG5ActionPerformed(evt);
             }
         });
-        jpPoltrona.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 55, 60));
+        jpPoltrona.add(jButtonG5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 55, 60));
         jpPoltrona.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 512, 10));
         jpPoltrona.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 512, -1));
         jpPoltrona.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 510, 10));
@@ -2105,7 +2142,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(true);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
-
+        resetaPoltrona();
         String codPoltrona = jLabel21.getText().replaceAll("Poltrona ", "");
 
         // procura pontronas exisentes
@@ -2116,17 +2153,115 @@ public class MenuUsuario extends javax.swing.JFrame {
                 if (retorno.getString("codSessao").equals(codSessao)) {
                     //desativa botao; retorno.getString("assento")
                     if (retorno.getString("assento").equals("A1")) {
-                        jButton2.setEnabled(false);
+                        jButtonA1.setEnabled(false);
                     }
-                    //adicionar mais
+                    if (retorno.getString("assento").equals("B1")) {
+                        jButtonB1.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("C1")) {
+                        jButtonC1.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("D1")) {
+                        jButtonD1.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("E1")) {
+                        jButtonE1.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("F1")) {
+                        jButtonF1.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("G1")) {
+                        jButtonG1.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("A2")) {
+                        jButtonA2.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("B2")) {
+                        jButtonB2.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("C2")) {
+                        jButtonC2.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("D2")) {
+                        jButtonD2.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("E2")) {
+                        jButtonE2.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("F2")) {
+                        jButtonF2.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("G2")) {
+                        jButtonG2.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("A3")) {
+                        jButtonA3.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("B3")) {
+                        jButtonB3.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("C3")) {
+                        jButtonC3.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("D3")) {
+                        jButtonD3.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("E3")) {
+                        jButtonE3.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("F3")) {
+                        jButtonF3.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("G3")) {
+                        jButtonG3.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("A4")) {
+                        jButtonA4.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("B4")) {
+                        jButtonB4.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("C4")) {
+                        jButtonC4.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("D4")) {
+                        jButtonD4.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("E4")) {
+                        jButtonE4.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("F4")) {
+                        jButtonF4.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("G4")) {
+                        jButtonG4.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("A5")) {
+                        jButtonA5.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("B5")) {
+                        jButtonB5.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("C5")) {
+                        jButtonC5.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("D5")) {
+                        jButtonD5.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("E5")) {
+                        jButtonE5.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("F5")) {
+                        jButtonF5.setEnabled(false);
+                    }
+                    if (retorno.getString("assento").equals("G5")) {
+                        jButtonG5.setEnabled(false);
+                    }
                 }
             }
-
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessoes\n" + ex.getMessage());
         }
-
-
     }//GEN-LAST:event_jbPoltronaActionPerformed
 
     private void jbCompraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCompraMouseClicked
@@ -2180,180 +2315,180 @@ public class MenuUsuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jbCompraActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA1ActionPerformed
         recebePoltrona("A1");
         voltarPedido();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonA1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonB1ActionPerformed
         recebePoltrona("B1");
         voltarPedido();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButtonB1ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void jButtonA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA2ActionPerformed
         recebePoltrona("A2");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_jButtonA2ActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void jButtonA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA3ActionPerformed
         recebePoltrona("A3");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_jButtonA3ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void jButtonA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA4ActionPerformed
         recebePoltrona("A4");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_jButtonA4ActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+    private void jButtonA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA5ActionPerformed
         recebePoltrona("A5");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
+    }//GEN-LAST:event_jButtonA5ActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+    private void jButtonB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonB2ActionPerformed
         recebePoltrona("B2");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_jButtonB2ActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+    private void jButtonB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonB3ActionPerformed
         recebePoltrona("B3");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
+    }//GEN-LAST:event_jButtonB3ActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+    private void jButtonB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonB4ActionPerformed
         recebePoltrona("B4");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
+    }//GEN-LAST:event_jButtonB4ActionPerformed
 
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+    private void jButtonB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonB5ActionPerformed
         recebePoltrona("B5");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton21ActionPerformed
+    }//GEN-LAST:event_jButtonB5ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButtonC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonC1ActionPerformed
         recebePoltrona("C1");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jButtonC1ActionPerformed
 
-    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+    private void jButtonC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonC2ActionPerformed
         recebePoltrona("C2");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton22ActionPerformed
+    }//GEN-LAST:event_jButtonC2ActionPerformed
 
-    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+    private void jButtonC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonC3ActionPerformed
         recebePoltrona("C3");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton23ActionPerformed
+    }//GEN-LAST:event_jButtonC3ActionPerformed
 
-    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+    private void jButtonC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonC4ActionPerformed
         recebePoltrona("C4");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton24ActionPerformed
+    }//GEN-LAST:event_jButtonC4ActionPerformed
 
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+    private void jButtonC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonC5ActionPerformed
         recebePoltrona("C5");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton25ActionPerformed
+    }//GEN-LAST:event_jButtonC5ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButtonD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonD1ActionPerformed
         recebePoltrona("D1");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_jButtonD1ActionPerformed
 
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+    private void jButtonD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonD2ActionPerformed
         recebePoltrona("D2");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton26ActionPerformed
+    }//GEN-LAST:event_jButtonD2ActionPerformed
 
-    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+    private void jButtonD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonD3ActionPerformed
         recebePoltrona("D3");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton27ActionPerformed
+    }//GEN-LAST:event_jButtonD3ActionPerformed
 
-    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+    private void jButtonD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonD4ActionPerformed
         recebePoltrona("D4");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton28ActionPerformed
+    }//GEN-LAST:event_jButtonD4ActionPerformed
 
-    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+    private void jButtonD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonD5ActionPerformed
         recebePoltrona("D5");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton29ActionPerformed
+    }//GEN-LAST:event_jButtonD5ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButtonE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonE1ActionPerformed
         recebePoltrona("E1");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_jButtonE1ActionPerformed
 
-    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+    private void jButtonE2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonE2ActionPerformed
         recebePoltrona("E2");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton30ActionPerformed
+    }//GEN-LAST:event_jButtonE2ActionPerformed
 
-    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+    private void jButtonE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonE3ActionPerformed
         recebePoltrona("E3");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton31ActionPerformed
+    }//GEN-LAST:event_jButtonE3ActionPerformed
 
-    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+    private void jButtonE4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonE4ActionPerformed
         recebePoltrona("E4");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton32ActionPerformed
+    }//GEN-LAST:event_jButtonE4ActionPerformed
 
-    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+    private void jButtonE5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonE5ActionPerformed
         recebePoltrona("E5");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton33ActionPerformed
+    }//GEN-LAST:event_jButtonE5ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jButtonF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonF1ActionPerformed
         recebePoltrona("F1");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_jButtonF1ActionPerformed
 
-    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+    private void jButtonF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonF2ActionPerformed
         recebePoltrona("F2");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton34ActionPerformed
+    }//GEN-LAST:event_jButtonF2ActionPerformed
 
-    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
+    private void jButtonF3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonF3ActionPerformed
         recebePoltrona("F3");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton35ActionPerformed
+    }//GEN-LAST:event_jButtonF3ActionPerformed
 
-    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+    private void jButtonF4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonF4ActionPerformed
         recebePoltrona("F4");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton36ActionPerformed
+    }//GEN-LAST:event_jButtonF4ActionPerformed
 
-    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+    private void jButtonF5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonF5ActionPerformed
         recebePoltrona("F5");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton37ActionPerformed
+    }//GEN-LAST:event_jButtonF5ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jButtonG1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonG1ActionPerformed
         recebePoltrona("G1");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_jButtonG1ActionPerformed
 
-    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+    private void jButtonG2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonG2ActionPerformed
         recebePoltrona("G2");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton38ActionPerformed
+    }//GEN-LAST:event_jButtonG2ActionPerformed
 
-    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
+    private void jButtonG3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonG3ActionPerformed
         recebePoltrona("G3");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton39ActionPerformed
+    }//GEN-LAST:event_jButtonG3ActionPerformed
 
-    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+    private void jButtonG4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonG4ActionPerformed
         recebePoltrona("G4");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton40ActionPerformed
+    }//GEN-LAST:event_jButtonG4ActionPerformed
 
-    private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
+    private void jButtonG5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonG5ActionPerformed
         recebePoltrona("G5");
         voltarPedido();// TODO add your handling code here:
-    }//GEN-LAST:event_jButton41ActionPerformed
+    }//GEN-LAST:event_jButtonG5ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
@@ -2714,44 +2849,44 @@ public class MenuUsuario extends javax.swing.JFrame {
             new MenuUsuario(false).setVisible(true);
         });
     }
-
+    //<editor-fold defaultstate="collapsed" desc=" Variables declaration ">
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton37;
-    private javax.swing.JButton jButton38;
-    private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton40;
-    private javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButtonA1;
+    private javax.swing.JButton jButtonA2;
+    private javax.swing.JButton jButtonA3;
+    private javax.swing.JButton jButtonA4;
+    private javax.swing.JButton jButtonA5;
+    private javax.swing.JButton jButtonB1;
+    private javax.swing.JButton jButtonB2;
+    private javax.swing.JButton jButtonB3;
+    private javax.swing.JButton jButtonB4;
+    private javax.swing.JButton jButtonB5;
+    private javax.swing.JButton jButtonC1;
+    private javax.swing.JButton jButtonC2;
+    private javax.swing.JButton jButtonC3;
+    private javax.swing.JButton jButtonC4;
+    private javax.swing.JButton jButtonC5;
+    private javax.swing.JButton jButtonD1;
+    private javax.swing.JButton jButtonD2;
+    private javax.swing.JButton jButtonD3;
+    private javax.swing.JButton jButtonD4;
+    private javax.swing.JButton jButtonD5;
+    private javax.swing.JButton jButtonE1;
+    private javax.swing.JButton jButtonE2;
+    private javax.swing.JButton jButtonE3;
+    private javax.swing.JButton jButtonE4;
+    private javax.swing.JButton jButtonE5;
+    private javax.swing.JButton jButtonF1;
+    private javax.swing.JButton jButtonF2;
+    private javax.swing.JButton jButtonF3;
+    private javax.swing.JButton jButtonF4;
+    private javax.swing.JButton jButtonF5;
+    private javax.swing.JButton jButtonG1;
+    private javax.swing.JButton jButtonG2;
+    private javax.swing.JButton jButtonG3;
+    private javax.swing.JButton jButtonG4;
+    private javax.swing.JButton jButtonG5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -2889,4 +3024,5 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField jtxMinutosInicio;
     private javax.swing.JTextField jtxNomeFilme;
     // End of variables declaration//GEN-END:variables
+    //</editor-fold>
 }
