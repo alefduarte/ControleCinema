@@ -36,6 +36,14 @@ public class Conexao {
             } catch (ClassNotFoundException ez) {
                 System.out.println("Driver não encontrado! " + ez.getMessage());
             } catch (SQLException ez) {
+                try {
+                Class.forName("com.mysql.jdbc.Driver");
+                conexao = DriverManager.getConnection(url, "marina", senha);
+                sentenca = conexao.createStatement();
+            } catch (ClassNotFoundException ea) {
+                System.out.println("Driver não encontrado! " + ea.getMessage());
+            } catch (SQLException ea) {
+            }
             }
         }
     }
