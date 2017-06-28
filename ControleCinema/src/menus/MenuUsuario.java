@@ -591,6 +591,11 @@ public class MenuUsuario extends javax.swing.JFrame {
         jTextField2.setText("000000");
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jTextField2.setPreferredSize(new java.awt.Dimension(122, 30));
+        jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField2MouseClicked(evt);
+            }
+        });
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -1982,7 +1987,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jComboBox1.setModel(new DefaultComboBoxModel(filmes.toArray()));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox1.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
 
         //codigo do filme
@@ -2012,7 +2016,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jComboBox2.setModel(new DefaultComboBoxModel(salas.toArray()));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox2.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
         // pega capacidade
 
@@ -2028,7 +2031,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jLabel22.setText(capacidade);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox2.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
 
         //pegar horarios
@@ -2044,7 +2046,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jComboBox3.setModel(new DefaultComboBoxModel(horario.toArray()));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
 
         // pegar preço
@@ -2066,7 +2067,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jLabel20.setText("R$ " + String.valueOf(preco));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
     }//GEN-LAST:event_jbPedidoActionPerformed
 
@@ -2098,7 +2098,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jComboBox2.setModel(new DefaultComboBoxModel(salas.toArray()));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox2.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
         // pega capacidade
 
@@ -2114,7 +2113,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jLabel22.setText(capacidade);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox2.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
 
         //pegar horarios
@@ -2130,7 +2128,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jComboBox3.setModel(new DefaultComboBoxModel(horario.toArray()));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
         // pegar preço
         float preco = 0;
@@ -2151,7 +2148,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jLabel20.setText("R$ " + String.valueOf(preco));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -2178,8 +2174,8 @@ public class MenuUsuario extends javax.swing.JFrame {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
                 if (retorno.getString("codSessao").equals(codSessao)) {
-                    
-        //<editor-fold defaultstate="collapsed" desc=" desativas assentos usados ">
+
+                    //<editor-fold defaultstate="collapsed" desc=" desativas assentos usados ">
                     if (retorno.getString("assento").equals("A1")) {
                         jButtonA1.setEnabled(false);
                     }
@@ -2301,7 +2297,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         String tipoIngresso = jComboBox4.getSelectedItem().toString();
         String codPoltrona = jLabel21.getText().replaceAll("Poltrona ", "");
         float preco = Float.parseFloat(jLabel20.getText().replaceAll("[^\\d.]", "")); // pega apenas numeros, nao apagar
-        JOptionPane.showMessageDialog(null, "codSessao: " + codSessao + "\nAssento: " + codPoltrona + "\n");
         int codigo = (int) (Math.random() * 9999 + 1111); // gera um random
         boolean exit = false;
 
@@ -2309,36 +2304,40 @@ public class MenuUsuario extends javax.swing.JFrame {
         // procuura se assento ja foi adicioando, evita clicar duas vezes
         boolean assento = false;
         sql = "SELECT * FROM ingressos";
-        while (exit == false) {
-            try {
-                ResultSet retorno = con.sentenca.executeQuery(sql);
-                while (retorno.next()) {
-                    if (retorno.getString("codigo").equals(codigo)) {
-                        codigo = (int) (Math.random() * 9999 + 1111);
-                    } else {
-                        if (retorno.getString("assento").equals(codPoltrona)
-                                && retorno.getString("codSessao").equals(codSessao)) {
-                            assento = true;
+        if (codPoltrona.length() == 2) {
+            while (exit == false) {
+                try {
+                    ResultSet retorno = con.sentenca.executeQuery(sql);
+                    while (retorno.next()) {
+                        if (retorno.getString("codigo").equals(codigo)) {
+                            codigo = (int) (Math.random() * 999999 + 111111);
+                        } else {
+                            if (retorno.getString("assento").equals(codPoltrona)
+                                    && retorno.getString("codSessao").equals(codSessao)) {
+                                assento = true;
+                            }
+                            exit = true;
                         }
-                        exit = true;
                     }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessoes\n" + ex.getMessage());
                 }
-            } catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessoes\n" + ex.getMessage());
             }
-        }
-        if (assento == false) {
-            //Insere no banco de dados
-            sql = "INSERT INTO ingressos VALUES (" + codigo + "," + codSessao + ",'"
-                    + codPoltrona + "','" + tipoIngresso + "')";
-            try {
-                con.sentenca.execute(sql);
-                JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
-            } catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Erro de sintaxe " + ex.getMessage());
+            if (assento == false) {
+                //Insere no banco de dados
+                sql = "INSERT INTO ingressos VALUES (" + codigo + "," + codSessao + ",'"
+                        + codPoltrona + "','" + tipoIngresso + "')";
+                try {
+                    con.sentenca.execute(sql);
+                    JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro de sintaxe " + ex.getMessage());
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Assento Indisponível");
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Assento Indisponível");
+            JOptionPane.showMessageDialog(null, "Selecione o assento");
         }
     }//GEN-LAST:event_jbCompraActionPerformed
 
@@ -2835,6 +2834,10 @@ public class MenuUsuario extends javax.swing.JFrame {
         try {
             con.sentenca.executeUpdate(sql);
             JOptionPane.showMessageDialog(this, "Ingresso Cancelado");
+            jTextField2.setText("");
+            jLabel1.setText("Meia/Inteira");
+            jLabel24.setText("00:00");
+            jLabel23.setText("");
         } catch (SQLException ex) {
             jLabel23.setText("Código inválido");
             JOptionPane.showMessageDialog(this, ex.getMessage());
@@ -2857,6 +2860,10 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jbSair5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbSair5ActionPerformed
+
+    private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
+        jTextField2.setText("");
+    }//GEN-LAST:event_jTextField2MouseClicked
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
