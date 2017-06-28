@@ -1828,6 +1828,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
+
     }//GEN-LAST:event_jbFechamentoActionPerformed
 
     private void jbSuperUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSuperUserMouseClicked
@@ -2279,6 +2280,41 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
+        Conexao innerCon = new Conexao(); // um resultset dentro de outro resultset nao executa
+        float valorTotal = 0;               // ao menos que haja duas conexões
+        int quantIngressos = 0;
+        float valor = 0;
+        int quantMeia = 0;
+        int quantInteira = 0;
+        sql = "SELECT * FROM ingressos";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                quantIngressos += 1;
+                String tipo = retorno.getString("tipo");
+                sql = "SELECT * FROM sessoes WHERE codigo=" + retorno.getInt("codSessao");
+                try {
+                    ResultSet retorno2 = innerCon.sentenca.executeQuery(sql);
+                    retorno2.first();
+                    valor = retorno2.getFloat("preco");
+                    if (tipo.equals("Meia")) {
+                        valor /= 2;
+                        quantMeia += 1;
+                    } else {
+                        quantInteira += 1;
+                    }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro ao buscar valor de sessao\n" + ex.getMessage());
+                }
+                valorTotal += valor;
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de ingressos\n" + ex.getMessage());
+        }
+        jLabel30.setText(String.valueOf(quantIngressos));
+        jLabel31.setText(String.valueOf(valorTotal));
+        jLabel33.setText(String.valueOf(quantMeia));
+        jLabel32.setText(String.valueOf(quantInteira));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jbSair2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair2ActionPerformed
@@ -2366,7 +2402,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     int i = 0;
     private void jbSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair1ActionPerformed
         i++;
-        String NomeImagem = "";
         String CaminhoPacote = caminho;
 
         //BufferedReader img = pegarImagemPacote(NomeImagem,CaminhoPacote);
@@ -2375,6 +2410,21 @@ public class MenuUsuario extends javax.swing.JFrame {
         Icon icon = new ImageIcon(CaminhoPacote);
         filme.setIcon(icon);
         jPanel3.add(filme);
+
+        String nome = jtxNomeFilme.getText();
+        int random = (int) (Math.random() * 9999 + 1111);
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codigo").equals(random)) {
+                    random = (int) (Math.random() * 9999 + 1111);
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessoes\n" + ex.getMessage());
+        }
+
 
     }//GEN-LAST:event_jbSair1ActionPerformed
 
@@ -2469,7 +2519,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-       // pegar preço
+        // pegar preço
         float preco = 0;
         sql = "SELECT * FROM sessoes";
         try {
