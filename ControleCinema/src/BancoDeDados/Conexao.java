@@ -15,6 +15,7 @@ public class Conexao {
     private String senha;
     public String error;
 
+    // construtor padrao
     public Conexao() {
         error = "";
         this.user = "root";
@@ -31,7 +32,8 @@ public class Conexao {
             error = ("Erro de conexão com banco de dados " + ex.getMessage());
         }
     }
-
+    
+    // editavel
     public Conexao(String url, String user, String senha) {
         error = "";
         this.url = url;

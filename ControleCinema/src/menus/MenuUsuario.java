@@ -322,7 +322,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jtxNomeFilme = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
@@ -1602,11 +1601,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jpCadastrarSessao.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 170, -1));
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("00");
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 100, 30));
-
         jtxNomeFilme.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxNomeFilme.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jpCadastrarSessao.add(jtxNomeFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 220, 30));
@@ -1624,7 +1618,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.setText("00");
         jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 100, 30));
+        jpCadastrarSessao.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 220, 30));
 
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setText("0000");
@@ -2151,7 +2145,8 @@ public class MenuUsuario extends javax.swing.JFrame {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
                 if (retorno.getString("codSessao").equals(codSessao)) {
-                    //desativa botao; retorno.getString("assento")
+                    
+        //<editor-fold defaultstate="collapsed" desc=" desativas assentos usados ">
                     if (retorno.getString("assento").equals("A1")) {
                         jButtonA1.setEnabled(false);
                     }
@@ -2257,6 +2252,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                     if (retorno.getString("assento").equals("G5")) {
                         jButtonG5.setEnabled(false);
                     }
+                    //</editor-fold>
                 }
             }
         } catch (SQLException ex) {
@@ -2300,10 +2296,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         }
         if (assento == false) {
             //Insere no banco de dados
-            String sql = "INSERT INTO ingressos VALUES (" + codigo + "," + codSessao + ",'" + codPoltrona
-                    + "','" + tipoIngresso + "')";
-            Conexao con = new Conexao();
-
+            sql = "INSERT INTO ingressos VALUES (" + codigo + "," + codSessao + ",'"
+                    + codPoltrona + "','" + tipoIngresso + "')";
             try {
                 con.sentenca.execute(sql);
                 JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
@@ -2315,6 +2309,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jbCompraActionPerformed
 
+    //<editor-fold defaultstate="collapsed" desc=" Recebe valor do botao poltrona ">
     private void jButtonA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonA1ActionPerformed
         recebePoltrona("A1");
         voltarPedido();
@@ -2489,6 +2484,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         recebePoltrona("G5");
         voltarPedido();// TODO add your handling code here:
     }//GEN-LAST:event_jButtonG5ActionPerformed
+    //</editor-fold>
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
@@ -2974,7 +2970,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField2;
