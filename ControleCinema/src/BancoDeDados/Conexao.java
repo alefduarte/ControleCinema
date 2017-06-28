@@ -29,10 +29,17 @@ public class Conexao {
         } catch (ClassNotFoundException ex) {
             System.out.println("Driver não encontrado! " + ex.getMessage());
         } catch (SQLException ex) {
-            error = ("Erro de conexão com banco de dados " + ex.getMessage());
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                conexao = DriverManager.getConnection(url, "gabriel", senha);
+                sentenca = conexao.createStatement();
+            } catch (ClassNotFoundException ez) {
+                System.out.println("Driver não encontrado! " + ez.getMessage());
+            } catch (SQLException ez) {
+            }
         }
     }
-    
+
     // editavel
     public Conexao(String url, String user, String senha) {
         error = "";
