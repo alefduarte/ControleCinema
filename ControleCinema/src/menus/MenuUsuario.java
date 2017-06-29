@@ -28,7 +28,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 
@@ -41,6 +40,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     // variaveis globais, para nao ser preciso declarar toda ver que usá-la
     public static String sql = null;
     public static Conexao con = new Conexao();
+    public static String dirImagem = System.getProperty("user.dir") + "/src/Filmes/";
 
     public BufferedReader pegarImagemPacote(String fileNameWithExtension, String sourcePackage) {
         try {
@@ -116,9 +116,9 @@ public class MenuUsuario extends javax.swing.JFrame {
         //Define tamanho de largura 
         int o = inputImage.getHeight();
         int u = inputImage.getWidth();
-        int porc=o/u;
-        scaledWidth = scaledHeight*porc;
-        
+        int porc = o / u;
+        scaledWidth = scaledHeight * porc;
+
         // creates output image
         BufferedImage outputImage = new BufferedImage(scaledWidth, scaledHeight, inputImage.getType());
 
@@ -241,6 +241,10 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
         jpPoltrona = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jlLinha5 = new javax.swing.JLabel();
@@ -328,18 +332,18 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        jtxNomeFilme = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         jtxMinutosInicio = new javax.swing.JTextField();
         jtxHoraInicio = new javax.swing.JTextField();
         jbSair8 = new javax.swing.JButton();
         jLabel42 = new javax.swing.JLabel();
         jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBoxNomeFilme = new javax.swing.JComboBox<>();
+        jComboBox6 = new javax.swing.JComboBox<>();
         jpRemoverSessao = new javax.swing.JPanel();
         jbSair9 = new javax.swing.JButton();
         jLabel43 = new javax.swing.JLabel();
@@ -725,6 +729,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLayeredPane1.add(jpCancelamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
 
         jpPedido.setBackground(new java.awt.Color(204, 204, 204));
+        jpPedido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
@@ -733,23 +738,29 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
+        jpPedido.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 15, 169, -1));
 
         jLabel13.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Filme");
+        jpPedido.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 18, 150, 24));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpPedido.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 71, 169, -1));
 
         jLabel14.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Sala");
+        jpPedido.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 75, 150, -1));
 
         jLabel15.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Capacidade :");
+        jpPedido.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 119, 173, -1));
 
         jSeparator15.setForeground(new java.awt.Color(36, 47, 65));
+        jpPedido.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 395, 543, 10));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
@@ -758,10 +769,12 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jComboBox3ActionPerformed(evt);
             }
         });
+        jpPedido.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 161, 169, -1));
 
         jLabel16.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Horario");
+        jLabel16.setText("Formato");
+        jpPedido.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 209, 150, -1));
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Inteira", "Meia" }));
         jComboBox4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
@@ -770,17 +783,21 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jComboBox4ActionPerformed(evt);
             }
         });
+        jpPedido.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 292, 169, -1));
 
         jLabel17.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Tipo de Ingresso");
+        jpPedido.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 302, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel18.setText("Preço do Ingresso");
+        jpPedido.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 427, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Posição Poltrona");
+        jpPedido.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 346, -1, -1));
 
         jbPoltrona.setBackground(new java.awt.Color(229, 91, 0));
         jbPoltrona.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
@@ -797,6 +814,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbPoltronaActionPerformed(evt);
             }
         });
+        jpPedido.add(jbPoltrona, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 342, 167, -1));
 
         jbCompra.setBackground(new java.awt.Color(229, 91, 0));
         jbCompra.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
@@ -813,104 +831,47 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbCompraActionPerformed(evt);
             }
         });
+        jpPedido.add(jbCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 482, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("R$ 12.50");
         jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpPedido.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(268, 423, 174, -1));
 
         jLabel21.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("Poltrona     ");
         jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpPedido.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 150, -1));
 
         jLabel22.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("000");
+        jLabel22.setText("2D/3D");
         jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpPedido.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(179, 205, 170, -1));
 
-        javax.swing.GroupLayout jpPedidoLayout = new javax.swing.GroupLayout(jpPedido);
-        jpPedido.setLayout(jpPedidoLayout);
-        jpPedidoLayout.setHorizontalGroup(
-            jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator15)
-            .addGroup(jpPedidoLayout.createSequentialGroup()
-                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpPedidoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel19)
-                            .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpPedidoLayout.createSequentialGroup()
-                                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jbPoltrona, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jpPedidoLayout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpPedidoLayout.createSequentialGroup()
-                                .addComponent(jLabel18)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jbCompra, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addGap(29, 29, 29))
-        );
-        jpPedidoLayout.setVerticalGroup(
-            jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpPedidoLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1))
-                .addGap(18, 18, 18)
-                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14))
-                .addGap(18, 18, 18)
-                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel22))
-                .addGap(18, 18, 18)
-                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16))
-                .addGap(18, 18, 18)
-                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17))
-                .addGap(18, 18, 18)
-                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel19)
-                    .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jbPoltrona)
-                        .addComponent(jLabel21)))
-                .addGap(58, 58, 58)
-                .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jpPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel20))
-                .addGap(29, 29, 29)
-                .addComponent(jbCompra)
-                .addGap(28, 28, 28))
-        );
+        jLabel52.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel52.setText("Horario");
+        jpPedido.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 165, 150, -1));
+
+        jLabel48.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("000");
+        jLabel48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpPedido.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 115, 150, -1));
+
+        jLabel62.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel62.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel62.setText("Áudio");
+        jpPedido.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 257, 87, -1));
+
+        jLabel63.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
+        jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel63.setText("LEG/DUB");
+        jLabel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpPedido.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 170, -1));
 
         jLayeredPane1.add(jpPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 540, 540));
 
@@ -1528,7 +1489,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpSuperUserLayout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
+                .addContainerGap(61, Short.MAX_VALUE)
                 .addGroup(jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jbSair2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1651,10 +1612,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jpCadastrarSessao.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 170, -1));
 
-        jtxNomeFilme.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jtxNomeFilme.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jtxNomeFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 220, 30));
-
         jTextField4.setEditable(false);
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
@@ -1678,11 +1635,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jpCadastrarSessao.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 220, 30));
-
-        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField9.setText("0000");
-        jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 220, 30));
 
         jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField10.setText("00.00");
@@ -1735,6 +1687,22 @@ public class MenuUsuario extends javax.swing.JFrame {
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2D", "3D" }));
         jComboBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jpCadastrarSessao.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, 220, 30));
+
+        jComboBoxNomeFilme.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxNomeFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxNomeFilmeActionPerformed(evt);
+            }
+        });
+        jpCadastrarSessao.add(jComboBoxNomeFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 220, -1));
+
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox6ActionPerformed(evt);
+            }
+        });
+        jpCadastrarSessao.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 220, -1));
 
         jLayeredPane1.add(jpCadastrarSessao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -2028,7 +1996,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                     capacidade = retorno.getString("capacidade");
                 }
             }
-            jLabel22.setText(capacidade);
+            jLabel48.setText(capacidade);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
         }
@@ -2059,6 +2027,8 @@ public class MenuUsuario extends javax.swing.JFrame {
                         && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
                     preco = retorno.getFloat("preco");
                     codSessao = retorno.getString("codigo");
+                    jLabel22.setText(retorno.getString("formato")); //pega formato
+                    jLabel63.setText(retorno.getString("audio")); //pega audio
                 }
             }
             if (jComboBox4.getSelectedItem().toString().equals("Meia")) {
@@ -2110,7 +2080,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                     capacidade = retorno.getString("capacidade");
                 }
             }
-            jLabel22.setText(capacidade);
+            jLabel48.setText(capacidade);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
         }
@@ -2140,6 +2110,8 @@ public class MenuUsuario extends javax.swing.JFrame {
                         && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
                     preco = retorno.getFloat("preco");
                     codSessao = retorno.getString("codigo");
+                    jLabel22.setText(retorno.getString("formato")); //pega formato
+                    jLabel63.setText(retorno.getString("audio")); //pega audio
                 }
             }
             if (jComboBox4.getSelectedItem().toString().equals("Meia")) {
@@ -2149,6 +2121,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
         }
+
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jbPoltronaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPoltronaMouseClicked
@@ -2570,6 +2543,46 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(true);
         jpRemoverSessao.setVisible(false);
+
+        // lista de filmes
+        ArrayList<String> filmes = new ArrayList<>();
+        sql = "SELECT  * FROM filmes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                filmes.add(retorno.getString("nome"));
+            }
+            jComboBoxNomeFilme.setModel(new DefaultComboBoxModel(filmes.toArray()));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+        }
+
+        //codigo do filme
+        sql = "SELECT * FROM filmes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("nome").equals(jComboBoxNomeFilme.getSelectedItem().toString())) {
+                    jTextField6.setText(retorno.getString("codigo"));
+                    jTextField5.setText(retorno.getString("duracao") + " minutos");
+                    jTextField8.setText(retorno.getString("genero"));
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Não há sessões com o filme selecionado \n" + ex.getMessage());
+        }
+        //lista sessoes
+        ArrayList<String> salas = new ArrayList<>();
+        sql = "SELECT * FROM salas";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                salas.add(retorno.getString("codSala"));
+            }
+            jComboBox6.setModel(new DefaultComboBoxModel(salas.toArray()));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+        }
     }//GEN-LAST:event_jbSair2ActionPerformed
 
     private void jbSair2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair2MouseClicked
@@ -2680,8 +2693,9 @@ public class MenuUsuario extends javax.swing.JFrame {
         JLabel filme = new JLabel("Label n" + i);
         filme.setBackground(jbSair1.getBackground());
         filme.setOpaque(true);
-        String text = jtxNomeFilme.getText() + "\nHorario de Inicio: " + jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText();
-        Border bord = new TitledBorder(jbSair1.getBorder(), text, 0 , ICONIFIED, jbSair1.getFont(), Color.WHITE);
+        String text = jComboBoxNomeFilme.getSelectedItem().toString()
+                + "\nHorario de Inicio: " + jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText();
+        Border bord = new TitledBorder(jbSair1.getBorder(), text, 0, ICONIFIED, jbSair1.getFont(), Color.WHITE);
         filme.setBorder(bord);
         filme.setText("");
         Icon icon = new ImageIcon(CaminhoPacote);
@@ -2689,7 +2703,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jPanel3.add(filme);
         jPanel3.setName(sql);
 
-        String nome = jtxNomeFilme.getText();
+        String nome = jComboBoxNomeFilme.getSelectedItem().toString();
         int random = (int) (Math.random() * 9999 + 1111);
         sql = "SELECT * FROM sessoes";
         try {
@@ -2792,7 +2806,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jLabel20.setText("R$ " + String.valueOf(preco));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
@@ -2816,7 +2829,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             jLabel20.setText("R$ " + String.valueOf(preco));
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
-            jComboBox3.setModel(new DefaultComboBoxModel(new String[]{"item 1", "item 2"}));
         }
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
@@ -2864,6 +2876,28 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
         jTextField2.setText("");
     }//GEN-LAST:event_jTextField2MouseClicked
+
+    private void jComboBoxNomeFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxNomeFilmeActionPerformed
+        //codigo do filme
+        sql = "SELECT * FROM filmes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("nome").equals(jComboBoxNomeFilme.getSelectedItem().toString())) {
+                    jTextField6.setText(retorno.getString("codigo"));
+                    jTextField5.setText(retorno.getString("duracao") + " minutos");
+                    jTextField8.setText(retorno.getString("genero"));
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Não há sessões com o filme selecionado \n" + ex.getMessage());
+        }
+
+    }//GEN-LAST:event_jComboBoxNomeFilmeActionPerformed
+
+    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+
+    }//GEN-LAST:event_jComboBox6ActionPerformed
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
@@ -2944,6 +2978,8 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBoxNomeFilme;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2986,10 +3022,12 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
@@ -3000,6 +3038,8 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -3033,7 +3073,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JButton jbCancelamento;
     private javax.swing.JButton jbCancelarIngresso;
     private javax.swing.JButton jbCancelarIngresso1;
@@ -3075,7 +3114,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JPanel jpSuperUser;
     private javax.swing.JTextField jtxHoraInicio;
     private javax.swing.JTextField jtxMinutosInicio;
-    private javax.swing.JTextField jtxNomeFilme;
     // End of variables declaration//GEN-END:variables
     //</editor-fold>
 }
