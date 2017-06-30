@@ -1709,11 +1709,21 @@ public class MenuUsuario extends javax.swing.JFrame {
         jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField10.setText("00.00");
         jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jTextField10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField10MouseClicked(evt);
+            }
+        });
         jpCadastrarSessao.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 220, 30));
 
         jtxMinutosInicio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxMinutosInicio.setText("00");
         jtxMinutosInicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxMinutosInicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxMinutosInicioMouseClicked(evt);
+            }
+        });
         jtxMinutosInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxMinutosInicioActionPerformed(evt);
@@ -1724,6 +1734,11 @@ public class MenuUsuario extends javax.swing.JFrame {
         jtxHoraInicio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxHoraInicio.setText("00");
         jtxHoraInicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxHoraInicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxHoraInicioMouseClicked(evt);
+            }
+        });
         jtxHoraInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxHoraInicioActionPerformed(evt);
@@ -2781,7 +2796,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         String CaminhoPacote = "";
         if (caminho.contains("/src/")) {
             CaminhoPacote = caminho;
-        } else{
+        } else {
             CaminhoPacote = dirImagem + jTextField4.getText();
         }
 
@@ -2830,7 +2845,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println("Erro de sintaxe " + ex.getMessage());
         }
-
+        jpCadastrarSessao.setVisible(false);
+        jpSuperUser.setVisible(true);
     }//GEN-LAST:event_jbSair1ActionPerformed
 
     private void jbSair8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair8MouseClicked
@@ -3018,6 +3034,18 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
 
     }//GEN-LAST:event_jComboBox6ActionPerformed
+
+    private void jTextField10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField10MouseClicked
+        jTextField10.setText("");
+    }//GEN-LAST:event_jTextField10MouseClicked
+
+    private void jtxHoraInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxHoraInicioMouseClicked
+        jtxHoraInicio.setText("");
+    }//GEN-LAST:event_jtxHoraInicioMouseClicked
+
+    private void jtxMinutosInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxMinutosInicioMouseClicked
+        jtxMinutosInicio.setText("");
+    }//GEN-LAST:event_jtxMinutosInicioMouseClicked
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
