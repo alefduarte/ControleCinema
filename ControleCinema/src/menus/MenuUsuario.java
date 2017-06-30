@@ -2754,7 +2754,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(true);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
-        
+
         // lista de filmes
         ArrayList<String> filmes = new ArrayList<>();
         sql = "SELECT  * FROM filmes";
@@ -2946,7 +2946,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         String formato = jComboBox5.getSelectedItem().toString();
         String audio = jComboBox7.getSelectedItem().toString();
         String sql = "INSERT INTO sessoes VALUES (" + random + "," + codFilme + "," + preco
-                + "," + codSala + ",'" + horario + "','" + formato + "','" + audio + "')"; //ver como enviar horario
+                + "," + codSala + ",'" + horario + "','" + formato + "','" + audio + "')";
         Conexao con2 = new Conexao();
         try {
             con2.sentenca.execute(sql);
@@ -3181,26 +3181,26 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         // criar codigo
         nome = jComboBoxNomeFilme.getSelectedItem().toString();
-        
+
         int conferir = Integer.parseInt(jtxCodigoC.getText());
         sql = "SELECT * FROM filmes";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
                 if (retorno.getString("codigo").equals(conferir)) {
-                    
+
                     JOptionPane.showMessageDialog(null, "Erro de cadastro: Filme não Cadastrado. \nCodigo de Filme Existente. \nDigite outro Codigo.");
-                    
+
                 }
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessoes\n" + ex.getMessage());
         }
+        String s = jTextField4.getText();
+        String imagem = s.substring(s.lastIndexOf("/") + 1, s.length());
         
-
         // adiciona no banco
-        
-        String sql = "INSERT INTO filmes VALUES (" + conferir + "," +jtxNomeFilmeC.getText() +Integer.parseInt(jtxDuracacaoC.getText()) +"," +jtxGeneroC.getText() +"," +jTextField4.getText() + "')"; //ver como enviar horario
+        sql = "INSERT INTO filmes VALUES (" + conferir + ",'" + jtxNomeFilmeC.getText() + "'," + Integer.parseInt(jtxDuracacaoC.getText()) + ",'" + jtxGeneroC.getText() + "','" + imagem + "')"; //ver como enviar horario
         Conexao con2 = new Conexao();
         try {
             con2.sentenca.execute(sql);
