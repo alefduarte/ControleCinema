@@ -229,6 +229,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
     }
 
     /**
@@ -251,6 +252,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -446,6 +448,12 @@ public class MenuUsuario extends javax.swing.JFrame {
         jtxDuracacaoC = new javax.swing.JTextField();
         jtxGeneroC = new javax.swing.JTextField();
         jtxNomeFilmeC = new javax.swing.JTextField();
+        jpCadastrarSala = new javax.swing.JPanel();
+        jLabel69 = new javax.swing.JLabel();
+        jtxCapacidadeSala = new javax.swing.JTextField();
+        jLabel70 = new javax.swing.JLabel();
+        jtxCodigoSala = new javax.swing.JTextField();
+        jbCadastrarS = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -2026,6 +2034,60 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jLayeredPane1.add(jpCadastrarFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jpCadastrarSala.setBackground(new java.awt.Color(204, 204, 204));
+        jpCadastrarSala.setMaximumSize(new java.awt.Dimension(550, 540));
+        jpCadastrarSala.setMinimumSize(new java.awt.Dimension(550, 540));
+        jpCadastrarSala.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel69.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel69.setText("Capacidade:");
+        jLabel69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarSala.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 170, -1));
+
+        jtxCapacidadeSala.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxCapacidadeSala.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxCapacidadeSala.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxCapacidadeSalaMouseClicked(evt);
+            }
+        });
+        jpCadastrarSala.add(jtxCapacidadeSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 220, 30));
+
+        jLabel70.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel70.setText("Código da Sala:");
+        jLabel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarSala.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 170, -1));
+
+        jtxCodigoSala.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxCodigoSala.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxCodigoSala.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxCodigoSalaMouseClicked(evt);
+            }
+        });
+        jpCadastrarSala.add(jtxCodigoSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 220, 30));
+
+        jbCadastrarS.setBackground(new java.awt.Color(229, 91, 0));
+        jbCadastrarS.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbCadastrarS.setForeground(new java.awt.Color(255, 255, 255));
+        jbCadastrarS.setText("Cadastrar");
+        jbCadastrarS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbCadastrarS.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbCadastrarSMouseClicked(evt);
+            }
+        });
+        jbCadastrarS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCadastrarSActionPerformed(evt);
+            }
+        });
+        jpCadastrarSala.add(jbCadastrarS, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, 30));
+
+        jLayeredPane1.add(jpCadastrarSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
+
         jPanel1.add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 550, 540));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -2083,6 +2145,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
     }//GEN-LAST:event_jbCancelamentoActionPerformed
 
     private void jbFechamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbFechamentoMouseClicked
@@ -2100,6 +2163,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
     }//GEN-LAST:event_jbFechamentoActionPerformed
 
     private void jbSuperUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSuperUserMouseClicked
@@ -2117,6 +2181,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
     }//GEN-LAST:event_jbSuperUserActionPerformed
 
     private void jbHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbHomeMouseClicked
@@ -2134,6 +2199,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
     }//GEN-LAST:event_jbHomeActionPerformed
 
     private void jbPedidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPedidoMouseClicked
@@ -2152,6 +2218,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
 
         // lista de filmes
         ArrayList<String> filmes = new ArrayList<>();
@@ -2348,6 +2415,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
         resetaPoltrona();
         String codPoltrona = jLabel21.getText().replaceAll("Poltrona ", "");
 
@@ -2754,6 +2822,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(true);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
 
         // lista de filmes
         ArrayList<String> filmes = new ArrayList<>();
@@ -2817,6 +2886,18 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void jbSair4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair4ActionPerformed
         // TODO add your handling code here:
+        jpPedido.setVisible(false);
+        jpCancelamento.setVisible(false);
+        jpFechamento.setVisible(false);
+        jpSuperUser.setVisible(false);
+        jLabel2.setVisible(false);
+        jpMostrador2.setVisible(false);
+        jpPoltrona.setVisible(false);
+        jpCadastrarSessao.setVisible(false);
+        jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(true);
+        
     }//GEN-LAST:event_jbSair4ActionPerformed
 
     private void jbRemoverSessaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbRemoverSessaoMouseClicked
@@ -2833,6 +2914,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(true);
         jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
     }//GEN-LAST:event_jbRemoverSessaoActionPerformed
 
     private void jbSair6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair6MouseClicked
@@ -3004,6 +3086,11 @@ public class MenuUsuario extends javax.swing.JFrame {
                 Logger.getLogger(MenuUsuario.class
                         .getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "Error coping" + ex.getMessage());
+                jtxCodigoC.setText("");
+                jtxNomeFilmeC.setText("");
+                jtxDuracacaoC.setText("");
+                jtxGeneroC.setText("");
+                jTextField4.setText("");
             }
 
         } else {
@@ -3125,6 +3212,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
         jpCadastrarFilme.setVisible(true);
+        jpCadastrarSala.setVisible(false);
     }//GEN-LAST:event_jbSair5ActionPerformed
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
@@ -3172,6 +3260,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void jbCadastrarFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarFilmeActionPerformed
         i++;
+         int erro = 0;
         String CaminhoPacote = "";
         if (caminho.contains("/src/")) {
             CaminhoPacote = caminho;
@@ -3182,13 +3271,13 @@ public class MenuUsuario extends javax.swing.JFrame {
         // criar codigo
         nome = jComboBoxNomeFilme.getSelectedItem().toString();
 
-        int conferir = Integer.parseInt(jtxCodigoC.getText());
+        String conferir = jtxCodigoC.getText();
         sql = "SELECT * FROM filmes";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
                 if (retorno.getString("codigo").equals(conferir)) {
-
+                    erro = 1;
                     JOptionPane.showMessageDialog(null, "Erro de cadastro: Filme não Cadastrado. \nCodigo de Filme Existente. \nDigite outro Codigo.");
 
                 }
@@ -3196,6 +3285,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessoes\n" + ex.getMessage());
         }
+        if(erro==0){
         String s = jTextField4.getText();
         String imagem = s.substring(s.lastIndexOf("/") + 1, s.length());
         
@@ -3206,10 +3296,19 @@ public class MenuUsuario extends javax.swing.JFrame {
             con2.sentenca.execute(sql);
             JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
         } catch (SQLException ex) {
+            
             System.out.println("Erro de sintaxe " + ex.getMessage());
         }
         jpCadastrarFilme.setVisible(false);
         jpSuperUser.setVisible(true);
+        }
+        else{
+            jtxCodigoC.setText("");
+            jtxNomeFilmeC.setText("");
+            jtxDuracacaoC.setText("");
+            jtxGeneroC.setText("");
+            jTextField4.setText("");
+        }
     }//GEN-LAST:event_jbCadastrarFilmeActionPerformed
 
     private void jtxCodigoCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxCodigoCMouseClicked
@@ -3227,6 +3326,64 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jtxNomeFilmeCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxNomeFilmeCMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxNomeFilmeCMouseClicked
+
+    private void jtxCapacidadeSalaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxCapacidadeSalaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxCapacidadeSalaMouseClicked
+
+    private void jtxCodigoSalaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxCodigoSalaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxCodigoSalaMouseClicked
+
+    private void jbCadastrarSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCadastrarSMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbCadastrarSMouseClicked
+
+    private void jbCadastrarSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarSActionPerformed
+        // TODO add your handling code here:
+        int capacidade = Integer.parseInt(jtxCapacidadeSala.getText());
+        int codigo = Integer.parseInt(jtxCodigoSala.getText());
+        String conferir = jtxCodigoSala.getText();
+        int erro = 0;
+        sql = "SELECT * FROM salas";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            
+            while (retorno.next()) {
+                
+                if (retorno.getString("codSala").equals(conferir)) {
+                    erro = 1;
+                    
+                    JOptionPane.showMessageDialog(null, "Erro de cadastro: Sala não cadastrada. \nCodigo de sala existente. \nDigite outro Codigo.");
+                    
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sala\n" + ex.getMessage());
+        }
+        if(erro==0){
+        sql = "INSERT INTO salas VALUES ("+ conferir + "," + capacidade + ")";
+        Conexao con3 = new Conexao();
+        try{
+            con3.sentenca.execute(sql);
+            JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
+        } catch (SQLException ex) {
+            System.out.println("Erro de sintaxe " + ex.getMessage());
+        }
+        jtxCapacidadeSala.setText("");
+        jtxCodigoSala.setText("");
+        jpCadastrarFilme.setVisible(false);
+        jpSuperUser.setVisible(true);
+        jtxCapacidadeSala.setVisible(false);
+        jtxCodigoSala.setVisible(false);
+        }
+        
+        else{
+            jtxCapacidadeSala.setText("");
+            jtxCodigoSala.setText("");
+        }
+        
+    }//GEN-LAST:event_jbCadastrarSActionPerformed
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
@@ -3383,7 +3540,9 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
@@ -3417,6 +3576,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JButton jbCadastrarFilme;
+    private javax.swing.JButton jbCadastrarS;
     private javax.swing.JButton jbCancelamento;
     private javax.swing.JButton jbCancelarIngresso;
     private javax.swing.JButton jbCancelarIngresso1;
@@ -3445,6 +3605,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jlLinha5;
     private javax.swing.JLabel jlNomeUsuario;
     private javax.swing.JPanel jpCadastrarFilme;
+    private javax.swing.JPanel jpCadastrarSala;
     private javax.swing.JPanel jpCadastrarSessao;
     private javax.swing.JPanel jpCancelamento;
     private javax.swing.JPanel jpDevCodes;
@@ -3457,7 +3618,9 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JPanel jpRemoverSessao;
     private javax.swing.JPanel jpSeletorOpc;
     private javax.swing.JPanel jpSuperUser;
+    private javax.swing.JTextField jtxCapacidadeSala;
     private javax.swing.JTextField jtxCodigoC;
+    private javax.swing.JTextField jtxCodigoSala;
     private javax.swing.JTextField jtxDuracacaoC;
     private javax.swing.JTextField jtxGeneroC;
     private javax.swing.JTextField jtxHoraInicio;
