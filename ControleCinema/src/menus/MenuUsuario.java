@@ -2998,6 +2998,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             ////
             try {
                 Copiar2(source, dest);
+                source.delete();
 
             } catch (InterruptedException | IOException ex) {
                 Logger.getLogger(MenuUsuario.class
@@ -3207,7 +3208,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println("Erro de sintaxe " + ex.getMessage());
         }
-        jpCadastrarSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
         jpSuperUser.setVisible(true);
     }//GEN-LAST:event_jbCadastrarFilmeActionPerformed
 
