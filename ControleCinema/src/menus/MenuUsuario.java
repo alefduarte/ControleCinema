@@ -1692,16 +1692,19 @@ public class MenuUsuario extends javax.swing.JFrame {
         });
         jpCadastrarSessao.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 150, 30));
 
+        jTextField5.setEditable(false);
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.setText("00");
         jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jpCadastrarSessao.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 220, 30));
 
+        jTextField6.setEditable(false);
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setText("0000");
         jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jpCadastrarSessao.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 220, 30));
 
+        jTextField8.setEditable(false);
         jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jpCadastrarSessao.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 220, 30));
