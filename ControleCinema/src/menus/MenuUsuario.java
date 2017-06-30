@@ -228,6 +228,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
     }
 
     /**
@@ -249,6 +250,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -397,17 +399,14 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         jtxMinutosInicio = new javax.swing.JTextField();
         jtxHoraInicio = new javax.swing.JTextField();
-        jbSair8 = new javax.swing.JButton();
         jLabel42 = new javax.swing.JLabel();
         jComboBox5 = new javax.swing.JComboBox<>();
         jComboBoxNomeFilme = new javax.swing.JComboBox<>();
@@ -434,6 +433,19 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel59 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
+        jpCadastrarFilme = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jbSair8 = new javax.swing.JButton();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jbCadastrarFilme = new javax.swing.JButton();
+        jtxCodigoC = new javax.swing.JTextField();
+        jtxDuracacaoC = new javax.swing.JTextField();
+        jtxGeneroC = new javax.swing.JTextField();
+        jtxNomeFilmeC3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -745,7 +757,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCancelamentoLayout.setHorizontalGroup(
             jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpCancelamentoLayout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addGroup(jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpCancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1662,35 +1674,19 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel38.setText("Codigo da Sala");
         jLabel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 170, -1));
-
-        jLabel39.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("Capa do Filme");
-        jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 170, -1));
+        jpCadastrarSessao.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 170, -1));
 
         jLabel40.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setText("Audio");
         jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 170, -1));
+        jpCadastrarSessao.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 170, -1));
 
         jLabel41.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText("Horario de Inicio");
         jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 170, -1));
-
-        jTextField4.setEditable(false);
-        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-        jpCadastrarSessao.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 150, 30));
+        jpCadastrarSessao.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 170, -1));
 
         jTextField5.setEditable(false);
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1717,7 +1713,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jTextField10MouseClicked(evt);
             }
         });
-        jpCadastrarSessao.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 220, 30));
+        jpCadastrarSessao.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 220, 30));
 
         jtxMinutosInicio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxMinutosInicio.setText("00");
@@ -1732,7 +1728,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jtxMinutosInicioActionPerformed(evt);
             }
         });
-        jpCadastrarSessao.add(jtxMinutosInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 100, 30));
+        jpCadastrarSessao.add(jtxMinutosInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 100, 30));
 
         jtxHoraInicio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxHoraInicio.setText("00");
@@ -1747,34 +1743,17 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jtxHoraInicioActionPerformed(evt);
             }
         });
-        jpCadastrarSessao.add(jtxHoraInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 100, 30));
-
-        jbSair8.setBackground(new java.awt.Color(229, 91, 0));
-        jbSair8.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jbSair8.setForeground(new java.awt.Color(255, 255, 255));
-        jbSair8.setText("....");
-        jbSair8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
-        jbSair8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jbSair8MouseClicked(evt);
-            }
-        });
-        jbSair8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSair8ActionPerformed(evt);
-            }
-        });
-        jpCadastrarSessao.add(jbSair8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 50, 30));
+        jpCadastrarSessao.add(jtxHoraInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 100, 30));
 
         jLabel42.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setText("Preço");
         jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 170, -1));
+        jpCadastrarSessao.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 170, -1));
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2D", "3D" }));
         jComboBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, 220, 30));
+        jpCadastrarSessao.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 220, 30));
 
         jComboBoxNomeFilme.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBoxNomeFilme.addActionListener(new java.awt.event.ActionListener() {
@@ -1782,7 +1761,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jComboBoxNomeFilmeActionPerformed(evt);
             }
         });
-        jpCadastrarSessao.add(jComboBoxNomeFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 220, -1));
+        jpCadastrarSessao.add(jComboBoxNomeFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 220, 30));
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox6.addActionListener(new java.awt.event.ActionListener() {
@@ -1790,17 +1769,17 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jComboBox6ActionPerformed(evt);
             }
         });
-        jpCadastrarSessao.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 220, -1));
+        jpCadastrarSessao.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 220, -1));
 
         jLabel64.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel64.setText("3D/2D");
         jLabel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 170, -1));
+        jpCadastrarSessao.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 170, -1));
 
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2D", "3D" }));
         jComboBox7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, 220, 30));
+        jpCadastrarSessao.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 220, 30));
 
         jLayeredPane1.add(jpCadastrarSessao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -1927,6 +1906,126 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jLayeredPane1.add(jpRemoverSessao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jpCadastrarFilme.setBackground(new java.awt.Color(204, 204, 204));
+        jpCadastrarFilme.setMaximumSize(new java.awt.Dimension(550, 540));
+        jpCadastrarFilme.setMinimumSize(new java.awt.Dimension(550, 540));
+        jpCadastrarFilme.setPreferredSize(new java.awt.Dimension(550, 540));
+        jpCadastrarFilme.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel39.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setText("Capa do Filme");
+        jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarFilme.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 170, -1));
+
+        jTextField4.setEditable(false);
+        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+        jpCadastrarFilme.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 150, 30));
+
+        jbSair8.setBackground(new java.awt.Color(229, 91, 0));
+        jbSair8.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbSair8.setForeground(new java.awt.Color(255, 255, 255));
+        jbSair8.setText("....");
+        jbSair8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbSair8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbSair8MouseClicked(evt);
+            }
+        });
+        jbSair8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSair8ActionPerformed(evt);
+            }
+        });
+        jpCadastrarFilme.add(jbSair8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 50, 30));
+
+        jLabel65.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel65.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel65.setText("Nome do Filme");
+        jLabel65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarFilme.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 170, -1));
+
+        jLabel66.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel66.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel66.setText("Codigo do Filme");
+        jLabel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarFilme.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 170, -1));
+
+        jLabel67.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel67.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel67.setText("Duração");
+        jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarFilme.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 170, -1));
+
+        jLabel68.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel68.setText("Genero");
+        jLabel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarFilme.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 170, -1));
+
+        jbCadastrarFilme.setBackground(new java.awt.Color(229, 91, 0));
+        jbCadastrarFilme.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbCadastrarFilme.setForeground(new java.awt.Color(255, 255, 255));
+        jbCadastrarFilme.setText("Cadastrar");
+        jbCadastrarFilme.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbCadastrarFilme.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbCadastrarFilmeMouseClicked(evt);
+            }
+        });
+        jbCadastrarFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCadastrarFilmeActionPerformed(evt);
+            }
+        });
+        jpCadastrarFilme.add(jbCadastrarFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, 30));
+
+        jtxCodigoC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxCodigoC.setText("0000");
+        jtxCodigoC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxCodigoC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxCodigoCMouseClicked(evt);
+            }
+        });
+        jpCadastrarFilme.add(jtxCodigoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 220, 30));
+
+        jtxDuracacaoC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxDuracacaoC.setText("00:00");
+        jtxDuracacaoC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxDuracacaoC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxDuracacaoCMouseClicked(evt);
+            }
+        });
+        jpCadastrarFilme.add(jtxDuracacaoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 220, 30));
+
+        jtxGeneroC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxGeneroC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxGeneroC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxGeneroCMouseClicked(evt);
+            }
+        });
+        jpCadastrarFilme.add(jtxGeneroC, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 220, 30));
+
+        jtxNomeFilmeC3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxNomeFilmeC3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxNomeFilmeC3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxNomeFilmeC3MouseClicked(evt);
+            }
+        });
+        jpCadastrarFilme.add(jtxNomeFilmeC3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 220, 30));
+
+        jLayeredPane1.add(jpCadastrarFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         jPanel1.add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 550, 540));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -1983,6 +2082,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
     }//GEN-LAST:event_jbCancelamentoActionPerformed
 
     private void jbFechamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbFechamentoMouseClicked
@@ -1999,7 +2099,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
-
+        jpCadastrarFilme.setVisible(false);
     }//GEN-LAST:event_jbFechamentoActionPerformed
 
     private void jbSuperUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSuperUserMouseClicked
@@ -2016,6 +2116,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
     }//GEN-LAST:event_jbSuperUserActionPerformed
 
     private void jbHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbHomeMouseClicked
@@ -2032,6 +2133,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
     }//GEN-LAST:event_jbHomeActionPerformed
 
     private void jbPedidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPedidoMouseClicked
@@ -2049,6 +2151,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
 
         // lista de filmes
         ArrayList<String> filmes = new ArrayList<>();
@@ -2244,6 +2347,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(true);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
         resetaPoltrona();
         String codPoltrona = jLabel21.getText().replaceAll("Poltrona ", "");
 
@@ -2649,7 +2753,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(true);
         jpRemoverSessao.setVisible(false);
-
+        jpCadastrarFilme.setVisible(false);
+        
         // lista de filmes
         ArrayList<String> filmes = new ArrayList<>();
         sql = "SELECT  * FROM filmes";
@@ -2727,6 +2832,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpPoltrona.setVisible(false);
         jpCadastrarSessao.setVisible(false);
         jpRemoverSessao.setVisible(true);
+        jpCadastrarFilme.setVisible(false);
     }//GEN-LAST:event_jbRemoverSessaoActionPerformed
 
     private void jbSair6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair6MouseClicked
@@ -3008,7 +3114,16 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSair5MouseClicked
 
     private void jbSair5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair5ActionPerformed
-        // TODO add your handling code here:
+        jpPedido.setVisible(false);
+        jpCancelamento.setVisible(false);
+        jpFechamento.setVisible(false);
+        jpSuperUser.setVisible(false);
+        jLabel2.setVisible(false);
+        jpMostrador2.setVisible(false);
+        jpPoltrona.setVisible(false);
+        jpCadastrarSessao.setVisible(false);
+        jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(true);
     }//GEN-LAST:event_jbSair5ActionPerformed
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
@@ -3049,6 +3164,69 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jtxMinutosInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxMinutosInicioMouseClicked
         jtxMinutosInicio.setText("");
     }//GEN-LAST:event_jtxMinutosInicioMouseClicked
+
+    private void jbCadastrarFilmeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCadastrarFilmeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbCadastrarFilmeMouseClicked
+
+    private void jbCadastrarFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarFilmeActionPerformed
+        i++;
+        String CaminhoPacote = "";
+        if (caminho.contains("/src/")) {
+            CaminhoPacote = caminho;
+        } else {
+            CaminhoPacote = dirImagem + jTextField4.getText();
+        }
+
+        // criar codigo
+        nome = jComboBoxNomeFilme.getSelectedItem().toString();
+        
+        int random = Integer.parseInt(jtxCodigoC.getText());
+        sql = "SELECT * FROM filmes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codigo").equals(random)) {
+                    
+                    JOptionPane.showMessageDialog(null, "Erro de cadastro: Filme não Cadastrado. \nCodigo de Filme Existente. \nDigite outro Codigo.");
+                    return;
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessoes\n" + ex.getMessage());
+        }
+        
+
+        // adiciona no banco
+        codFilme = jtxNomeFilmeC3.getText();
+        
+        String sql = "INSERT INTO sessoes VALUES (" + random + "," +jtxNomeFilmeC3.getText() +"," +jtxDuracacaoC.getText() +"," +jtxGeneroC.getText() +"," +jTextField4.getText() + "')"; //ver como enviar horario
+        Conexao con2 = new Conexao();
+        try {
+            con2.sentenca.execute(sql);
+            JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
+        } catch (SQLException ex) {
+            System.out.println("Erro de sintaxe " + ex.getMessage());
+        }
+        jpCadastrarSessao.setVisible(false);
+        jpSuperUser.setVisible(true);
+    }//GEN-LAST:event_jbCadastrarFilmeActionPerformed
+
+    private void jtxCodigoCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxCodigoCMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxCodigoCMouseClicked
+
+    private void jtxDuracacaoCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxDuracacaoCMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxDuracacaoCMouseClicked
+
+    private void jtxGeneroCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxGeneroCMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxGeneroCMouseClicked
+
+    private void jtxNomeFilmeC3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxNomeFilmeC3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxNomeFilmeC3MouseClicked
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
@@ -3201,6 +3379,10 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -3234,6 +3416,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JButton jbCadastrarFilme;
     private javax.swing.JButton jbCancelamento;
     private javax.swing.JButton jbCancelarIngresso;
     private javax.swing.JButton jbCancelarIngresso1;
@@ -3261,6 +3444,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jlLinha4;
     private javax.swing.JLabel jlLinha5;
     private javax.swing.JLabel jlNomeUsuario;
+    private javax.swing.JPanel jpCadastrarFilme;
     private javax.swing.JPanel jpCadastrarSessao;
     private javax.swing.JPanel jpCancelamento;
     private javax.swing.JPanel jpDevCodes;
@@ -3273,8 +3457,12 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JPanel jpRemoverSessao;
     private javax.swing.JPanel jpSeletorOpc;
     private javax.swing.JPanel jpSuperUser;
+    private javax.swing.JTextField jtxCodigoC;
+    private javax.swing.JTextField jtxDuracacaoC;
+    private javax.swing.JTextField jtxGeneroC;
     private javax.swing.JTextField jtxHoraInicio;
     private javax.swing.JTextField jtxMinutosInicio;
+    private javax.swing.JTextField jtxNomeFilmeC3;
     // End of variables declaration//GEN-END:variables
     //</editor-fold>
 }
