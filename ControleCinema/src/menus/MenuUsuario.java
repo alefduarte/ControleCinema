@@ -42,6 +42,32 @@ public class MenuUsuario extends javax.swing.JFrame {
     public static Conexao con = new Conexao();
     public static String dirImagem = System.getProperty("user.dir") + "/src/Filmes/";
 
+    public void inserirImagensDir() {
+        String CaminhoPacote;
+        int j = 0;
+        File folder = new File(dirImagem);
+        File[] listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++) {
+            if (listOfFiles[i].isFile()) {
+                j++;
+                CaminhoPacote = listOfFiles[i].getAbsolutePath();
+                JLabel filme = new JLabel("Label n" + j);
+                filme.setBackground(jbSair1.getBackground());
+                filme.setOpaque(true);
+                String text = jComboBoxNomeFilme.getSelectedItem().toString()
+                        + "\nHorario de Inicio: " + jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText();
+                Border bord = new TitledBorder(jbSair1.getBorder(), text, 0, ICONIFIED, jbSair1.getFont(), Color.WHITE);
+                filme.setBorder(bord);
+                filme.setText("");
+                Icon icon = new ImageIcon(CaminhoPacote);
+                filme.setIcon(icon);
+                jPanel3.add(filme);
+                jPanel3.setName(sql);
+            }
+        }
+    }
+
     public BufferedReader pegarImagemPacote(String fileNameWithExtension, String sourcePackage) {
         try {
             String file = "/" + sourcePackage + "/" + fileNameWithExtension;
@@ -107,17 +133,17 @@ public class MenuUsuario extends javax.swing.JFrame {
         String inputImagePath = source.getAbsolutePath();
         String outputImagePath = source.getAbsolutePath();
         outputImagePath += "novo." + outputImagePath.substring(outputImagePath.lastIndexOf(".") + 1); //pega o tipo da imagem
-        int scaledWidth;
+        int scaledWidth = 1;
         int scaledHeight = 300;
         // reads input image
         File inputFile = new File(inputImagePath);
         BufferedImage inputImage = ImageIO.read(inputFile);
 
         //Define tamanho de largura 
-        int o = inputImage.getHeight();
-        int u = inputImage.getWidth();
-        int porc = o / u;
-        scaledWidth = scaledHeight * porc;
+        float o = inputImage.getHeight();
+        float u = inputImage.getWidth();
+        float porc = o / u;
+        scaledWidth = (int) (scaledHeight * porc);
 
         // creates output image
         BufferedImage outputImage = new BufferedImage(scaledWidth, scaledHeight, inputImage.getType());
@@ -170,6 +196,7 @@ public class MenuUsuario extends javax.swing.JFrame {
      */
     private void initComponentsAlterado(boolean superdefinidor) {
         initComponents();
+        inserirImagensDir();
         jbSuperUser.setVisible(superdefinidor);
 
         jpPedido.setVisible(false);
@@ -2753,12 +2780,14 @@ public class MenuUsuario extends javax.swing.JFrame {
                 source = resize(source);
             } catch (IOException ex) {
                 Logger.getLogger(MenuUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(null, "Error resizing" + ex.getMessage());
             }
             ////
             try {
                 Copiar2(source, dest);
             } catch (InterruptedException | IOException ex) {
                 Logger.getLogger(MenuUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(null, "Error coping" + ex.getMessage());
             }
 
         } else {
