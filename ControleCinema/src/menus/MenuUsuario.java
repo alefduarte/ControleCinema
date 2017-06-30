@@ -68,6 +68,47 @@ public class MenuUsuario extends javax.swing.JFrame {
         }
     }
 
+    public void inserirImagensBanco() {
+        int j = 0;
+        String CaminhoPacote;
+        sql = "SELECT  * FROM filmes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                nome = retorno.getString("nome");
+                codFilme = retorno.getString("codigo");
+
+                // busca cada horario do filme
+                Conexao innerCon = new Conexao();
+                sql = "SELECT * FROM sessoes";
+                try {
+                    ResultSet retorno2 = innerCon.sentenca.executeQuery(sql);
+                    while (retorno2.next()) {
+                        if (retorno2.getString("codFilme").equals(codFilme)) {
+                            j++;
+                            CaminhoPacote = dirImagem + retorno.getString("imagem");
+                            JLabel filme = new JLabel("Label n" + j);
+                            filme.setBackground(jbSair1.getBackground());
+                            filme.setOpaque(true);
+                            String text = nome + "\nHorario de Inicio: " + retorno2.getTime("horario").toString();
+                            Border bord = new TitledBorder(jbSair1.getBorder(), text, 0, ICONIFIED, jbSair1.getFont(), Color.WHITE);
+                            filme.setBorder(bord);
+                            filme.setText("");
+                            Icon icon = new ImageIcon(CaminhoPacote);
+                            filme.setIcon(icon);
+                            jPanel3.add(filme);
+                            jPanel3.setName(nome);
+                        }
+                    }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+        }
+    }
+
     public BufferedReader pegarImagemPacote(String fileNameWithExtension, String sourcePackage) {
         try {
             String file = "/" + sourcePackage + "/" + fileNameWithExtension;
@@ -133,7 +174,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         String inputImagePath = source.getAbsolutePath();
         String outputImagePath = source.getAbsolutePath();
         outputImagePath += "novo." + outputImagePath.substring(outputImagePath.lastIndexOf(".") + 1); //pega o tipo da imagem
-        int scaledWidth = 1;
+        int scaledWidth = 300; //alterei pra 300 como padrao
         int scaledHeight = 300;
         // reads input image
         File inputFile = new File(inputImagePath);
@@ -143,7 +184,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         float o = inputImage.getHeight();
         float u = inputImage.getWidth();
         float porc = o / u;
-        scaledWidth = (int) (scaledHeight * porc);
+        // scaledWidth = (int) (scaledHeight * porc); tava deixando a imagem gorda
 
         // creates output image
         BufferedImage outputImage = new BufferedImage(scaledWidth, scaledHeight, inputImage.getType());
@@ -196,7 +237,7 @@ public class MenuUsuario extends javax.swing.JFrame {
      */
     private void initComponentsAlterado(boolean superdefinidor) {
         initComponents();
-        inserirImagensDir();
+        inserirImagensBanco();
         jbSuperUser.setVisible(superdefinidor);
 
         jpPedido.setVisible(false);
@@ -1874,16 +1915,24 @@ public class MenuUsuario extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         Login log = new Login();
         log.setVisible(true);
@@ -2778,15 +2827,19 @@ public class MenuUsuario extends javax.swing.JFrame {
             try {
                 ///////
                 source = resize(source);
+
             } catch (IOException ex) {
-                Logger.getLogger(MenuUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuUsuario.class
+                        .getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "Error resizing" + ex.getMessage());
             }
             ////
             try {
                 Copiar2(source, dest);
+
             } catch (InterruptedException | IOException ex) {
-                Logger.getLogger(MenuUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuUsuario.class
+                        .getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "Error coping" + ex.getMessage());
             }
 
@@ -2946,16 +2999,24 @@ public class MenuUsuario extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 

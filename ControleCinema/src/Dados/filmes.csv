@@ -1,3 +1,4 @@
-"codigo";"nome";"duracao";"genero"
-1125;"Interstellar";148;"Sci-FI"
-1315;"Star Wars V";127;"Sci-Fi"
+"codigo";"nome";"duracao";"genero";"imagem"
+1125;"Interstellar";289;"Mystery/Science fiction";"Interstellar.jpg"
+1315;"Star Wars V - O Império Contra-Ataca";127;"Sci-Fi";"Star Wars V.jpg"
+1416;"Malévola";157;"Fantasy/Action";"Malevola.jpg"
