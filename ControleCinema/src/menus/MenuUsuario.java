@@ -412,6 +412,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jComboBox5 = new javax.swing.JComboBox<>();
         jComboBoxNomeFilme = new javax.swing.JComboBox<>();
         jComboBox6 = new javax.swing.JComboBox<>();
+        jLabel64 = new javax.swing.JLabel();
+        jComboBox7 = new javax.swing.JComboBox<>();
         jpRemoverSessao = new javax.swing.JPanel();
         jbSair9 = new javax.swing.JButton();
         jLabel43 = new javax.swing.JLabel();
@@ -1557,7 +1559,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpSuperUserLayout.createSequentialGroup()
-                .addContainerGap(61, Short.MAX_VALUE)
+                .addContainerGap(71, Short.MAX_VALUE)
                 .addGroup(jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpSuperUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jbSair2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1630,7 +1632,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jbSair1ActionPerformed(evt);
             }
         });
-        jpCadastrarSessao.add(jbSair1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, 30));
+        jpCadastrarSessao.add(jbSair1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 500, 150, 30));
 
         jLabel7.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1670,9 +1672,9 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jLabel40.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel40.setText("3D/2D");
+        jLabel40.setText("Audio");
         jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 170, -1));
+        jpCadastrarSessao.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 170, -1));
 
         jLabel41.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1754,7 +1756,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2D", "3D" }));
         jComboBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, 220, 30));
+        jpCadastrarSessao.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, 220, 30));
 
         jComboBoxNomeFilme.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBoxNomeFilme.addActionListener(new java.awt.event.ActionListener() {
@@ -1771,6 +1773,16 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
         });
         jpCadastrarSessao.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 220, -1));
+
+        jLabel64.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel64.setText("3D/2D");
+        jLabel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarSessao.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 170, -1));
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2D", "3D" }));
+        jComboBox7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarSessao.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, 220, 30));
 
         jLayeredPane1.add(jpCadastrarSessao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -2642,6 +2654,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                     jTextField6.setText(retorno.getString("codigo"));
                     jTextField5.setText(retorno.getString("duracao") + " minutos");
                     jTextField8.setText(retorno.getString("genero"));
+                    jTextField4.setText(retorno.getString("imagem"));
                 }
             }
         } catch (SQLException ex) {
@@ -2659,6 +2672,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
         }
+
+        jComboBox7.setModel(new DefaultComboBoxModel(new String[]{"DUB", "LEG"}));
     }//GEN-LAST:event_jbSair2ActionPerformed
 
     private void jbSair2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair2MouseClicked
@@ -2763,7 +2778,12 @@ public class MenuUsuario extends javax.swing.JFrame {
     int i = 0;
     private void jbSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair1ActionPerformed
         i++;
-        String CaminhoPacote = caminho;
+        String CaminhoPacote = "";
+        if (caminho.contains("/src/")) {
+            CaminhoPacote = caminho;
+        } else{
+            CaminhoPacote = dirImagem + jTextField4.getText();
+        }
 
         //BufferedReader img = pegarImagemPacote(NomeImagem,CaminhoPacote);
         JLabel filme = new JLabel("Label n" + i);
@@ -2779,7 +2799,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jPanel3.add(filme);
         jPanel3.setName(sql);
 
-        String nome = jComboBoxNomeFilme.getSelectedItem().toString();
+        // criar codigo
+        nome = jComboBoxNomeFilme.getSelectedItem().toString();
         int random = (int) (Math.random() * 9999 + 1111);
         sql = "SELECT * FROM sessoes";
         try {
@@ -2793,6 +2814,22 @@ public class MenuUsuario extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessoes\n" + ex.getMessage());
         }
 
+        // adiciona no banco
+        codFilme = jTextField6.getText();
+        int codSala = Integer.parseInt(jComboBox6.getSelectedItem().toString());
+        float preco = Float.parseFloat(jTextField10.getText());
+        String horario = jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText();
+        String formato = jComboBox5.getSelectedItem().toString();
+        String audio = jComboBox7.getSelectedItem().toString();
+        String sql = "INSERT INTO sessoes VALUES (" + random + "," + codFilme + "," + preco
+                + "," + codSala + ",'" + horario + "','" + formato + "','" + audio + "')"; //ver como enviar horario
+        Conexao con2 = new Conexao();
+        try {
+            con2.sentenca.execute(sql);
+            JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
+        } catch (SQLException ex) {
+            System.out.println("Erro de sintaxe " + ex.getMessage());
+        }
 
     }//GEN-LAST:event_jbSair1ActionPerformed
 
@@ -2969,6 +3006,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                     jTextField6.setText(retorno.getString("codigo"));
                     jTextField5.setText(retorno.getString("duracao") + " minutos");
                     jTextField8.setText(retorno.getString("genero"));
+                    jTextField4.setText(retorno.getString("imagem"));
                 }
             }
         } catch (SQLException ex) {
@@ -3069,6 +3107,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBoxNomeFilme;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3130,6 +3169,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
