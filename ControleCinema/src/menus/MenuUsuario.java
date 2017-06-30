@@ -445,7 +445,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jtxCodigoC = new javax.swing.JTextField();
         jtxDuracacaoC = new javax.swing.JTextField();
         jtxGeneroC = new javax.swing.JTextField();
-        jtxNomeFilmeC3 = new javax.swing.JTextField();
+        jtxNomeFilmeC = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -2015,14 +2015,14 @@ public class MenuUsuario extends javax.swing.JFrame {
         });
         jpCadastrarFilme.add(jtxGeneroC, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 220, 30));
 
-        jtxNomeFilmeC3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jtxNomeFilmeC3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jtxNomeFilmeC3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jtxNomeFilmeC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxNomeFilmeC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxNomeFilmeC.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jtxNomeFilmeC3MouseClicked(evt);
+                jtxNomeFilmeCMouseClicked(evt);
             }
         });
-        jpCadastrarFilme.add(jtxNomeFilmeC3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 220, 30));
+        jpCadastrarFilme.add(jtxNomeFilmeC, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 220, 30));
 
         jLayeredPane1.add(jpCadastrarFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -3181,15 +3181,15 @@ public class MenuUsuario extends javax.swing.JFrame {
         // criar codigo
         nome = jComboBoxNomeFilme.getSelectedItem().toString();
         
-        int random = Integer.parseInt(jtxCodigoC.getText());
+        int conferir = Integer.parseInt(jtxCodigoC.getText());
         sql = "SELECT * FROM filmes";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
-                if (retorno.getString("codigo").equals(random)) {
+                if (retorno.getString("codigo").equals(conferir)) {
                     
                     JOptionPane.showMessageDialog(null, "Erro de cadastro: Filme não Cadastrado. \nCodigo de Filme Existente. \nDigite outro Codigo.");
-                    return;
+                    
                 }
             }
         } catch (SQLException ex) {
@@ -3198,9 +3198,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         
 
         // adiciona no banco
-        codFilme = jtxNomeFilmeC3.getText();
         
-        String sql = "INSERT INTO sessoes VALUES (" + random + "," +jtxNomeFilmeC3.getText() +"," +jtxDuracacaoC.getText() +"," +jtxGeneroC.getText() +"," +jTextField4.getText() + "')"; //ver como enviar horario
+        String sql = "INSERT INTO filmes VALUES (" + conferir + "," +jtxNomeFilmeC.getText() +Integer.parseInt(jtxDuracacaoC.getText()) +"," +jtxGeneroC.getText() +"," +jTextField4.getText() + "')"; //ver como enviar horario
         Conexao con2 = new Conexao();
         try {
             con2.sentenca.execute(sql);
@@ -3224,9 +3223,9 @@ public class MenuUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxGeneroCMouseClicked
 
-    private void jtxNomeFilmeC3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxNomeFilmeC3MouseClicked
+    private void jtxNomeFilmeCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxNomeFilmeCMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtxNomeFilmeC3MouseClicked
+    }//GEN-LAST:event_jtxNomeFilmeCMouseClicked
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
@@ -3462,7 +3461,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField jtxGeneroC;
     private javax.swing.JTextField jtxHoraInicio;
     private javax.swing.JTextField jtxMinutosInicio;
-    private javax.swing.JTextField jtxNomeFilmeC3;
+    private javax.swing.JTextField jtxNomeFilmeC;
     // End of variables declaration//GEN-END:variables
     //</editor-fold>
 }
