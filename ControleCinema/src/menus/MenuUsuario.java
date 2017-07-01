@@ -1820,6 +1820,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarSessao.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 220, 30));
 
         jComboBoxNomeFilme.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxNomeFilme.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jComboBoxNomeFilme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxNomeFilmeActionPerformed(evt);
@@ -2257,10 +2258,20 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jtxSenha.setText("jPasswordField1");
         jtxSenha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxSenha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxSenhaMouseClicked(evt);
+            }
+        });
         jpCadastrarUsuario.add(jtxSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 220, 30));
 
         jtxSenhaComfirmacao.setText("jPasswordField1");
         jtxSenhaComfirmacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxSenhaComfirmacao.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxSenhaComfirmacaoMouseClicked(evt);
+            }
+        });
         jpCadastrarUsuario.add(jtxSenhaComfirmacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 220, 30));
 
         jLabel74.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
@@ -2919,9 +2930,64 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
         resetaPoltrona();
         String codPoltrona = jLabel21.getText().replaceAll("Poltrona ", "");
+
+        // pega capacidade
+        if (jLabel48.getText().equals("30")) {
+            jButtonG1.setEnabled(false);
+            jButtonG2.setEnabled(false);
+            jButtonG3.setEnabled(false);
+            jButtonG4.setEnabled(false);
+            jButtonG5.setEnabled(false);
+        } else if (jLabel48.getText().equals("28")) {
+            jButtonA5.setEnabled(false);
+            jButtonB5.setEnabled(false);
+            jButtonC5.setEnabled(false);
+            jButtonD5.setEnabled(false);
+            jButtonE5.setEnabled(false);
+            jButtonF5.setEnabled(false);
+            jButtonG5.setEnabled(false);
+        } else if (jLabel48.getText().equals("25")) {
+            jButtonG1.setEnabled(false);
+            jButtonG2.setEnabled(false);
+            jButtonG3.setEnabled(false);
+            jButtonG4.setEnabled(false);
+            jButtonG5.setEnabled(false);
+            jButtonF1.setEnabled(false);
+            jButtonF2.setEnabled(false);
+            jButtonF3.setEnabled(false);
+            jButtonF4.setEnabled(false);
+            jButtonF5.setEnabled(false);
+        } else if (jLabel48.getText().equals("24")) {
+            jButtonA5.setEnabled(false);
+            jButtonB5.setEnabled(false);
+            jButtonC5.setEnabled(false);
+            jButtonD5.setEnabled(false);
+            jButtonE5.setEnabled(false);
+            jButtonF5.setEnabled(false);
+            jButtonG5.setEnabled(false);
+            jButtonG4.setEnabled(false);
+            jButtonG3.setEnabled(false);
+            jButtonG2.setEnabled(false);
+            jButtonG1.setEnabled(false);
+        } else if (jLabel48.getText().equals("21")) {
+            jButtonA5.setEnabled(false);
+            jButtonB5.setEnabled(false);
+            jButtonC5.setEnabled(false);
+            jButtonD5.setEnabled(false);
+            jButtonE5.setEnabled(false);
+            jButtonF5.setEnabled(false);
+            jButtonG5.setEnabled(false);
+            jButtonA4.setEnabled(false);
+            jButtonB4.setEnabled(false);
+            jButtonC4.setEnabled(false);
+            jButtonD4.setEnabled(false);
+            jButtonE4.setEnabled(false);
+            jButtonF4.setEnabled(false);
+            jButtonG4.setEnabled(false);
+        }
 
         // procura pontronas exisentes
         sql = "SELECT * FROM ingressos";
@@ -3453,7 +3519,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSair6MouseClicked
 
     private void jbSair6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair6ActionPerformed
-               jpPedido.setVisible(false);
+        jpPedido.setVisible(false);
         jpCancelamento.setVisible(false);
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
@@ -3670,62 +3736,51 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbBuscarSessaoMouseClicked
 
     private void jbBuscarSessaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarSessaoActionPerformed
-        String CodigoSala="";
-        String preco="";
-        String codigoFilme="";
-        String horario ="";
-        String tipo ="";
-        String audio ="";
-        
+        String CodigoSala = "";
+        String preco = "";
+        String codigoFilme = "";
+        String horario = "";
+        String tipo = "";
+        String audio = "";
+
         String conferir = jtxBuscarCodigoS.getText();
-        int erro = 0;
         sql = "SELECT * FROM sessoes";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
-                    if (retorno.getString("codigo").equals(conferir)) {
-                        erro = 0;
-                        codigoFilme = retorno.getString("codFilme");
-                        preco = retorno.getString("preco");
-                        CodigoSala = retorno.getString("codSala");
-                        horario = retorno.getString("horario");
-                        tipo = retorno.getString("formato");
-                        audio = retorno.getString("audio");
+                if (retorno.getString("codigo").equals(conferir)) {
+                    codigoFilme = retorno.getString("codFilme");
+                    preco = retorno.getString("preco");
+                    CodigoSala = retorno.getString("codSala");
+                    horario = retorno.getTime("horario").toString();
+                    tipo = retorno.getString("formato");
+                    audio = retorno.getString("audio");
+                    String sql2 = "SELECT * FROM filmes";
+                    Conexao con2 = new Conexao();
+                    try {
+                        ResultSet retorno2 = con2.sentenca.executeQuery(sql2);
+                        while (retorno2.next()) {
+                            if (retorno2.getString("codigo").equals(codigoFilme)) {
+                                jlNomeFilmeS.setText(retorno2.getString("nome"));
+                                jlDuracaoFilmeS.setText(retorno2.getString("duracao") + " minutos");
+                                jlGeneroFilmeS.setText(retorno2.getString("genero"));
+                                jlCodigoFilmeS.setText(codigoFilme);
+                                jlCodigoSalaS.setText(CodigoSala);
+                                jlPrecoS.setText(preco);
+                                jlHorarioIniS.setText(horario);
+                                jlTipoS.setText(tipo);
+                                jlAudioS.setText(audio);
+                            }
+                        }
+
+                    } catch (SQLException ex) {
+                        JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessões.\n" + ex.getMessage());
                     }
                 }
-            
-            }catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessões.\n" + ex.getMessage());
             }
-        if(erro==0){
-            String conferir2 = codigoFilme;
-            int erro2 = 0;
-            String sql2 = "SELECT * FROM filmes";
-            try {
-                ResultSet retorno = con.sentenca.executeQuery(sql2);
-                while (retorno.next()) {
-                        if (retorno.getString("codigo").equals(conferir2)) {
-                            jlNomeFilmeS.setText(retorno.getString("nome"));
-                            jlDuracaoFilmeS.setText(retorno.getString("duracao"));
-                            jlGeneroFilmeS.setText(retorno.getString("genero"));
-                        }
-                }
-            
-            }catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessões.\n" + ex.getMessage());
-            }
-            
-            
-            jlCodigoFilmeS.setText(codigoFilme);
-            jlCodigoSalaS.setText(CodigoSala);
-            jlPrecoS.setText(preco);
-            jlHorarioIniS.setText(horario);
-            jlTipoS.setText(tipo);
-            jlAudioS.setText(audio);
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "Erro de busca: Sessão Inexistente. \nDigite outro codigo.");
-            jtxBuscarCodigoS.setText("000000");
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessões.\n" + ex.getMessage());
         }
     }//GEN-LAST:event_jbBuscarSessaoActionPerformed
 
@@ -3809,7 +3864,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSair10MouseClicked
 
     private void jbSair10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair10ActionPerformed
-         jpPedido.setVisible(false);
+        jpPedido.setVisible(false);
         jpCancelamento.setVisible(false);
         jpFechamento.setVisible(false);
         jpSuperUser.setVisible(false);
@@ -3893,7 +3948,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void jbCadastrarFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarFilmeActionPerformed
         i++;
-         int erro = 0;
+        int erro = 0;
         String CaminhoPacote = "";
         if (caminho.contains("/src/")) {
             CaminhoPacote = caminho;
@@ -3918,24 +3973,23 @@ public class MenuUsuario extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sessoes\n" + ex.getMessage());
         }
-        if(erro==0){
-        String s = jTextField4.getText();
-        String imagem = s.substring(s.lastIndexOf("/") + 1, s.length());
-        
-        // adiciona no banco
-        sql = "INSERT INTO filmes VALUES (" + conferir + ",'" + jtxNomeFilmeC.getText() + "'," + Integer.parseInt(jtxDuracacaoC.getText()) + ",'" + jtxGeneroC.getText() + "','" + imagem + "')"; //ver como enviar horario
-        Conexao con2 = new Conexao();
-        try {
-            con2.sentenca.execute(sql);
-            JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
-        } catch (SQLException ex) {
-            
-            System.out.println("Erro de sintaxe " + ex.getMessage());
-        }
-        jpCadastrarFilme.setVisible(false);
-        jpSuperUser.setVisible(true);
-        }
-        else{
+        if (erro == 0) {
+            String s = jTextField4.getText();
+            String imagem = s.substring(s.lastIndexOf("/") + 1, s.length());
+
+            // adiciona no banco
+            sql = "INSERT INTO filmes VALUES (" + conferir + ",'" + jtxNomeFilmeC.getText() + "'," + Integer.parseInt(jtxDuracacaoC.getText()) + ",'" + jtxGeneroC.getText() + "','" + imagem + "')"; //ver como enviar horario
+            Conexao con2 = new Conexao();
+            try {
+                con2.sentenca.execute(sql);
+                JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
+            } catch (SQLException ex) {
+
+                System.out.println("Erro de sintaxe " + ex.getMessage());
+            }
+            jpCadastrarFilme.setVisible(false);
+            jpSuperUser.setVisible(true);
+        } else {
             jtxCodigoC.setText("");
             jtxNomeFilmeC.setText("");
             jtxDuracacaoC.setText("");
@@ -3945,11 +3999,11 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbCadastrarFilmeActionPerformed
 
     private void jtxCodigoCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxCodigoCMouseClicked
-        // TODO add your handling code here:
+        jtxCodigoC.setText("");
     }//GEN-LAST:event_jtxCodigoCMouseClicked
 
     private void jtxDuracacaoCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxDuracacaoCMouseClicked
-        // TODO add your handling code here:
+        jtxDuracacaoC.setText("");
     }//GEN-LAST:event_jtxDuracacaoCMouseClicked
 
     private void jtxGeneroCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxGeneroCMouseClicked
@@ -3981,49 +4035,47 @@ public class MenuUsuario extends javax.swing.JFrame {
         sql = "SELECT * FROM salas";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
-            
+
             while (retorno.next()) {
-                
+
                 if (retorno.getString("codSala").equals(conferir)) {
                     erro = 1;
-                    
+
                     JOptionPane.showMessageDialog(null, "Erro de cadastro: Sala não cadastrada. \nCodigo de sala existente. \nDigite outro Codigo.");
-                    
+
                 }
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigo de sala\n" + ex.getMessage());
         }
-        if(erro==0){
-        sql = "INSERT INTO salas VALUES ("+ conferir + "," + capacidade + ")";
-        Conexao con3 = new Conexao();
-        try{
-            con3.sentenca.execute(sql);
-            JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
-        } catch (SQLException ex) {
-            System.out.println("Erro de sintaxe " + ex.getMessage());
-        }
-        jtxCapacidadeSala.setText("");
-        jtxCodigoSala.setText("");
-        jpCadastrarFilme.setVisible(false);
-        jpSuperUser.setVisible(true);
-        jtxCapacidadeSala.setVisible(false);
-        jtxCodigoSala.setVisible(false);
-        }
-        
-        else{
+        if (erro == 0) {
+            sql = "INSERT INTO salas VALUES (" + conferir + "," + capacidade + ")";
+            Conexao con3 = new Conexao();
+            try {
+                con3.sentenca.execute(sql);
+                JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
+            } catch (SQLException ex) {
+                System.out.println("Erro de sintaxe " + ex.getMessage());
+            }
+            jtxCapacidadeSala.setText("");
+            jtxCodigoSala.setText("");
+            jpCadastrarFilme.setVisible(false);
+            jpSuperUser.setVisible(true);
+            jtxCapacidadeSala.setVisible(false);
+            jtxCodigoSala.setVisible(false);
+        } else {
             jtxCapacidadeSala.setText("");
             jtxCodigoSala.setText("");
         }
-        
+
     }//GEN-LAST:event_jbCadastrarSActionPerformed
 
     private void jtxNomeUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxNomeUMouseClicked
-        // TODO add your handling code here:
+        jtxNomeU.setText("");
     }//GEN-LAST:event_jtxNomeUMouseClicked
 
     private void jtxIdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxIdMouseClicked
-        // TODO add your handling code here:
+        jtxId.setText("");
     }//GEN-LAST:event_jtxIdMouseClicked
 
     private void jbCadastrarUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCadastrarUMouseClicked
@@ -4031,93 +4083,93 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbCadastrarUMouseClicked
 
     private void jbCadastrarUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarUActionPerformed
-        if(jtxSenha.getText().equals(jtxSenhaComfirmacao.getText())){
+        if (jtxSenha.getText().equals(jtxSenhaComfirmacao.getText())) {
             int id = Integer.parseInt(jtxId.getText());
-            String nome= jtxNomeU.getText();
+            String nome = jtxNomeU.getText();
             String senha = jtxSenha.getText();
-            int tipoUsuario=0;
-            if(jcbTipoUsuario.getSelectedItem().equals("Administrador")){
-                tipoUsuario=1;
+            int tipoUsuario = 0;
+            if (jcbTipoUsuario.getSelectedItem().equals("Administrador")) {
+                tipoUsuario = 1;
+            } else {
+                tipoUsuario = 0;
             }
-            else{tipoUsuario=0;}
-            
+
             String conferir = jtxId.getText();
             int erro = 0;
             sql = "SELECT * FROM usuarios";
             try {
                 ResultSet retorno = con.sentenca.executeQuery(sql);
                 while (retorno.next()) {
-                if (retorno.getString("id").equals(conferir)) {
-                    erro = 1;
-                    JOptionPane.showMessageDialog(null, "Erro de cadastro: Usuario não cadastrada. \nID do Usuario existente. \nDigite outro ID.");
+                    if (retorno.getString("id").equals(conferir)) {
+                        erro = 1;
+                        JOptionPane.showMessageDialog(null, "Erro de cadastro: Usuario não cadastrada. \nID do Usuario existente. \nDigite outro ID.");
                     }
                 }
-            }catch (SQLException ex) {
+            } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(null, "Erro ao buscar lista de ID de usuarios\n" + ex.getMessage());
             }
-            
-            if(erro==0){
-                sql = "INSERT INTO usuarios VALUES ("+ id + ",'" + senha +"','" +nome +"'," +tipoUsuario + ")";
+
+            if (erro == 0) {
+                sql = "INSERT INTO usuarios VALUES (" + id + ",'" + senha + "','" + nome + "'," + tipoUsuario + ")";
                 Conexao con3 = new Conexao();
-                try{
+                try {
                     con3.sentenca.execute(sql);
                     JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
                 } catch (SQLException ex) {
-                System.out.println("Erro de sintaxe " + ex.getMessage());
+                    System.out.println("Erro de sintaxe " + ex.getMessage());
                 }
-            jtxSenha.setText("");
-            jtxSenhaComfirmacao.setText("");
-            jtxId.setText("");
-            jtxNomeU.setText("");
-            jpCadastrarUsuario.setVisible(false);
-            jpSuperUser.setVisible(true);
+                jtxSenha.setText("");
+                jtxSenhaComfirmacao.setText("");
+                jtxId.setText("");
+                jtxNomeU.setText("");
+                jpCadastrarUsuario.setVisible(false);
+                jpSuperUser.setVisible(true);
             }
-            
-        }
-        else{
+
+        } else {
             JOptionPane.showMessageDialog(null, "Erro no cadastro. \nAs senhas nao sao iguais. \nDigite novamente");
             jtxSenha.setText("");
             jtxSenhaComfirmacao.setText("");
         }
     }//GEN-LAST:event_jbCadastrarUActionPerformed
 
-    
+
     private void jbBuscarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarUsuarioActionPerformed
-        int tipoUsuario=1;
-        String nomeU="";
-        String senhaU="";
+        int tipoUsuario = 1;
+        String nomeU = "";
+        String senhaU = "";
         String conferir = jtxIdBusca.getText();
         int erro = 0;
         sql = "SELECT * FROM usuarios";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
-                    if (retorno.getString("id").equals(conferir)) {
-                        erro = 0;
-                        senhaU = retorno.getString("senha");
-                        nomeU = retorno.getString("usuario");
-                        tipoUsuario = retorno.getInt("super");
-                    }
+                if (retorno.getString("id").equals(conferir)) {
+                    erro = 0;
+                    senhaU = retorno.getString("senha");
+                    nomeU = retorno.getString("usuario");
+                    tipoUsuario = retorno.getInt("super");
                 }
-            
-            }catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Erro ao buscar lista de ID de usuarios\n" + ex.getMessage());
             }
-        if(erro==0){
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de ID de usuarios\n" + ex.getMessage());
+        }
+        if (erro == 0) {
             jlNomeU.setText(nomeU);
             jlSenhaU.setText(senhaU);
-            if(tipoUsuario==1){
-                
+            if (tipoUsuario == 1) {
+
                 jlTipoUsuario.setText("Administrador");
+            } else {
+                jlTipoUsuario.setText("Usuario Comum");
             }
-            else{jlTipoUsuario.setText("Usuario Comum");}
-            
-        }
-        else{
+
+        } else {
             JOptionPane.showMessageDialog(null, "Erro de busca: Usuario Inexistente. \nDigite outro ID.");
             jtxIdBusca.setText("000000");
         }
-        
+
     }//GEN-LAST:event_jbBuscarUsuarioActionPerformed
 
     private void jbBuscarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbBuscarUsuarioMouseClicked
@@ -4125,7 +4177,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbBuscarUsuarioMouseClicked
 
     private void jtxIdBuscaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxIdBuscaMouseClicked
-        // TODO add your handling code here:
+        jtxIdBusca.setText("");
     }//GEN-LAST:event_jtxIdBuscaMouseClicked
 
     private void jbRemoverUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbRemoverUMouseClicked
@@ -4134,7 +4186,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void jbRemoverUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRemoverUActionPerformed
 
-    sql = "DELETE FROM usuarios WHERE id=" + jtxIdBusca.getText();
+        sql = "DELETE FROM usuarios WHERE id=" + jtxIdBusca.getText();
         try {
             con.sentenca.executeUpdate(sql);
             JOptionPane.showMessageDialog(this, "Usuario deletado");
@@ -4146,11 +4198,11 @@ public class MenuUsuario extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
-        
+
     }//GEN-LAST:event_jbRemoverUActionPerformed
 
     private void jtxBuscarSalaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxBuscarSalaMouseClicked
-        // TODO add your handling code here:
+        jtxBuscarSala.setText("");
     }//GEN-LAST:event_jtxBuscarSalaMouseClicked
 
     private void jbBusacarSalaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbBusacarSalaMouseClicked
@@ -4165,23 +4217,22 @@ public class MenuUsuario extends javax.swing.JFrame {
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
-                    if (retorno.getString("codSala").equals(conferir)) {
-                        erro = 0;
-                        capacidade = retorno.getString("capacidade");
-                    }
+                if (retorno.getString("codSala").equals(conferir)) {
+                    erro = 0;
+                    capacidade = retorno.getString("capacidade");
                 }
-            
-            }catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigos das salas\n" + ex.getMessage());
             }
-        if(erro==0){
-            jlCapacidade.setText(capacidade);
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigos das salas\n" + ex.getMessage());
         }
-        else{
+        if (erro == 0) {
+            jlCapacidade.setText(capacidade);
+        } else {
             JOptionPane.showMessageDialog(null, "Erro de busca: Sala Inexistente. \nDigite outro codigo.");
             jlCapacidade.setText("00000");
         }
-        
+
     }//GEN-LAST:event_jbBusacarSalaActionPerformed
 
     private void jtxBuscarSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxBuscarSalaActionPerformed
@@ -4225,32 +4276,31 @@ public class MenuUsuario extends javax.swing.JFrame {
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
-                    if (retorno.getString("codigo").equals(conferir)) {
-                        erro = 0;
-                        nome = retorno.getString("nome");
-                        duracao = retorno.getString("duracao");
-                        genero = retorno.getString("genero");
-                        capa = retorno.getString("imagem");
-                    }
+                if (retorno.getString("codigo").equals(conferir)) {
+                    erro = 0;
+                    nome = retorno.getString("nome");
+                    duracao = retorno.getString("duracao");
+                    genero = retorno.getString("genero");
+                    capa = retorno.getString("imagem");
                 }
-            
-            }catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigos dos filmes\n" + ex.getMessage());
             }
-        if(erro==0){
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigos dos filmes\n" + ex.getMessage());
+        }
+        if (erro == 0) {
             jlNomeFilme.setText(nome);
             jlDuracao.setText(duracao);
             jlGenero.setText(genero);
             jlCapa.setText(capa);
-        }
-        else{
+        } else {
             JOptionPane.showMessageDialog(null, "Erro de busca: Filme Inexistente. \nDigite outro codigo.");
             jtxBuscaCodigoF.setText("00000");
         }
     }//GEN-LAST:event_jbBuscarFilmeActionPerformed
 
     private void jtxBuscaCodigoFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxBuscaCodigoFMouseClicked
-        // TODO add your handling code here:
+        jtxBuscaCodigoF.setText("");
     }//GEN-LAST:event_jtxBuscaCodigoFMouseClicked
 
     private void jlCapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlCapaActionPerformed
@@ -4287,11 +4337,11 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbRemoverFilme1ActionPerformed
 
     private void jTextField11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField11MouseClicked
-        // TODO add your handling code here:
+      jTextField11.setText("");
     }//GEN-LAST:event_jTextField11MouseClicked
 
     private void jtxBuscarCodigoSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxBuscarCodigoSMouseClicked
-        // TODO add your handling code here:
+        jtxBuscarCodigoS.setText("");
     }//GEN-LAST:event_jtxBuscarCodigoSMouseClicked
 
     private void jbSair11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair11MouseClicked
@@ -4299,8 +4349,8 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSair11MouseClicked
 
     private void jbSair11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair11ActionPerformed
- 
-    sql = "DELETE FROM sessoes WHERE codigo=" + jtxBuscarCodigoS.getText();
+
+        sql = "DELETE FROM sessoes WHERE codigo=" + jtxBuscarCodigoS.getText();
         try {
             con.sentenca.executeUpdate(sql);
             JOptionPane.showMessageDialog(this, "Usuario deletado");
@@ -4319,8 +4369,16 @@ public class MenuUsuario extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
-        
+
     }//GEN-LAST:event_jbSair11ActionPerformed
+
+    private void jtxSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxSenhaMouseClicked
+        jtxSenha.setText("");
+    }//GEN-LAST:event_jtxSenhaMouseClicked
+
+    private void jtxSenhaComfirmacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxSenhaComfirmacaoMouseClicked
+        jtxSenhaComfirmacao.setText("");
+    }//GEN-LAST:event_jtxSenhaComfirmacaoMouseClicked
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
