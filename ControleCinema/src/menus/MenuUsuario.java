@@ -6,6 +6,8 @@
 package menus;
 
 import BancoDeDados.Conexao;
+import Ingressos.IngressoViewer;
+import Ingressos.SalvaIngresso;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -893,6 +895,11 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
         jpPedido.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 71, 169, -1));
 
         jLabel14.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
@@ -2991,11 +2998,11 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         // procura pontronas exisentes
         sql = "SELECT * FROM ingressos";
+        //String sql2 = "SELECT * FROM sessoes WHERE codigo=";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
                 if (retorno.getString("codSessao").equals(codSessao)) {
-
                     //<editor-fold defaultstate="collapsed" desc=" desativas assentos usados ">
                     if (retorno.getString("assento").equals("A1")) {
                         jButtonA1.setEnabled(false);
@@ -3150,7 +3157,16 @@ public class MenuUsuario extends javax.swing.JFrame {
                         + codPoltrona + "','" + tipoIngresso + "')";
                 try {
                     con.sentenca.execute(sql);
-                    JOptionPane.showMessageDialog(this, "Inserido com sucesso!");
+                    nome = jComboBox1.getSelectedItem().toString() + " " + jLabel22.getText()
+                            + " " + jLabel63.getText();
+                    String codSala = jComboBox2.getSelectedItem().toString();
+                    String horario = jComboBox3.getSelectedItem().toString();
+                    String codIng = String.valueOf(codigo);
+                    SalvaIngresso.writePng(codSala, nome, horario, String.valueOf(preco), codIng, codPoltrona);
+                    IngressoViewer tela = new IngressoViewer();
+                    tela.zerar();
+                    tela.viewer();
+                    tela.setVisible(true);
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog(null, "Erro de sintaxe " + ex.getMessage());
                 }
@@ -3160,6 +3176,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Selecione o assento");
         }
+
+
     }//GEN-LAST:event_jbCompraActionPerformed
 
     //<editor-fold defaultstate="collapsed" desc=" Recebe valor do botao poltrona ">
@@ -3799,6 +3817,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                         && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())
                         && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
                     preco = retorno.getFloat("preco");
+                    codSessao = String.valueOf(retorno.getFloat("codigo"));
                 }
             }
 
@@ -3822,6 +3841,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                         && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())
                         && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
                     preco = retorno.getFloat("preco");
+                    codSessao = String.valueOf(retorno.getFloat("codigo"));
                 }
             }
 
@@ -4337,7 +4357,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbRemoverFilme1ActionPerformed
 
     private void jTextField11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField11MouseClicked
-      jTextField11.setText("");
+        jTextField11.setText("");
     }//GEN-LAST:event_jTextField11MouseClicked
 
     private void jtxBuscarCodigoSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxBuscarCodigoSMouseClicked
@@ -4379,6 +4399,62 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jtxSenhaComfirmacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxSenhaComfirmacaoMouseClicked
         jtxSenhaComfirmacao.setText("");
     }//GEN-LAST:event_jtxSenhaComfirmacaoMouseClicked
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // pega capacidade
+
+        String capacidade = null;
+        sql = "SELECT * FROM salas";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())) {
+                    capacidade = retorno.getString("capacidade");
+                }
+            }
+            jLabel48.setText(capacidade);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+        }
+
+        //pegar horarios
+        ArrayList<String> horario = new ArrayList<>();
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codFilme").equals(codFilme) && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())) {
+                    horario.add(retorno.getTime("horario").toString());
+                }
+            }
+            jComboBox3.setModel(new DefaultComboBoxModel(horario.toArray()));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+        }
+        // pegar preço
+        float preco = 0;
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codFilme").equals(codFilme)
+                        && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())
+                        && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
+                    preco = retorno.getFloat("preco");
+                    codSessao = retorno.getString("codigo");
+                    jLabel22.setText(retorno.getString("formato")); //pega formato
+                    jLabel63.setText(retorno.getString("audio")); //pega audio
+                }
+            }
+            if (jComboBox4.getSelectedItem().toString().equals("Meia")) {
+                preco /= 2;
+            }
+            jLabel20.setText("R$ " + String.valueOf(preco));
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar lista de filmes\n" + ex.getMessage());
+        }
+
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
