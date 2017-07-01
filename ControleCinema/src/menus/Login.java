@@ -182,7 +182,12 @@ public class Login extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setText("DevCodes");
+        jLabel5.setText("DevCode");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
         jPanel5.add(jLabel5);
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 30));
@@ -191,7 +196,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Bebas", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel6.setText("www.devcodes.com.br");
+        jLabel6.setText("www.devcode.com.br");
         jPanel6.add(jLabel6);
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 410, 60));
@@ -311,6 +316,11 @@ public class Login extends javax.swing.JFrame {
             login();
         }
     }//GEN-LAST:event_jtxUserKeyPressed
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        Sobre sobre = new Sobre();
+        sobre.setVisible(true);
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments

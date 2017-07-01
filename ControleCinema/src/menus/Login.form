@@ -322,8 +322,11 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="DevCodes"/>
+                <Property name="text" type="java.lang.String" value="DevCode"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel5MouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -349,7 +352,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="www.devcodes.com.br"/>
+                <Property name="text" type="java.lang.String" value="www.devcode.com.br"/>
               </Properties>
             </Component>
           </SubComponents>
