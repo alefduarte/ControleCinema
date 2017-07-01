@@ -233,6 +233,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }
 
     /**
@@ -259,6 +260,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -490,6 +492,19 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbBusacarSala = new javax.swing.JButton();
         jlCapacidade = new javax.swing.JLabel();
         jbCadastrarS2 = new javax.swing.JButton();
+        jpRemoverFilme = new javax.swing.JPanel();
+        jLabel82 = new javax.swing.JLabel();
+        jlGenero = new javax.swing.JTextField();
+        jLabel83 = new javax.swing.JLabel();
+        jLabel84 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        jLabel86 = new javax.swing.JLabel();
+        jbBuscarFilme = new javax.swing.JButton();
+        jtxBuscaCodigoF = new javax.swing.JTextField();
+        jlCapa = new javax.swing.JTextField();
+        jlNomeFilme = new javax.swing.JTextField();
+        jlDuracao = new javax.swing.JTextField();
+        jbRemoverFilme1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -2358,7 +2373,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbCadastrarS2.setBackground(new java.awt.Color(229, 91, 0));
         jbCadastrarS2.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jbCadastrarS2.setForeground(new java.awt.Color(255, 255, 255));
-        jbCadastrarS2.setText("Cadastrar");
+        jbCadastrarS2.setText("Remover");
         jbCadastrarS2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
         jbCadastrarS2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2373,6 +2388,128 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverSala.add(jbCadastrarS2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, 150, 30));
 
         jLayeredPane1.add(jpRemoverSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 540));
+
+        jpRemoverFilme.setBackground(new java.awt.Color(204, 204, 204));
+        jpRemoverFilme.setMaximumSize(new java.awt.Dimension(550, 540));
+        jpRemoverFilme.setMinimumSize(new java.awt.Dimension(550, 540));
+        jpRemoverFilme.setPreferredSize(new java.awt.Dimension(550, 540));
+        jpRemoverFilme.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel82.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel82.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel82.setText("Capa do Filme");
+        jLabel82.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpRemoverFilme.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 170, -1));
+
+        jlGenero.setEditable(false);
+        jlGenero.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jlGenero.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jlGenero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlGeneroActionPerformed(evt);
+            }
+        });
+        jpRemoverFilme.add(jlGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 220, 30));
+
+        jLabel83.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel83.setText("Nome do Filme");
+        jLabel83.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpRemoverFilme.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 170, -1));
+
+        jLabel84.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel84.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel84.setText("Codigo do Filme");
+        jLabel84.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpRemoverFilme.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 170, -1));
+
+        jLabel85.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel85.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel85.setText("Duração");
+        jLabel85.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpRemoverFilme.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 170, -1));
+
+        jLabel86.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel86.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel86.setText("Genero");
+        jLabel86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpRemoverFilme.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 170, -1));
+
+        jbBuscarFilme.setBackground(new java.awt.Color(229, 91, 0));
+        jbBuscarFilme.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbBuscarFilme.setForeground(new java.awt.Color(255, 255, 255));
+        jbBuscarFilme.setText("Buscar");
+        jbBuscarFilme.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbBuscarFilme.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbBuscarFilmeMouseClicked(evt);
+            }
+        });
+        jbBuscarFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBuscarFilmeActionPerformed(evt);
+            }
+        });
+        jpRemoverFilme.add(jbBuscarFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 90, 30));
+
+        jtxBuscaCodigoF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxBuscaCodigoF.setText("0000");
+        jtxBuscaCodigoF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jtxBuscaCodigoF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtxBuscaCodigoFMouseClicked(evt);
+            }
+        });
+        jpRemoverFilme.add(jtxBuscaCodigoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 110, 30));
+
+        jlCapa.setEditable(false);
+        jlCapa.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jlCapa.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jlCapa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlCapaActionPerformed(evt);
+            }
+        });
+        jpRemoverFilme.add(jlCapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 220, 30));
+
+        jlNomeFilme.setEditable(false);
+        jlNomeFilme.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jlNomeFilme.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jlNomeFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlNomeFilmeActionPerformed(evt);
+            }
+        });
+        jpRemoverFilme.add(jlNomeFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 220, 30));
+
+        jlDuracao.setEditable(false);
+        jlDuracao.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jlDuracao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jlDuracao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlDuracaoActionPerformed(evt);
+            }
+        });
+        jpRemoverFilme.add(jlDuracao, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 220, 30));
+
+        jbRemoverFilme1.setBackground(new java.awt.Color(229, 91, 0));
+        jbRemoverFilme1.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbRemoverFilme1.setForeground(new java.awt.Color(255, 255, 255));
+        jbRemoverFilme1.setText("Remover");
+        jbRemoverFilme1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbRemoverFilme1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbRemoverFilme1MouseClicked(evt);
+            }
+        });
+        jbRemoverFilme1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRemoverFilme1ActionPerformed(evt);
+            }
+        });
+        jpRemoverFilme.add(jbRemoverFilme1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, 30));
+
+        jLayeredPane1.add(jpRemoverFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel1.add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 550, 540));
 
@@ -2435,6 +2572,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbCancelamentoActionPerformed
 
     private void jbFechamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbFechamentoMouseClicked
@@ -2456,6 +2594,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbFechamentoActionPerformed
 
     private void jbSuperUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSuperUserMouseClicked
@@ -2477,6 +2616,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbSuperUserActionPerformed
 
     private void jbHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbHomeMouseClicked
@@ -2498,6 +2638,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbHomeActionPerformed
 
     private void jbPedidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPedidoMouseClicked
@@ -2520,6 +2661,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
 
         // lista de filmes
         ArrayList<String> filmes = new ArrayList<>();
@@ -2720,6 +2862,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
         
         resetaPoltrona();
         String codPoltrona = jLabel21.getText().replaceAll("Poltrona ", "");
@@ -3131,6 +3274,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
 
         // lista de filmes
         ArrayList<String> filmes = new ArrayList<>();
@@ -3199,6 +3343,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(true);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbSair3ActionPerformed
 
     private void jbSair4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair4MouseClicked
@@ -3223,6 +3368,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbSair4ActionPerformed
 
     private void jbRemoverSessaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbRemoverSessaoMouseClicked
@@ -3243,6 +3389,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbRemoverSessaoActionPerformed
 
     private void jbSair6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair6MouseClicked
@@ -3264,6 +3411,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(true);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbSair6ActionPerformed
 
     private void jbSair7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair7MouseClicked
@@ -3285,6 +3433,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(true);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbSair7ActionPerformed
 
     private void jbCancelarIngressoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCancelarIngressoMouseClicked
@@ -3548,7 +3697,21 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSair10MouseClicked
 
     private void jbSair10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair10ActionPerformed
-        // TODO add your handling code here:
+         jpPedido.setVisible(false);
+        jpCancelamento.setVisible(false);
+        jpFechamento.setVisible(false);
+        jpSuperUser.setVisible(false);
+        jLabel2.setVisible(false);
+        jpMostrador2.setVisible(false);
+        jpPoltrona.setVisible(false);
+        jpCadastrarSessao.setVisible(false);
+        jpRemoverSessao.setVisible(false);
+        jpCadastrarFilme.setVisible(false);
+        jpCadastrarSala.setVisible(false);
+        jpCadastrarUsuario.setVisible(false);
+        jpRemoverUsuario.setVisible(false);
+        jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(true);
     }//GEN-LAST:event_jbSair10ActionPerformed
 
     private void jbSair5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair5MouseClicked
@@ -3570,6 +3733,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpCadastrarUsuario.setVisible(false);
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
+        jpRemoverFilme.setVisible(false);
     }//GEN-LAST:event_jbSair5ActionPerformed
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
@@ -3920,7 +4084,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         sql = "DELETE FROM salas WHERE codSala=" + jtxBuscarSala.getText();
         try {
             con.sentenca.executeUpdate(sql);
-            JOptionPane.showMessageDialog(this, "Sala deletado");
+            JOptionPane.showMessageDialog(this, "Sala deletada");
             jlCapacidade.setText("");
             jpRemoverSala.setVisible(false);
             jpSuperUser.setVisible(true);
@@ -3929,6 +4093,86 @@ public class MenuUsuario extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jbCadastrarS2ActionPerformed
+
+    private void jlGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlGeneroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlGeneroActionPerformed
+
+    private void jbBuscarFilmeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbBuscarFilmeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbBuscarFilmeMouseClicked
+
+    private void jbBuscarFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarFilmeActionPerformed
+        String nome = "";
+        String duracao = "";
+        String genero = "";
+        String capa = "";
+        String conferir = jtxBuscaCodigoF.getText();
+        int erro = 0;
+        sql = "SELECT * FROM filmes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                    if (retorno.getString("codigo").equals(conferir)) {
+                        erro = 0;
+                        nome = retorno.getString("nome");
+                        duracao = retorno.getString("duracao");
+                        genero = retorno.getString("genero");
+                        capa = retorno.getString("imagem");
+                    }
+                }
+            
+            }catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "Erro ao buscar lista de codigos dos filmes\n" + ex.getMessage());
+            }
+        if(erro==0){
+            jlNomeFilme.setText(nome);
+            jlDuracao.setText(duracao);
+            jlGenero.setText(genero);
+            jlCapa.setText(capa);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Erro de busca: Filme Inexistente. \nDigite outro codigo.");
+            jtxBuscaCodigoF.setText("00000");
+        }
+    }//GEN-LAST:event_jbBuscarFilmeActionPerformed
+
+    private void jtxBuscaCodigoFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxBuscaCodigoFMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxBuscaCodigoFMouseClicked
+
+    private void jlCapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlCapaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlCapaActionPerformed
+
+    private void jlNomeFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlNomeFilmeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlNomeFilmeActionPerformed
+
+    private void jlDuracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlDuracaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlDuracaoActionPerformed
+
+    private void jbRemoverFilme1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbRemoverFilme1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbRemoverFilme1MouseClicked
+
+    private void jbRemoverFilme1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRemoverFilme1ActionPerformed
+        sql = "DELETE FROM filmes WHERE codigo=" + jtxBuscaCodigoF.getText();
+        try {
+            con.sentenca.executeUpdate(sql);
+            JOptionPane.showMessageDialog(this, "Filme deletado");
+            jlCapacidade.setText("");
+            jpRemoverFilme.setVisible(false);
+            jpSuperUser.setVisible(true);
+            jlNomeFilme.setText("");
+            jlDuracao.setText("");
+            jlGenero.setText("");
+            jlCapa.setText("");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+    }//GEN-LAST:event_jbRemoverFilme1ActionPerformed
 
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
@@ -4100,6 +4344,11 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
@@ -4132,6 +4381,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JButton jbBusacarSala;
+    private javax.swing.JButton jbBuscarFilme;
     private javax.swing.JButton jbBuscarUsuario;
     private javax.swing.JButton jbCadastrarFilme;
     private javax.swing.JButton jbCadastrarS;
@@ -4145,6 +4395,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JButton jbHome;
     private javax.swing.JButton jbPedido;
     private javax.swing.JButton jbPoltrona;
+    private javax.swing.JButton jbRemoverFilme1;
     private javax.swing.JButton jbRemoverSessao;
     private javax.swing.JButton jbRemoverU;
     private javax.swing.JButton jbSair;
@@ -4160,12 +4411,16 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JButton jbSair9;
     private javax.swing.JButton jbSuperUser;
     private javax.swing.JComboBox<String> jcbTipoUsuario;
+    private javax.swing.JTextField jlCapa;
     private javax.swing.JLabel jlCapacidade;
+    private javax.swing.JTextField jlDuracao;
+    private javax.swing.JTextField jlGenero;
     private javax.swing.JLabel jlLinha1;
     private javax.swing.JLabel jlLinha2;
     private javax.swing.JLabel jlLinha3;
     private javax.swing.JLabel jlLinha4;
     private javax.swing.JLabel jlLinha5;
+    private javax.swing.JTextField jlNomeFilme;
     private javax.swing.JLabel jlNomeU;
     private javax.swing.JLabel jlNomeUsuario;
     private javax.swing.JLabel jlSenhaU;
@@ -4182,11 +4437,13 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JScrollPane jpMostrador2;
     private javax.swing.JPanel jpPedido;
     private javax.swing.JPanel jpPoltrona;
+    private javax.swing.JPanel jpRemoverFilme;
     private javax.swing.JPanel jpRemoverSala;
     private javax.swing.JPanel jpRemoverSessao;
     private javax.swing.JPanel jpRemoverUsuario;
     private javax.swing.JPanel jpSeletorOpc;
     private javax.swing.JPanel jpSuperUser;
+    private javax.swing.JTextField jtxBuscaCodigoF;
     private javax.swing.JTextField jtxBuscarSala;
     private javax.swing.JTextField jtxCapacidadeSala;
     private javax.swing.JTextField jtxCodigoC;
