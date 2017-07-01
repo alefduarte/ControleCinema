@@ -423,8 +423,10 @@ public class MenuUsuario extends javax.swing.JFrame {
         jComboBox6 = new javax.swing.JComboBox<>();
         jLabel64 = new javax.swing.JLabel();
         jComboBox7 = new javax.swing.JComboBox<>();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel87 = new javax.swing.JLabel();
         jpRemoverSessao = new javax.swing.JPanel();
-        jbSair9 = new javax.swing.JButton();
+        jbBuscarSessao = new javax.swing.JButton();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
@@ -432,7 +434,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel47 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
         jLabel51 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
@@ -443,6 +444,12 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel59 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jLabel88 = new javax.swing.JLabel();
+        jLabel89 = new javax.swing.JLabel();
+        jbSair11 = new javax.swing.JButton();
+        jLabel90 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
         jpCadastrarFilme = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
@@ -1709,43 +1716,43 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Nome do Filme");
         jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 170, -1));
+        jpCadastrarSessao.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 190, -1));
 
         jLabel35.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel35.setText("Codigo do Filme");
         jLabel35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 170, -1));
+        jpCadastrarSessao.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 190, -1));
 
         jLabel36.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel36.setText("Duração");
         jLabel36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 170, -1));
+        jpCadastrarSessao.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 190, -1));
 
         jLabel37.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel37.setText("Genero");
         jLabel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 170, -1));
+        jpCadastrarSessao.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 190, -1));
 
         jLabel38.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel38.setText("Codigo da Sala");
         jLabel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 170, -1));
+        jpCadastrarSessao.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 190, -1));
 
         jLabel40.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setText("Audio");
         jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 170, -1));
+        jpCadastrarSessao.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 190, -1));
 
         jLabel41.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText("Horario de Inicio");
         jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 170, -1));
+        jpCadastrarSessao.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 190, -1));
 
         jTextField5.setEditable(false);
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1757,12 +1764,12 @@ public class MenuUsuario extends javax.swing.JFrame {
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setText("0000");
         jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 220, 30));
+        jpCadastrarSessao.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 220, 30));
 
         jTextField8.setEditable(false);
         jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 220, 30));
+        jpCadastrarSessao.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 220, 30));
 
         jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField10.setText("00.00");
@@ -1772,7 +1779,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jTextField10MouseClicked(evt);
             }
         });
-        jpCadastrarSessao.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 220, 30));
+        jpCadastrarSessao.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 220, 30));
 
         jtxMinutosInicio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxMinutosInicio.setText("00");
@@ -1787,7 +1794,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jtxMinutosInicioActionPerformed(evt);
             }
         });
-        jpCadastrarSessao.add(jtxMinutosInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 100, 30));
+        jpCadastrarSessao.add(jtxMinutosInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 100, 30));
 
         jtxHoraInicio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxHoraInicio.setText("00");
@@ -1802,17 +1809,17 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jtxHoraInicioActionPerformed(evt);
             }
         });
-        jpCadastrarSessao.add(jtxHoraInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 100, 30));
+        jpCadastrarSessao.add(jtxHoraInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 100, 30));
 
         jLabel42.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setText("Preço");
         jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 170, -1));
+        jpCadastrarSessao.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 190, -1));
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2D", "3D" }));
         jComboBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 220, 30));
+        jpCadastrarSessao.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 220, 30));
 
         jComboBoxNomeFilme.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBoxNomeFilme.addActionListener(new java.awt.event.ActionListener() {
@@ -1820,25 +1827,42 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jComboBoxNomeFilmeActionPerformed(evt);
             }
         });
-        jpCadastrarSessao.add(jComboBoxNomeFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 220, 30));
+        jpCadastrarSessao.add(jComboBoxNomeFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 220, 30));
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
         jComboBox6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox6ActionPerformed(evt);
             }
         });
-        jpCadastrarSessao.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 220, -1));
+        jpCadastrarSessao.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 220, 30));
 
         jLabel64.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel64.setText("3D/2D");
         jLabel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 170, -1));
+        jpCadastrarSessao.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 190, -1));
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2D", "3D" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Legendado", "Dublado" }));
         jComboBox7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpCadastrarSessao.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 220, 30));
+        jpCadastrarSessao.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 220, 30));
+
+        jTextField11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField11.setText("00000");
+        jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jTextField11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField11MouseClicked(evt);
+            }
+        });
+        jpCadastrarSessao.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 220, 30));
+
+        jLabel87.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel87.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel87.setText("Codigo Sessão");
+        jLabel87.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpCadastrarSessao.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 190, -1));
 
         jLayeredPane1.add(jpCadastrarSessao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -1848,90 +1872,85 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverSessao.setPreferredSize(new java.awt.Dimension(540, 540));
         jpRemoverSessao.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jbSair9.setBackground(new java.awt.Color(229, 91, 0));
-        jbSair9.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
-        jbSair9.setForeground(new java.awt.Color(255, 255, 255));
-        jbSair9.setText("Remover");
-        jbSair9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
-        jbSair9.addMouseListener(new java.awt.event.MouseAdapter() {
+        jbBuscarSessao.setBackground(new java.awt.Color(229, 91, 0));
+        jbBuscarSessao.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbBuscarSessao.setForeground(new java.awt.Color(255, 255, 255));
+        jbBuscarSessao.setText("Buscar");
+        jbBuscarSessao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbBuscarSessao.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jbSair9MouseClicked(evt);
+                jbBuscarSessaoMouseClicked(evt);
             }
         });
-        jbSair9.addActionListener(new java.awt.event.ActionListener() {
+        jbBuscarSessao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSair9ActionPerformed(evt);
+                jbBuscarSessaoActionPerformed(evt);
             }
         });
-        jpRemoverSessao.add(jbSair9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, 30));
+        jpRemoverSessao.add(jbBuscarSessao, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 100, 30));
 
         jLabel43.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel43.setText("Nome do Filme");
         jLabel43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 170, -1));
+        jpRemoverSessao.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 180, -1));
 
         jLabel44.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel44.setText("Codigo do Filme");
         jLabel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 170, -1));
+        jpRemoverSessao.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 180, -1));
 
         jLabel45.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel45.setText("Duração");
         jLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 170, -1));
+        jpRemoverSessao.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 180, -1));
 
         jLabel46.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel46.setText("Genero");
         jLabel46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 170, -1));
+        jpRemoverSessao.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 180, -1));
 
         jLabel47.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel47.setText("Codigo da Sala");
         jLabel47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 170, -1));
+        jpRemoverSessao.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 180, -1));
 
         jLabel49.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel49.setText("3D/2D");
         jLabel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 170, -1));
+        jpRemoverSessao.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 180, -1));
 
         jLabel50.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel50.setText("Horario de Inicio");
         jLabel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 170, -1));
-
-        jTextField12.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
-        jTextField12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 220, 30));
+        jpRemoverSessao.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 180, -1));
 
         jLabel51.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel51.setText("Preço");
         jLabel51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 170, -1));
+        jpRemoverSessao.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 180, -1));
 
         jLabel53.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 220, 30));
+        jpRemoverSessao.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 220, 30));
 
         jLabel54.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, 100, 30));
+        jpRemoverSessao.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 100, 30));
 
         jLabel55.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 220, 30));
+        jpRemoverSessao.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 220, 30));
 
         jLabel56.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1941,27 +1960,76 @@ public class MenuUsuario extends javax.swing.JFrame {
         jLabel57.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 220, 30));
+        jpRemoverSessao.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 220, 30));
 
         jLabel58.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 220, 30));
+        jpRemoverSessao.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 220, 30));
 
         jLabel59.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 100, 30));
+        jpRemoverSessao.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 100, 30));
 
         jLabel60.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 100, 30));
+        jpRemoverSessao.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 100, 30));
 
         jLabel61.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
         jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
-        jpRemoverSessao.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 100, 30));
+        jpRemoverSessao.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 100, 30));
+
+        jTextField13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField13.setText("00000");
+        jTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jTextField13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField13MouseClicked(evt);
+            }
+        });
+        jpRemoverSessao.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 100, 30));
+
+        jLabel88.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel88.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel88.setText("Codigo Sessão");
+        jLabel88.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpRemoverSessao.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 180, -1));
+
+        jLabel89.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
+        jLabel89.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel89.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpRemoverSessao.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 220, 30));
+
+        jbSair11.setBackground(new java.awt.Color(229, 91, 0));
+        jbSair11.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jbSair11.setForeground(new java.awt.Color(255, 255, 255));
+        jbSair11.setText("Remover");
+        jbSair11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 114, 0), 4));
+        jbSair11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbSair11MouseClicked(evt);
+            }
+        });
+        jbSair11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSair11ActionPerformed(evt);
+            }
+        });
+        jpRemoverSessao.add(jbSair11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, 30));
+
+        jLabel90.setFont(new java.awt.Font("Alice", 1, 18)); // NOI18N
+        jLabel90.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel90.setText("Audio");
+        jLabel90.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpRemoverSessao.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 180, -1));
+
+        jLabel91.setFont(new java.awt.Font("Alice", 0, 18)); // NOI18N
+        jLabel91.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel91.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 47, 65), 4));
+        jpRemoverSessao.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 220, 30));
 
         jLayeredPane1.add(jpRemoverSessao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -3609,13 +3677,13 @@ public class MenuUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxMinutosInicioActionPerformed
 
-    private void jbSair9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair9MouseClicked
+    private void jbBuscarSessaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbBuscarSessaoMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbSair9MouseClicked
+    }//GEN-LAST:event_jbBuscarSessaoMouseClicked
 
-    private void jbSair9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair9ActionPerformed
+    private void jbBuscarSessaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarSessaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbSair9ActionPerformed
+    }//GEN-LAST:event_jbBuscarSessaoActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -4174,6 +4242,22 @@ public class MenuUsuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jbRemoverFilme1ActionPerformed
 
+    private void jTextField11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField11MouseClicked
+
+    private void jTextField13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField13MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField13MouseClicked
+
+    private void jbSair11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbSair11MouseClicked
+
+    private void jbSair11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbSair11ActionPerformed
+
     public void alterarNomeUsuario(String nome) {
         jlNomeUsuario.setText(nome);
     }
@@ -4349,7 +4433,12 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel84;
     private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -4374,7 +4463,8 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
@@ -4382,6 +4472,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JButton jbBusacarSala;
     private javax.swing.JButton jbBuscarFilme;
+    private javax.swing.JButton jbBuscarSessao;
     private javax.swing.JButton jbBuscarUsuario;
     private javax.swing.JButton jbCadastrarFilme;
     private javax.swing.JButton jbCadastrarS;
@@ -4401,6 +4492,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JButton jbSair;
     private javax.swing.JButton jbSair1;
     private javax.swing.JButton jbSair10;
+    private javax.swing.JButton jbSair11;
     private javax.swing.JButton jbSair2;
     private javax.swing.JButton jbSair3;
     private javax.swing.JButton jbSair4;
@@ -4408,7 +4500,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JButton jbSair6;
     private javax.swing.JButton jbSair7;
     private javax.swing.JButton jbSair8;
-    private javax.swing.JButton jbSair9;
     private javax.swing.JButton jbSuperUser;
     private javax.swing.JComboBox<String> jcbTipoUsuario;
     private javax.swing.JTextField jlCapa;
