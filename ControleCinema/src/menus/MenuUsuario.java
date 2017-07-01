@@ -516,6 +516,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jbRemoverFilme1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Movieland");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
