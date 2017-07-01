@@ -4299,7 +4299,27 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSair11MouseClicked
 
     private void jbSair11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair11ActionPerformed
-        // TODO add your handling code here:
+ 
+    sql = "DELETE FROM sessoes WHERE codigo=" + jtxBuscarCodigoS.getText();
+        try {
+            con.sentenca.executeUpdate(sql);
+            JOptionPane.showMessageDialog(this, "Usuario deletado");
+            jtxBuscarCodigoS.setText("000000");
+            jlNomeFilmeS.setText("");
+            jlDuracaoFilmeS.setText("");
+            jlGeneroFilmeS.setText("");
+            jlCodigoFilmeS.setText("");
+            jlCodigoSalaS.setText("");
+            jlPrecoS.setText("");
+            jlHorarioIniS.setText("");
+            jlTipoS.setText("");
+            jlAudioS.setText("");
+            jpRemoverSessao.setVisible(false);
+            jpSuperUser.setVisible(true);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+        
     }//GEN-LAST:event_jbSair11ActionPerformed
 
     public void alterarNomeUsuario(String nome) {
