@@ -50,10 +50,10 @@ public class MenuUsuario extends javax.swing.JFrame {
         File folder = new File(dirImagem);
         File[] listOfFiles = folder.listFiles();
 
-        for (int i = 0; i < listOfFiles.length; i++) {
-            if (listOfFiles[i].isFile()) {
+        for (File listOfFile : listOfFiles) {
+            if (listOfFile.isFile()) {
                 j++;
-                CaminhoPacote = listOfFiles[i].getAbsolutePath();
+                CaminhoPacote = listOfFile.getAbsolutePath();
                 JLabel filme = new JLabel("Label n" + j);
                 filme.setBackground(jbSair1.getBackground());
                 filme.setOpaque(true);
@@ -2614,21 +2614,10 @@ public class MenuUsuario extends javax.swing.JFrame {
 
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         Login log = new Login();
         log.setVisible(true);
@@ -2953,58 +2942,66 @@ public class MenuUsuario extends javax.swing.JFrame {
         resetaPoltrona();
 
         // pega capacidade
-        if (jLabel48.getText().equals("30")) {
-            jButtonG1.setEnabled(false);
-            jButtonG2.setEnabled(false);
-            jButtonG3.setEnabled(false);
-            jButtonG4.setEnabled(false);
-            jButtonG5.setEnabled(false);
-        } else if (jLabel48.getText().equals("28")) {
-            jButtonA5.setEnabled(false);
-            jButtonB5.setEnabled(false);
-            jButtonC5.setEnabled(false);
-            jButtonD5.setEnabled(false);
-            jButtonE5.setEnabled(false);
-            jButtonF5.setEnabled(false);
-            jButtonG5.setEnabled(false);
-        } else if (jLabel48.getText().equals("25")) {
-            jButtonG1.setEnabled(false);
-            jButtonG2.setEnabled(false);
-            jButtonG3.setEnabled(false);
-            jButtonG4.setEnabled(false);
-            jButtonG5.setEnabled(false);
-            jButtonF1.setEnabled(false);
-            jButtonF2.setEnabled(false);
-            jButtonF3.setEnabled(false);
-            jButtonF4.setEnabled(false);
-            jButtonF5.setEnabled(false);
-        } else if (jLabel48.getText().equals("24")) {
-            jButtonA5.setEnabled(false);
-            jButtonB5.setEnabled(false);
-            jButtonC5.setEnabled(false);
-            jButtonD5.setEnabled(false);
-            jButtonE5.setEnabled(false);
-            jButtonF5.setEnabled(false);
-            jButtonG5.setEnabled(false);
-            jButtonG4.setEnabled(false);
-            jButtonG3.setEnabled(false);
-            jButtonG2.setEnabled(false);
-            jButtonG1.setEnabled(false);
-        } else if (jLabel48.getText().equals("21")) {
-            jButtonA5.setEnabled(false);
-            jButtonB5.setEnabled(false);
-            jButtonC5.setEnabled(false);
-            jButtonD5.setEnabled(false);
-            jButtonE5.setEnabled(false);
-            jButtonF5.setEnabled(false);
-            jButtonG5.setEnabled(false);
-            jButtonA4.setEnabled(false);
-            jButtonB4.setEnabled(false);
-            jButtonC4.setEnabled(false);
-            jButtonD4.setEnabled(false);
-            jButtonE4.setEnabled(false);
-            jButtonF4.setEnabled(false);
-            jButtonG4.setEnabled(false);
+        switch (jLabel48.getText()) {
+            case "30":
+                jButtonG1.setEnabled(false);
+                jButtonG2.setEnabled(false);
+                jButtonG3.setEnabled(false);
+                jButtonG4.setEnabled(false);
+                jButtonG5.setEnabled(false);
+                break;
+            case "28":
+                jButtonA5.setEnabled(false);
+                jButtonB5.setEnabled(false);
+                jButtonC5.setEnabled(false);
+                jButtonD5.setEnabled(false);
+                jButtonE5.setEnabled(false);
+                jButtonF5.setEnabled(false);
+                jButtonG5.setEnabled(false);
+                break;
+            case "25":
+                jButtonG1.setEnabled(false);
+                jButtonG2.setEnabled(false);
+                jButtonG3.setEnabled(false);
+                jButtonG4.setEnabled(false);
+                jButtonG5.setEnabled(false);
+                jButtonF1.setEnabled(false);
+                jButtonF2.setEnabled(false);
+                jButtonF3.setEnabled(false);
+                jButtonF4.setEnabled(false);
+                jButtonF5.setEnabled(false);
+                break;
+            case "24":
+                jButtonA5.setEnabled(false);
+                jButtonB5.setEnabled(false);
+                jButtonC5.setEnabled(false);
+                jButtonD5.setEnabled(false);
+                jButtonE5.setEnabled(false);
+                jButtonF5.setEnabled(false);
+                jButtonG5.setEnabled(false);
+                jButtonG4.setEnabled(false);
+                jButtonG3.setEnabled(false);
+                jButtonG2.setEnabled(false);
+                jButtonG1.setEnabled(false);
+                break;
+            case "21":
+                jButtonA5.setEnabled(false);
+                jButtonB5.setEnabled(false);
+                jButtonC5.setEnabled(false);
+                jButtonD5.setEnabled(false);
+                jButtonE5.setEnabled(false);
+                jButtonF5.setEnabled(false);
+                jButtonG5.setEnabled(false);
+                jButtonA4.setEnabled(false);
+                jButtonB4.setEnabled(false);
+                jButtonC4.setEnabled(false);
+                jButtonD4.setEnabled(false);
+                jButtonE4.setEnabled(false);
+                jButtonF4.setEnabled(false);
+                jButtonG4.setEnabled(false);
+                break;
+            default:
+                break;
         }
         // procura sessoes pois nao estava pegando todos
         sql = "SELECT * FROM sessoes";
@@ -3399,7 +3396,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             while (retorno.next()) {
                 quantIngressos += 1;
                 String tipo = retorno.getString("tipo");
-                sql = "SELECT * FROM sessoes WHERE codigo=" + retorno.getInt("codSessao");
+                sql = "SELECT * FROM sessoes WHERE codigo=" + retorno.getString("codSessao");
                 try {
                     ResultSet retorno2 = innerCon.sentenca.executeQuery(sql);
                     retorno2.first();
@@ -3411,7 +3408,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                         quantInteira += 1;
                     }
                 } catch (SQLException ex) {
-                    JOptionPane.showMessageDialog(null, "Erro ao buscar valor de sessao\n" + ex.getMessage());
+                //    JOptionPane.showMessageDialog(null, "Erro ao buscar valor de sessao\n" + ex.getMessage());
                 }
                 valorTotal += valor;
             }
@@ -3612,24 +3609,24 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jbCancelarIngressoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarIngressoActionPerformed
         //pegar dado ingresso
         sql = "SELECT * FROM ingressos WHERE codigo=" + jTextField2.getText();
-        int codSessao = 0;
+ 
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             retorno.first();
             jLabel1.setText(retorno.getString("tipo"));
-            codSessao = retorno.getInt("codSessao");
+            codSessao = retorno.getString("codSessao");
         } catch (SQLException ex) {
             jLabel23.setText("Código inválido");
         }
 
         //procura sessao
         sql = "SELECT * FROM sessoes WHERE codigo=" + codSessao;
-        int codFilme = 0;
+
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             retorno.first();
             jLabel24.setText(retorno.getTime("horario").toString());
-            codFilme = retorno.getInt("codFilme");
+            codFilme = retorno.getString("codFilme");
         } catch (SQLException ex) {
             jLabel23.setText("Código inválido");
         }
@@ -3656,7 +3653,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     int i = 0;
     private void jbSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair1ActionPerformed
         i++;
-        String CaminhoPacote = "";
+        String CaminhoPacote;
         if (caminho.contains("/src/")) {
             CaminhoPacote = caminho;
         } else {
@@ -3668,7 +3665,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         filme.setBackground(jbSair1.getBackground());
         filme.setOpaque(true);
         String text = jComboBoxNomeFilme.getSelectedItem().toString()
-                + "\nHorario de Inicio: " + jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText();
+                + "\n Horario de Inicio: " + jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText();
         Border bord = new TitledBorder(jbSair1.getBorder(), text, 0, ICONIFIED, jbSair1.getFont(), Color.WHITE);
         filme.setBorder(bord);
         filme.setText("");
@@ -3699,7 +3696,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         String horario = jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText();
         String formato = jComboBox5.getSelectedItem().toString();
         String audio = jComboBox7.getSelectedItem().toString();
-        String sql = "INSERT INTO sessoes VALUES (" + random + "," + codFilme + "," + preco
+        sql = "INSERT INTO sessoes VALUES (" + random + "," + codFilme + "," + preco
                 + "," + codSala + ",'" + horario + "','" + formato + "','" + audio + "')";
         Conexao con2 = new Conexao();
         try {
@@ -3718,7 +3715,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void jbSair8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair8ActionPerformed
         File source;
-        File dest = null;
+        File dest;
         int retorno = 0;
 
         JFileChooser poster = new JFileChooser();
@@ -3734,7 +3731,6 @@ public class MenuUsuario extends javax.swing.JFrame {
 
             jTextField4.setText(caminho);
 
-            JOptionPane.showMessageDialog(null, poster.getSelectedFile().getName());
             nome = poster.getSelectedFile().getName();
             dest = new File("src" + File.separator + "Filmes" + File.separator + poster.getSelectedFile().getName());
             caminho = dest.getAbsolutePath();
@@ -3783,12 +3779,12 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbBuscarSessaoMouseClicked
 
     private void jbBuscarSessaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarSessaoActionPerformed
-        String CodigoSala = "";
-        String preco = "";
-        String codigoFilme = "";
-        String horario = "";
-        String tipo = "";
-        String audio = "";
+        String CodigoSala;
+        String preco;
+        String codigoFilme;
+        String horario;
+        String tipo;
+        String audio;
 
         String conferir = jtxBuscarCodigoS.getText();
         sql = "SELECT * FROM sessoes";
@@ -4137,9 +4133,9 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jbCadastrarUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarUActionPerformed
         if (jtxSenha.getText().equals(jtxSenhaComfirmacao.getText())) {
             int id = Integer.parseInt(jtxId.getText());
-            String nome = jtxNomeU.getText();
+            nome = jtxNomeU.getText();
             String senha = jtxSenha.getText();
-            int tipoUsuario = 0;
+            int tipoUsuario;
             if (jcbTipoUsuario.getSelectedItem().equals("Administrador")) {
                 tipoUsuario = 1;
             } else {
@@ -4318,7 +4314,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbBuscarFilmeMouseClicked
 
     private void jbBuscarFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarFilmeActionPerformed
-        String nome = "";
+
         String duracao = "";
         String genero = "";
         String capa = "";
@@ -4514,22 +4510,13 @@ public class MenuUsuario extends javax.swing.JFrame {
 
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+
         //</editor-fold>
 
         /* Create and display the form */
