@@ -236,7 +236,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }
 
     /**
@@ -264,7 +264,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }
 
     @SuppressWarnings("unchecked")
@@ -2655,7 +2655,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbCancelamentoActionPerformed
 
     private void jbFechamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbFechamentoMouseClicked
@@ -2678,7 +2678,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbFechamentoActionPerformed
 
     private void jbSuperUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSuperUserMouseClicked
@@ -2701,7 +2701,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbSuperUserActionPerformed
 
     private void jbHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbHomeMouseClicked
@@ -2724,7 +2724,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbHomeActionPerformed
 
     private void jbPedidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbPedidoMouseClicked
@@ -2748,7 +2748,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
 
         // lista de filmes
         ArrayList<String> filmes = new ArrayList<>();
@@ -2950,10 +2949,8 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
 
         resetaPoltrona();
-        String codPoltrona = jLabel21.getText().replaceAll("Poltrona ", "");
 
         // pega capacidade
         if (jLabel48.getText().equals("30")) {
@@ -3009,10 +3006,23 @@ public class MenuUsuario extends javax.swing.JFrame {
             jButtonF4.setEnabled(false);
             jButtonG4.setEnabled(false);
         }
+        // procura sessoes pois nao estava pegando todos
+        sql = "SELECT * FROM sessoes";
+        try {
+            ResultSet retorno = con.sentenca.executeQuery(sql);
+            while (retorno.next()) {
+                if (retorno.getString("codFilme").equals(codFilme)
+                        && retorno.getString("codSala").equals(jComboBox2.getSelectedItem().toString())
+                        && retorno.getTime("horario").toString().equals(jComboBox3.getSelectedItem().toString())) {
+                    codSessao = retorno.getString("codigo");
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
+        }
 
         // procura pontronas exisentes
         sql = "SELECT * FROM ingressos";
-        //String sql2 = "SELECT * FROM sessoes WHERE codigo=";
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             while (retorno.next()) {
@@ -3429,7 +3439,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
 
         // lista de filmes
         ArrayList<String> filmes = new ArrayList<>();
@@ -3499,7 +3508,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbSair3ActionPerformed
 
     private void jbSair4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair4MouseClicked
@@ -3525,7 +3534,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbSair4ActionPerformed
 
     private void jbRemoverSessaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbRemoverSessaoMouseClicked
@@ -3547,7 +3556,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbRemoverSessaoActionPerformed
 
     private void jbSair6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair6MouseClicked
@@ -3570,7 +3579,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(true);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbSair6ActionPerformed
 
     private void jbSair7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSair7MouseClicked
@@ -3593,7 +3602,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(true);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbSair7ActionPerformed
 
     private void jbCancelarIngressoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCancelarIngressoMouseClicked
@@ -3919,7 +3928,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(true);
-        
+
 
     }//GEN-LAST:event_jbSair10ActionPerformed
 
@@ -3943,7 +3952,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jpRemoverUsuario.setVisible(false);
         jpRemoverSala.setVisible(false);
         jpRemoverFilme.setVisible(false);
-        
+
     }//GEN-LAST:event_jbSair5ActionPerformed
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
