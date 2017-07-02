@@ -92,14 +92,16 @@ public class MenuUsuario extends javax.swing.JFrame {
                             JLabel filme = new JLabel("Label n" + j);
                             filme.setBackground(jbSair1.getBackground());
                             filme.setOpaque(true);
-                            String text = nome + "\nHorario de Inicio: " + retorno2.getTime("horario").toString();
-                            Border bord = new TitledBorder(jbSair1.getBorder(), text, 0, ICONIFIED, jbSair1.getFont(), Color.WHITE);
+                            String text = "Horario de Inicio: " + retorno2.getTime("horario").toString();
+                            Border bord = new TitledBorder(jbSair1.getBorder(), nome, 0, ICONIFIED, jbSair1.getFont(), Color.WHITE);
                             filme.setBorder(bord);
-                            filme.setText("");
+                            filme.setText(text);
                             Icon icon = new ImageIcon(CaminhoPacote);
                             filme.setIcon(icon);
+                            filme.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+                            filme.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
                             jPanel3.add(filme);
-                            jPanel3.setName(nome);
+                            jPanel3.setName("");
                         }
                     }
                 } catch (SQLException ex) {
@@ -3408,7 +3410,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                         quantInteira += 1;
                     }
                 } catch (SQLException ex) {
-                //    JOptionPane.showMessageDialog(null, "Erro ao buscar valor de sessao\n" + ex.getMessage());
+                    //    JOptionPane.showMessageDialog(null, "Erro ao buscar valor de sessao\n" + ex.getMessage());
                 }
                 valorTotal += valor;
             }
@@ -3609,7 +3611,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private void jbCancelarIngressoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarIngressoActionPerformed
         //pegar dado ingresso
         sql = "SELECT * FROM ingressos WHERE codigo=" + jTextField2.getText();
- 
+
         try {
             ResultSet retorno = con.sentenca.executeQuery(sql);
             retorno.first();
@@ -3664,15 +3666,17 @@ public class MenuUsuario extends javax.swing.JFrame {
         JLabel filme = new JLabel("Label n" + i);
         filme.setBackground(jbSair1.getBackground());
         filme.setOpaque(true);
-        String text = jComboBoxNomeFilme.getSelectedItem().toString()
-                + "\n Horario de Inicio: " + jtxHoraInicio.getText() + ":" + jtxMinutosInicio.getText();
-        Border bord = new TitledBorder(jbSair1.getBorder(), text, 0, ICONIFIED, jbSair1.getFont(), Color.WHITE);
+        String text = "Horario de Inicio: " + jtxHoraInicio.getText() + ":"
+                + jtxMinutosInicio.getText();
+        Border bord = new TitledBorder(jbSair1.getBorder(), jComboBoxNomeFilme.getSelectedItem().toString(), 0, ICONIFIED, jbSair1.getFont(), Color.WHITE);
         filme.setBorder(bord);
-        filme.setText("");
+        filme.setText(text);
         Icon icon = new ImageIcon(CaminhoPacote);
         filme.setIcon(icon);
+        filme.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        filme.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel3.add(filme);
-        jPanel3.setName(sql);
+        jPanel3.setName("");
 
         // criar codigo
         nome = jComboBoxNomeFilme.getSelectedItem().toString();
@@ -4015,7 +4019,6 @@ public class MenuUsuario extends javax.swing.JFrame {
                 if (retorno.getString("codigo").equals(conferir)) {
                     erro = 1;
                     JOptionPane.showMessageDialog(null, "Erro de cadastro: Filme não Cadastrado. \nCodigo de Filme Existente. \nDigite outro Codigo.");
-
                 }
             }
         } catch (SQLException ex) {
@@ -4037,12 +4040,13 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
             jpCadastrarFilme.setVisible(false);
             jpSuperUser.setVisible(true);
-        } else {
             jtxCodigoC.setText("");
             jtxNomeFilmeC.setText("");
             jtxDuracacaoC.setText("");
             jtxGeneroC.setText("");
             jTextField4.setText("");
+        } else {
+
         }
     }//GEN-LAST:event_jbCadastrarFilmeActionPerformed
 
